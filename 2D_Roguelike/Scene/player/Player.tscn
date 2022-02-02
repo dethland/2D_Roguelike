@@ -1,3 +1,12 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
 
-[node name="Player" type="KinematicBody2D"]
+[ext_resource path="res://Scene/Player/running.gd" type="Script" id=1]
+[ext_resource path="res://Scene/Player/Player.gd" type="Script" id=2]
+
+[node name="Player" type="KinematicBody2D" groups=["Player"]]
+script = ExtResource( 2 )
+
+[node name="Statemachine" type="Node2D" parent="."]
+
+[node name="Run" type="Node2D" parent="Statemachine"]
+script = ExtResource( 1 )
