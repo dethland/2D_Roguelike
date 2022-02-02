@@ -1,4 +1,4 @@
-extends "res://Scene/Player/script/palyer_script_template.gd"
+extends "res://Scene/Player/script/player_script_template.gd"
 
 # How fast the player moves in meters per second.
 export var speed = 14
