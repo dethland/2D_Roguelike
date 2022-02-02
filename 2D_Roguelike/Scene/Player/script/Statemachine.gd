@@ -3,6 +3,8 @@ extends Node2D
 
 func _ready():
 	turn_off_all()
+	change_state_to("Idle")
+	print(show_active_state())
 
 
 func turn_off_all() -> void:
