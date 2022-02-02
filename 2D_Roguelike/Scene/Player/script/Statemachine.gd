@@ -18,7 +18,7 @@ func show_active_state() -> String:
 	var string_value : String
 	for child in get_children():
 		if not child.get("is_able") == null:
-			if child:
+			if child.is_able:
 				string_value = child.name
 	return string_value
 	
@@ -28,3 +28,7 @@ func change_state_to(state_name) -> void:
 	for child in get_children():
 		if child.name == state_name:
 			child.turn_on()
+			
+func _process(delta):
+	if Input.is_action_just_pressed("ui_accept"):
+		print(show_active_state())
