@@ -4,16 +4,12 @@
 [ext_resource path="res://Scene/Player/script/Player.gd" type="Script" id=2]
 [ext_resource path="res://Scene/Player/script/Statemachine.gd" type="Script" id=3]
 [ext_resource path="res://Scene/Player/script/Hurt.gd" type="Script" id=4]
-<<<<<<< Updated upstream
 [ext_resource path="res://Scene/player/CharacterDemo1Frames.tres" type="SpriteFrames" id=5]
-=======
-[ext_resource path="res://Scene/Player/script/Fall.gd" type="Script" id=5]
->>>>>>> Stashed changes
 [ext_resource path="res://Scene/Player/script/Attack.gd" type="Script" id=6]
 [ext_resource path="res://icon.png" type="Texture" id=7]
 [ext_resource path="res://Scene/Player/script/Idle.gd" type="Script" id=8]
-[ext_resource path="res://Scene/Player/script/Jump.gd" type="Script" id=9]
-[ext_resource path="res://Scene/Player/script/Parry.gd" type="Script" id=10]
+[ext_resource path="res://Scene/Player/Jump.gd" type="Script" id=9]
+[ext_resource path="res://Scene/Player/Parry.gd" type="Script" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30.5, 30.5 )
@@ -42,9 +38,6 @@ script = ExtResource( 9 )
 
 [node name="Parry" type="Node2D" parent="Statemachine"]
 script = ExtResource( 10 )
-
-[node name="Fall" type="Node2D" parent="Statemachine"]
-script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.5, 0.5 )
