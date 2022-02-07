@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://Scene/System/Combat_system.gd" type="Script" id=1]
-
-[node name="Combat_system" type="Node2D"]
-script = ExtResource( 1 )
