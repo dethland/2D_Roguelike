@@ -1,10 +1,11 @@
-extends "res://Scene/Player/script/player_script_template.gd"
+extends "res://Scene/player/script/player_script_template.gd"
 
+func turn_on()->void:
+	.turn_on()
+	animator.play("idle");
 
 func _physics_process(delta):
-	$Anim.visible = is_able; # only play idle anim if idling (pozdnm)
 	if is_able:
-		$Anim.play();
 		if get_horizental_input() != 0:
 			statemachine.change_state_to("Run")
 		if Input.is_action_just_pressed("ui_up"):

@@ -1,121 +1,134 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scene/Player/script/running.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player/script/Player.gd" type="Script" id=2]
 [ext_resource path="res://Scene/Player/script/Statemachine.gd" type="Script" id=3]
 [ext_resource path="res://Scene/Player/script/Hurt.gd" type="Script" id=4]
-[ext_resource path="res://Scene/player/CharacterDemo1Frames.tres" type="SpriteFrames" id=5]
 [ext_resource path="res://Scene/Player/script/Attack.gd" type="Script" id=6]
-[ext_resource path="res://icon.png" type="Texture" id=7]
 [ext_resource path="res://Scene/Player/script/Idle.gd" type="Script" id=8]
 [ext_resource path="res://Scene/Player/Jump.gd" type="Script" id=9]
 [ext_resource path="res://Scene/Player/Parry.gd" type="Script" id=10]
 [ext_resource path="res://Scene/player/script/ChargeSkill.gd" type="Script" id=11]
 [ext_resource path="res://Scene/player/CharacterDraft1SpriteSheet.png" type="Texture" id=13]
 
-[sub_resource type="AtlasTexture" id=18]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 64, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=19]
-atlas = ExtResource( 13 )
-region = Rect2( 64, 64, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 13 )
-region = Rect2( 128, 64, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=21]
-atlas = ExtResource( 13 )
-region = Rect2( 192, 64, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=22]
-atlas = ExtResource( 13 )
-region = Rect2( 256, 64, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=23]
-atlas = ExtResource( 13 )
-region = Rect2( 320, 64, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=24]
-atlas = ExtResource( 13 )
-region = Rect2( 384, 64, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=25]
-atlas = ExtResource( 13 )
-region = Rect2( 448, 64, 64, 64 )
-
-[sub_resource type="SpriteFrames" id=26]
-animations = [ {
-"frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
-"loop": true,
-"name": "run",
-"speed": 5.0
-} ]
-
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 0, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 13 )
-region = Rect2( 64, 0, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=11]
-atlas = ExtResource( 13 )
-region = Rect2( 128, 0, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 13 )
-region = Rect2( 192, 0, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 13 )
-region = Rect2( 256, 0, 64, 64 )
-
-[sub_resource type="SpriteFrames" id=14]
-animations = [ {
-"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 13 )
-region = Rect2( 0, 320, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 13 )
-region = Rect2( 64, 320, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=15]
-atlas = ExtResource( 13 )
-region = Rect2( 128, 320, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=16]
-atlas = ExtResource( 13 )
-region = Rect2( 192, 320, 64, 64 )
-
-[sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 13 )
-region = Rect2( 256, 320, 64, 64 )
-
-[sub_resource type="SpriteFrames" id=4]
-animations = [ {
-"frames": [ SubResource( 2 ), SubResource( 3 ) ],
-"loop": true,
-"name": "charging",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 17 ), SubResource( 17 ), SubResource( 17 ), SubResource( 17 ), SubResource( 17 ) ],
-"loop": false,
-"name": "use",
-"speed": 5.0
-} ]
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30.5, 30.5 )
+
+[sub_resource type="Animation" id=28]
+resource_name = "fall"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 24, 25, 26 ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "idle"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "jump"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 16, 17, 18, 19 ]
+}
+
+[sub_resource type="Animation" id=31]
+resource_name = "melee"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 32, 33, 34, 35, 36 ]
+}
+
+[sub_resource type="Animation" id=30]
+resource_name = "run"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 8, 9, 10, 11, 12, 13, 14, 15 ]
+}
+
+[sub_resource type="Animation" id=32]
+resource_name = "skill_charge"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 40, 41 ]
+}
+
+[sub_resource type="Animation" id=33]
+resource_name = "skill_use"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 42, 43, 44, 44, 44, 44 ]
+}
 
 [node name="Player" type="KinematicBody2D" groups=["Player"]]
 script = ExtResource( 2 )
@@ -127,14 +140,6 @@ script = ExtResource( 3 )
 script = ExtResource( 1 )
 speed = 200
 
-[node name="Anim" type="AnimatedSprite" parent="Statemachine/Run"]
-visible = false
-frames = SubResource( 26 )
-animation = "run"
-frame = 5
-speed_scale = 2.0
-playing = true
-
 [node name="Attack" type="Node2D" parent="Statemachine"]
 script = ExtResource( 6 )
 
@@ -143,11 +148,6 @@ script = ExtResource( 4 )
 
 [node name="Idle" type="Node2D" parent="Statemachine"]
 script = ExtResource( 8 )
-
-[node name="Anim" type="AnimatedSprite" parent="Statemachine/Idle"]
-frames = SubResource( 14 )
-speed_scale = 2.0
-playing = true
 
 [node name="Jump" type="Node2D" parent="Statemachine"]
 script = ExtResource( 9 )
@@ -158,27 +158,23 @@ script = ExtResource( 10 )
 [node name="ChargeSkill" type="Node2D" parent="Statemachine"]
 script = ExtResource( 11 )
 
-[node name="Anim" type="AnimatedSprite" parent="Statemachine/ChargeSkill"]
-visible = false
-frames = SubResource( 4 )
-animation = "charging"
-frame = 1
-speed_scale = 2.0
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.5, 0.5 )
 shape = SubResource( 1 )
 
-[node name="Sprite_placeholder" type="Sprite" parent="."]
-visible = false
-texture = ExtResource( 7 )
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 13 )
+hframes = 8
+vframes = 6
+frame = 3
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-visible = false
-frames = ExtResource( 5 )
-animation = "skill"
-frame = 4
-speed_scale = 2.5
-playing = true
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/fall = SubResource( 28 )
+anims/idle = SubResource( 27 )
+anims/jump = SubResource( 29 )
+anims/melee = SubResource( 31 )
+anims/run = SubResource( 30 )
+anims/skill_charge = SubResource( 32 )
+anims/skill_use = SubResource( 33 )
 
-[connection signal="animation_finished" from="Statemachine/ChargeSkill/Anim" to="Statemachine/ChargeSkill" method="_on_Anim_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/ChargeSkill" method="_on_AnimationPlayer_animation_finished"]

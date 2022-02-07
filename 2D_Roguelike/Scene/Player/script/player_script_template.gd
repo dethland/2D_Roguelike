@@ -4,10 +4,12 @@ var is_able : bool = false
 
 var statemachine : Node2D
 var player : KinematicBody2D
+var animator : AnimationPlayer
 
 func _ready():
 	statemachine = get_parent()
 	player = get_parent().get_parent()
+	animator = player.get_node("AnimationPlayer");
 
 func turn_on() -> void:
 	# turn on the state script

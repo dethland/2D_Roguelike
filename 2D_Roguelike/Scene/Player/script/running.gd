@@ -1,4 +1,4 @@
-extends "res://Scene/Player/script/player_script_template.gd"
+extends "res://Scene/player/script/player_script_template.gd"
 
 # How fast the player moves in meters per second.
 export var speed = 14
@@ -6,8 +6,11 @@ export var speed = 14
 var velocity = Vector2.ZERO
 var last_scale = Vector2.ONE
 
+func turn_on()->void:
+	.turn_on()
+	animator.play("run");
+
 func _physics_process(delta):
-	$Anim.visible = is_able;
 	if is_able:
 		var direction = Vector2.ZERO
 
