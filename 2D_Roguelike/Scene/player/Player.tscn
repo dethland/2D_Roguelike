@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Scene/Player/script/running.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player/script/Player.gd" type="Script" id=2]
@@ -12,6 +12,46 @@
 [ext_resource path="res://Scene/Player/Parry.gd" type="Script" id=10]
 [ext_resource path="res://Scene/player/script/ChargeSkill.gd" type="Script" id=11]
 [ext_resource path="res://Scene/player/CharacterDraft1SpriteSheet.png" type="Texture" id=13]
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 13 )
+region = Rect2( 64, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 13 )
+region = Rect2( 128, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 13 )
+region = Rect2( 192, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 13 )
+region = Rect2( 256, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 13 )
+region = Rect2( 320, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 13 )
+region = Rect2( 384, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 13 )
+region = Rect2( 448, 64, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=26]
+animations = [ {
+"frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
+"loop": true,
+"name": "run",
+"speed": 5.0
+} ]
 
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 13 )
@@ -87,6 +127,14 @@ script = ExtResource( 3 )
 script = ExtResource( 1 )
 speed = 200
 
+[node name="Anim" type="AnimatedSprite" parent="Statemachine/Run"]
+visible = false
+frames = SubResource( 26 )
+animation = "run"
+frame = 5
+speed_scale = 2.0
+playing = true
+
 [node name="Attack" type="Node2D" parent="Statemachine"]
 script = ExtResource( 6 )
 
@@ -98,7 +146,6 @@ script = ExtResource( 8 )
 
 [node name="Anim" type="AnimatedSprite" parent="Statemachine/Idle"]
 frames = SubResource( 14 )
-frame = 3
 speed_scale = 2.0
 playing = true
 
