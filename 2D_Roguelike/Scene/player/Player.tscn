@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Scene/Player/script/running.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player/script/Player.gd" type="Script" id=2]
@@ -10,6 +10,69 @@
 [ext_resource path="res://Scene/Player/script/Idle.gd" type="Script" id=8]
 [ext_resource path="res://Scene/Player/Jump.gd" type="Script" id=9]
 [ext_resource path="res://Scene/Player/Parry.gd" type="Script" id=10]
+[ext_resource path="res://Scene/player/script/ChargeSkill.gd" type="Script" id=11]
+[ext_resource path="res://Scene/player/CharacterDraft1SpriteSheet.png" type="Texture" id=13]
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 13 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 13 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 13 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 13 )
+region = Rect2( 256, 0, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=14]
+animations = [ {
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 320, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 13 )
+region = Rect2( 64, 320, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 13 )
+region = Rect2( 128, 320, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 13 )
+region = Rect2( 192, 320, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 13 )
+region = Rect2( 256, 320, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "charging",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 17 ), SubResource( 17 ), SubResource( 17 ), SubResource( 17 ), SubResource( 17 ) ],
+"loop": false,
+"name": "use",
+"speed": 5.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30.5, 30.5 )
@@ -33,22 +96,42 @@ script = ExtResource( 4 )
 [node name="Idle" type="Node2D" parent="Statemachine"]
 script = ExtResource( 8 )
 
+[node name="Anim" type="AnimatedSprite" parent="Statemachine/Idle"]
+frames = SubResource( 14 )
+frame = 3
+speed_scale = 2.0
+playing = true
+
 [node name="Jump" type="Node2D" parent="Statemachine"]
 script = ExtResource( 9 )
 
 [node name="Parry" type="Node2D" parent="Statemachine"]
 script = ExtResource( 10 )
 
+[node name="ChargeSkill" type="Node2D" parent="Statemachine"]
+script = ExtResource( 11 )
+
+[node name="Anim" type="AnimatedSprite" parent="Statemachine/ChargeSkill"]
+visible = false
+frames = SubResource( 4 )
+animation = "charging"
+frame = 1
+speed_scale = 2.0
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.5, 0.5 )
 shape = SubResource( 1 )
 
 [node name="Sprite_placeholder" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 7 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+visible = false
 frames = ExtResource( 5 )
 animation = "skill"
 frame = 4
 speed_scale = 2.5
 playing = true
+
+[connection signal="animation_finished" from="Statemachine/ChargeSkill/Anim" to="Statemachine/ChargeSkill" method="_on_Anim_animation_finished"]

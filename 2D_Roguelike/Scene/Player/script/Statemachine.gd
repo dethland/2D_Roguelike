@@ -10,8 +10,7 @@ func _ready():
 func turn_off_all() -> void:
 	# trun off all state
 	for child in get_children():
-		if not child.get("is_able") == null:
-			child.is_able = false
+		child.turn_off()
 
 func show_active_state() -> String:
 	# return the name of active state

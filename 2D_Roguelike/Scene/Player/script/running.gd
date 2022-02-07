@@ -20,5 +20,7 @@ func _physics_process(delta):
 			statemachine.change_state_to("Idle")
 		if Input.is_action_just_pressed("ui_up"):
 			statemachine.change_state_to("Jump")
+		if Input.is_action_just_pressed("skill_use"):
+			statemachine.change_state_to("ChargeSkill")
 		
 		velocity = player.move_and_slide(velocity, Vector2.UP)
