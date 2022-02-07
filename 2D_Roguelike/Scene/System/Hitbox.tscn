@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="Hitbox" type="Area2D"]
+
+[node name="Duration" type="Timer" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
