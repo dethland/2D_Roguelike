@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Scene/Enemy/script/Statemachine.gd" type="Script" id=2]
@@ -11,6 +11,9 @@ extents = Vector2( 32, 32 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 200, 68.6887 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 88, 30.5 )
 
 [node name="Enemy" type="KinematicBody2D"]
 position = Vector2( 299, 570 )
@@ -34,8 +37,15 @@ script = ExtResource( 3 )
 script = ExtResource( 5 )
 
 [node name="player_detection" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_detection"]
 position = Vector2( 0, -38.0668 )
 scale = Vector2( 1, 0.989 )
 shape = SubResource( 2 )
+
+[node name="attack_detection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_detection"]
+position = Vector2( 0, -0.5 )
+shape = SubResource( 3 )

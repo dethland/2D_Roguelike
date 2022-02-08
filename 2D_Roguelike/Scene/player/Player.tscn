@@ -131,6 +131,7 @@ tracks/0/keys = {
 }
 
 [node name="Player" type="KinematicBody2D" groups=["Player"]]
+position = Vector2( 253, 565 )
 script = ExtResource( 2 )
 
 [node name="Statemachine" type="Node2D" parent="."]
