@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Idle",
+"language": "GDScript",
+"path": "res://Scene/Enemy/script/Idle.gd"
+} ]
+_global_script_class_icons={
+"Idle": ""
+}
+
 [application]
 
 config/name="2D_Roguelike"
