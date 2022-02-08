@@ -10,9 +10,10 @@
 extents = Vector2( 32, 32 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 200, 133.333 )
+extents = Vector2( 200, 68.6887 )
 
 [node name="Enemy" type="KinematicBody2D"]
+position = Vector2( 299, 570 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -32,8 +33,9 @@ script = ExtResource( 3 )
 [node name="Search" type="Node2D" parent="Statemachine"]
 script = ExtResource( 5 )
 
-[node name="P_detection" type="Area2D" parent="."]
+[node name="player_detection" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="P_detection"]
-position = Vector2( 0, -102 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_detection"]
+position = Vector2( 0, -38.0668 )
+scale = Vector2( 1, 0.989 )
 shape = SubResource( 2 )

@@ -166,7 +166,7 @@ shape = SubResource( 1 )
 texture = ExtResource( 13 )
 hframes = 8
 vframes = 6
-frame = 3
+frame = 44
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/fall = SubResource( 28 )

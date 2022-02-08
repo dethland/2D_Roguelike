@@ -4,5 +4,6 @@
 
 [node name="Hitbox" type="Area2D"]
 script = ExtResource( 1 )
+hitbox = PoolVector2Array( -407, 607, -411, 579, -402, 576, -414, 531, -394, 521, -402, 529, -401, 501, -352, 552, -125, -165 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
