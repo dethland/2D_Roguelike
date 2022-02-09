@@ -4,7 +4,6 @@ extends "res://Scene/player/script/player_script_template.gd"
 export var speed = 14
 
 var velocity = Vector2.ZERO
-var last_scale = Vector2.ONE
 
 func turn_on()->void:
 	.turn_on()
@@ -15,13 +14,6 @@ func _physics_process(delta):
 		var direction = Vector2.ZERO
 
 		direction.x = get_horizental_input()
-		# should be replaced with changing scale.x the top root (Player) to -1 (pozdnm)
-		if (direction.x < 0): 	 last_scale = Vector2(-1,1);
-		elif (direction.x > 0):  last_scale = Vector2( 1,1);
-		player.scale = last_scale
-		# undo the artifacts of scaling (pozdnm)
-		player.global_rotation = 0;
-		
 		
 		velocity.x = direction.x * speed
 		# gravity dont need for now 

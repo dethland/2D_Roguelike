@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scene/Player/script/running.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player/script/Player.gd" type="Script" id=2]
@@ -45,14 +45,20 @@ func _physics_process(delta):
 			if velocity.y < 0:
 				velocity.y -= jump_gravity * delta
 			elif velocity.y >= 0:
+				animator.play(\"fall\");
 				velocity.y -= fall_gravity * delta
 			
 		elif player.is_on_floor() and leave_floor:
-			statemachine.change_state_to(\"Idle\")
+			animator.play(\"land\");
 			leave_floor = false
 			velocity.y = 0
 			
 		player.move_and_slide(velocity, Vector2.UP)
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == \"land\":
+		statemachine.change_state_to(\"Idle\");
 "
 
 [sub_resource type="GDScript" id=35]
@@ -112,6 +118,22 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 16, 17, 18, 19 ]
+}
+
+[sub_resource type="Animation" id=36]
+resource_name = "land"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 19, 18, 17, 16 ]
 }
 
 [sub_resource type="Animation" id=31]
@@ -218,15 +240,17 @@ shape = SubResource( 1 )
 texture = ExtResource( 13 )
 hframes = 8
 vframes = 6
-frame = 44
+frame = 19
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/fall = SubResource( 28 )
 anims/idle = SubResource( 27 )
 anims/jump = SubResource( 29 )
+anims/land = SubResource( 36 )
 anims/melee = SubResource( 31 )
 anims/run = SubResource( 30 )
 anims/skill_charge = SubResource( 32 )
 anims/skill_use = SubResource( 33 )
 
+[connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Jump" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/ChargeSkill" method="_on_AnimationPlayer_animation_finished"]

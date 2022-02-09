@@ -5,6 +5,9 @@ func turn_on()->void:
 	animator.play("idle");
 
 func _physics_process(delta):
+	# make the player face the correct direction (pozdnm)
+	face_direction();
+
 	if is_able:
 		if get_horizental_input() != 0:
 			statemachine.change_state_to("Run")
@@ -18,4 +21,12 @@ func _physics_process(delta):
 			statemachine.get_node("Jump").leave_floor = true
 			
 		player.move_and_slide(Vector2.ZERO, Vector2.UP)
-		
+
+var last_scale = Vector2.ONE
+func face_direction():
+	var dir = get_horizental_input();
+	if (dir < 0): 	 last_scale = Vector2(-1,1);
+	elif (dir > 0):  last_scale = Vector2( 1,1);
+	player.scale = last_scale
+	# undo the artifacts of scaling (pozdnm)
+	player.global_rotation = 0;
