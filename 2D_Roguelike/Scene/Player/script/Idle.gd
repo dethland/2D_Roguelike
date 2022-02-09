@@ -12,4 +12,10 @@ func _physics_process(delta):
 			statemachine.change_state_to("Jump")
 		if Input.is_action_just_pressed("skill_use"):
 			statemachine.change_state_to("ChargeSkill")
+			
+		if not player.is_on_floor():
+			statemachine.change_state_to("Jump")
+			statemachine.get_node("Jump").leave_floor = true
+			
+		player.move_and_slide(Vector2.ZERO, Vector2.UP)
 		

@@ -21,7 +21,7 @@ onready var jump_velocity : float = (2.0 * jump_height) / jump_time_to_peak
 onready var jump_gravity : float = (-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)
 onready var fall_gravity : float = (-2.0 * jump_height) / (jump_time_to_descent * jump_time_to_descent)
 
-var leave_groud : bool = false
+var leave_floor : bool = false
 
 var direction = Vector2.ZERO
 var velocity = Vector2.ZERO
@@ -36,10 +36,10 @@ func _physics_process(delta):
 		direction = get_horizental_input()
 		
 		velocity.x = direction * horizental_speed
-		if Input.is_action_just_pressed(\"ui_up\") and not leave_groud:
+		if Input.is_action_just_pressed(\"ui_up\") and not leave_floor:
 			velocity.y = -jump_velocity
 			animator.play(\"jump\")
-			leave_groud = true
+			leave_floor = true
 			
 		elif not player.is_on_floor():
 			if velocity.y < 0:
@@ -47,9 +47,9 @@ func _physics_process(delta):
 			elif velocity.y >= 0:
 				velocity.y -= fall_gravity * delta
 			
-		elif player.is_on_floor() and leave_groud:
+		elif player.is_on_floor() and leave_floor:
 			statemachine.change_state_to(\"Idle\")
-			leave_groud = false
+			leave_floor = false
 			velocity.y = 0
 			
 		player.move_and_slide(velocity, Vector2.UP)
