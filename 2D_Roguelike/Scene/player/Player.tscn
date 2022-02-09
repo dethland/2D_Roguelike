@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scene/Player/script/running.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player/script/Player.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scene/Player/script/Attack.gd" type="Script" id=6]
 [ext_resource path="res://Scene/player/script/Jump.gd" type="Script" id=7]
 [ext_resource path="res://Scene/Player/script/Idle.gd" type="Script" id=8]
+[ext_resource path="res://Scene/System/Hitbox.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scene/player/script/ChargeSkill.gd" type="Script" id=11]
 
 [sub_resource type="GDScript" id=35]
@@ -18,6 +19,21 @@ script/source = "extends \"res://Scene/Player/script/player_script_template.gd\"
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30.5, 30.5 )
+
+[sub_resource type="Animation" id=38]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Hitboxs/Hitbox:is_able")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=28]
 resource_name = "fall"
@@ -128,6 +144,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 32, 33, 34, 35, 36 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Hitboxs/Hitbox:is_able")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
 
 [sub_resource type="Animation" id=30]
 resource_name = "run"
@@ -217,9 +245,10 @@ shape = SubResource( 1 )
 texture = ExtResource( 5 )
 hframes = 8
 vframes = 6
-frame = 7
+frame = 36
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 38 )
 anims/fall = SubResource( 28 )
 anims/hurt = SubResource( 37 )
 anims/idle = SubResource( 27 )
@@ -229,6 +258,14 @@ anims/melee = SubResource( 31 )
 anims/run = SubResource( 30 )
 anims/skill_charge = SubResource( 32 )
 anims/skill_use = SubResource( 33 )
+
+[node name="Hitboxs" type="Node2D" parent="."]
+
+[node name="Hitbox" parent="Hitboxs" instance=ExtResource( 9 )]
+is_able = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitboxs/Hitbox"]
+polygon = PoolVector2Array( 5, -16, 4, 19, 26, 30, 29, -23 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Hurt" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Jump" method="_on_AnimationPlayer_animation_finished"]
