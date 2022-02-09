@@ -1,65 +1,14 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scene/Player/script/running.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player/script/Player.gd" type="Script" id=2]
 [ext_resource path="res://Scene/Player/script/Statemachine.gd" type="Script" id=3]
 [ext_resource path="res://Scene/Player/script/Hurt.gd" type="Script" id=4]
+[ext_resource path="res://Scene/player/CharacterDraft1SpriteSheet_WithHurt.png" type="Texture" id=5]
 [ext_resource path="res://Scene/Player/script/Attack.gd" type="Script" id=6]
+[ext_resource path="res://Scene/player/script/Jump.gd" type="Script" id=7]
 [ext_resource path="res://Scene/Player/script/Idle.gd" type="Script" id=8]
 [ext_resource path="res://Scene/player/script/ChargeSkill.gd" type="Script" id=11]
-[ext_resource path="res://Scene/player/CharacterDraft1SpriteSheet.png" type="Texture" id=13]
-
-[sub_resource type="GDScript" id=34]
-script/source = "extends \"res://Scene/player/script/player_script_template.gd\"
-
-export var jump_height : float = 300
-export var jump_time_to_peak : float = 0.5
-export var jump_time_to_descent : float = 0.4
-export var horizental_speed = 200
-
-onready var jump_velocity : float = (2.0 * jump_height) / jump_time_to_peak
-onready var jump_gravity : float = (-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)
-onready var fall_gravity : float = (-2.0 * jump_height) / (jump_time_to_descent * jump_time_to_descent)
-
-var leave_floor : bool = false
-
-var direction = Vector2.ZERO
-var velocity = Vector2.ZERO
-
-func _ready():
-	print(jump_velocity)
-	print(jump_gravity)
-	print(fall_gravity)
-
-func _physics_process(delta):
-	if is_able:
-		direction = get_horizental_input()
-		
-		velocity.x = direction * horizental_speed
-		if Input.is_action_just_pressed(\"ui_up\") and not leave_floor:
-			velocity.y = -jump_velocity
-			animator.play(\"jump\")
-			leave_floor = true
-			
-		elif not player.is_on_floor():
-			if velocity.y < 0:
-				velocity.y -= jump_gravity * delta
-			elif velocity.y >= 0:
-				animator.play(\"fall\");
-				velocity.y -= fall_gravity * delta
-			
-		elif player.is_on_floor() and leave_floor:
-			animator.play(\"land\");
-			leave_floor = false
-			velocity.y = 0
-			
-		player.move_and_slide(velocity, Vector2.UP)
-
-
-func _on_AnimationPlayer_animation_finished(anim_name):
-	if anim_name == \"land\":
-		statemachine.change_state_to(\"Idle\");
-"
 
 [sub_resource type="GDScript" id=35]
 script/source = "extends \"res://Scene/Player/script/player_script_template.gd\"
@@ -85,6 +34,34 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ 24, 25, 26 ]
+}
+
+[sub_resource type="Animation" id=37]
+resource_name = "hurt"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 5, 6, 7 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=27]
@@ -222,7 +199,7 @@ script = ExtResource( 4 )
 script = ExtResource( 8 )
 
 [node name="Jump" type="Node2D" parent="Statemachine"]
-script = SubResource( 34 )
+script = ExtResource( 7 )
 jump_height = 200.0
 horizental_speed = 300
 
@@ -237,13 +214,14 @@ position = Vector2( -0.5, 0.5 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 13 )
+texture = ExtResource( 5 )
 hframes = 8
 vframes = 6
-frame = 19
+frame = 7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/fall = SubResource( 28 )
+anims/hurt = SubResource( 37 )
 anims/idle = SubResource( 27 )
 anims/jump = SubResource( 29 )
 anims/land = SubResource( 36 )
@@ -252,5 +230,6 @@ anims/run = SubResource( 30 )
 anims/skill_charge = SubResource( 32 )
 anims/skill_use = SubResource( 33 )
 
+[connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Hurt" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Jump" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/ChargeSkill" method="_on_AnimationPlayer_animation_finished"]
