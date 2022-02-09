@@ -1,10 +1,11 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Asset/Image/icon.png" type="Texture" id=1]
 [ext_resource path="res://Scene/Enemy/script/Statemachine.gd" type="Script" id=2]
 [ext_resource path="res://Scene/Enemy/script/Fight.gd" type="Script" id=3]
 [ext_resource path="res://Scene/Enemy/script/Idle.gd" type="Script" id=4]
 [ext_resource path="res://Scene/Enemy/script/Search.gd" type="Script" id=5]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )

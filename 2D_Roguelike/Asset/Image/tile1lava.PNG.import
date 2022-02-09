@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tile1lava.PNG-b02dd46e7a800e49c86a8d5552c8ee9f.stex"
+path="res://.import/tile1lava.PNG-38bc20fafa8bbec4fb17f5773c49b07b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tile1lava.PNG"
-dest_files=[ "res://.import/tile1lava.PNG-b02dd46e7a800e49c86a8d5552c8ee9f.stex" ]
+source_file="res://Asset/Image/tile1lava.PNG"
+dest_files=[ "res://.import/tile1lava.PNG-38bc20fafa8bbec4fb17f5773c49b07b.stex" ]
 
 [params]
 

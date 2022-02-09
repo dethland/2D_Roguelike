@@ -6,10 +6,60 @@
 [ext_resource path="res://Scene/Player/script/Hurt.gd" type="Script" id=4]
 [ext_resource path="res://Scene/Player/script/Attack.gd" type="Script" id=6]
 [ext_resource path="res://Scene/Player/script/Idle.gd" type="Script" id=8]
-[ext_resource path="res://Scene/Player/Jump.gd" type="Script" id=9]
-[ext_resource path="res://Scene/Player/Parry.gd" type="Script" id=10]
 [ext_resource path="res://Scene/player/script/ChargeSkill.gd" type="Script" id=11]
 [ext_resource path="res://Scene/player/CharacterDraft1SpriteSheet.png" type="Texture" id=13]
+
+[sub_resource type="GDScript" id=34]
+script/source = "extends \"res://Scene/player/script/player_script_template.gd\"
+
+export var jump_height : float = 300
+export var jump_time_to_peak : float = 0.5
+export var jump_time_to_descent : float = 0.4
+export var horizental_speed = 200
+
+onready var jump_velocity : float = (2.0 * jump_height) / jump_time_to_peak
+onready var jump_gravity : float = (-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)
+onready var fall_gravity : float = (-2.0 * jump_height) / (jump_time_to_descent * jump_time_to_descent)
+
+var leave_groud : bool = false
+
+var direction = Vector2.ZERO
+var velocity = Vector2.ZERO
+
+func _ready():
+	print(jump_velocity)
+	print(jump_gravity)
+	print(fall_gravity)
+
+func _physics_process(delta):
+	if is_able:
+		direction = get_horizental_input()
+		
+		velocity.x = direction * horizental_speed
+		if Input.is_action_just_pressed(\"ui_up\") and not leave_groud:
+			velocity.y = -jump_velocity
+			animator.play(\"jump\")
+			leave_groud = true
+			
+		elif not player.is_on_floor():
+			if velocity.y < 0:
+				velocity.y -= jump_gravity * delta
+			elif velocity.y >= 0:
+				velocity.y -= fall_gravity * delta
+			
+		elif player.is_on_floor() and leave_groud:
+			statemachine.change_state_to(\"Idle\")
+			leave_groud = false
+			velocity.y = 0
+			
+		player.move_and_slide(velocity, Vector2.UP)
+"
+
+[sub_resource type="GDScript" id=35]
+script/source = "extends \"res://Scene/Player/script/player_script_template.gd\"
+
+
+"
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30.5, 30.5 )
@@ -138,7 +188,7 @@ script = ExtResource( 3 )
 
 [node name="Run" type="Node2D" parent="Statemachine"]
 script = ExtResource( 1 )
-speed = 200
+speed = 300
 
 [node name="Attack" type="Node2D" parent="Statemachine"]
 script = ExtResource( 6 )
@@ -150,11 +200,12 @@ script = ExtResource( 4 )
 script = ExtResource( 8 )
 
 [node name="Jump" type="Node2D" parent="Statemachine"]
-script = ExtResource( 9 )
+script = SubResource( 34 )
 jump_height = 200.0
+horizental_speed = 300
 
 [node name="Parry" type="Node2D" parent="Statemachine"]
-script = ExtResource( 10 )
+script = SubResource( 35 )
 
 [node name="ChargeSkill" type="Node2D" parent="Statemachine"]
 script = ExtResource( 11 )

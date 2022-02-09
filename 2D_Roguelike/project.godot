@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="2D_Roguelike"
-config/icon="res://icon.png"
+config/icon="res://Asset/Image/icon.png"
 
 [autoload]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fireball.png-c7822e52cb66c739ed23dd48a4e71947.stex"
+path="res://.import/lavastone_better.png-0d570df866dcfef87ed1ec539ac1a7b5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fireball.png"
-dest_files=[ "res://.import/fireball.png-c7822e52cb66c739ed23dd48a4e71947.stex" ]
+source_file="res://Asset/Image/lavastone_better.png"
+dest_files=[ "res://.import/lavastone_better.png-0d570df866dcfef87ed1ec539ac1a7b5.stex" ]
 
 [params]
 
