@@ -1,0 +1,3 @@
+Character 1: "Ghost1.png"
+Species: The Living Undead (?), Vivus Nonmortuus
+Weakness(es): fire/heat
