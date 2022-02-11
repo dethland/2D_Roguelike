@@ -1,4 +1,4 @@
-extends "res://Scene/Player/script/player_script_template.gd"
+extends "res://Scene/Player/script/Parry.gd"
 
 func turn_on()->void:
 	.turn_on()
@@ -11,4 +11,8 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 
 
 func hurt():
-	print("ouch")
+	var parry = test_parry()
+	if parry:
+		sucessful_parry()
+	else:
+		print("ouch")
