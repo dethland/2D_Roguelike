@@ -21,11 +21,15 @@ _global_script_class_icons={
 [application]
 
 config/name="2D_Roguelike"
-config/icon="res://Asset/Image/icon.png"
+config/icon="res://Asset/roguelike_logo.png"
 
 [autoload]
 
 global_tool="*res://global_tool.gd"
+
+[global]
+
+icon=false
 
 [input]
 
