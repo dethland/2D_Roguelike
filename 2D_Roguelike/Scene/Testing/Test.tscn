@@ -1,29 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scene/Enemy/Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scene/Player/Camera2D.gd" type="Script" id=3]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 564.75, 10 )
-
-[node name="TestingScene" type="Node2D"]
+[node name="Node2D" type="Node2D"]
 position = Vector2( 1, -1 )
 
 [node name="Enemy" parent="." instance=ExtResource( 1 )]
-position = Vector2( 228, 367 )
-scale = Vector2( 1.00989, 1.0544 )
+position = Vector2( 218, 569 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 510, 450 )
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-current = true
-script = ExtResource( 3 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 381, 566 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 140.25, -1 )
-shape = SubResource( 1 )
+position = Vector2( 840, 570 )
