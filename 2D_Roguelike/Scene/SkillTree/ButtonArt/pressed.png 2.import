@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CharacterDraft1SpriteSheet.png-d66df807cbccd6bda3ce8f5e5d3a4377.stex"
+path="res://.import/pressed.png-4f818691e9d11980737d54def532c250.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/Player/CharacterDraft1SpriteSheet.png"
-dest_files=[ "res://.import/CharacterDraft1SpriteSheet.png-d66df807cbccd6bda3ce8f5e5d3a4377.stex" ]
+source_file="res://Scene/SkillTree/ButtonArt/pressed.png"
+dest_files=[ "res://.import/pressed.png-4f818691e9d11980737d54def532c250.stex" ]
 
 [params]
 
