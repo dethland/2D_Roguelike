@@ -1,5 +1,8 @@
 extends KinematicBody2D
 
+#This is vital for search don't delete again
+var is_player = true
+
 export var health = 100
 export(String, "Player", "Enemy") var type = "Player"
 

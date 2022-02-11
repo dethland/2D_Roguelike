@@ -4,13 +4,14 @@
 [ext_resource path="res://Scene/player/Player.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 425.5, 10 )
+extents = Vector2( 564.75, 10 )
 
 [node name="TestingScene" type="Node2D"]
 position = Vector2( 1, -1 )
 
 [node name="Enemy" parent="." instance=ExtResource( 1 )]
-position = Vector2( 155, 451 )
+position = Vector2( 228, 367 )
+scale = Vector2( 1.00989, 1.0544 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 510, 450 )
@@ -19,5 +20,5 @@ position = Vector2( 510, 450 )
 position = Vector2( 381, 566 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 1, -1 )
+position = Vector2( 140.25, -1 )
 shape = SubResource( 1 )

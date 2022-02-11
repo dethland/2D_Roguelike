@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Asset/Image/icon.png" type="Texture" id=1]
 [ext_resource path="res://Scene/Enemy/script/Statemachine.gd" type="Script" id=2]
@@ -12,10 +12,7 @@
 extents = Vector2( 32, 32 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 200, 68.6887 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 88, 30.5 )
+extents = Vector2( 200, 107.179 )
 
 [node name="Enemy" type="KinematicBody2D"]
 script = ExtResource( 6 )
@@ -42,15 +39,17 @@ script = ExtResource( 5 )
 script = ExtResource( 7 )
 
 [node name="player_detection" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_detection"]
-position = Vector2( 0, -38.0668 )
+position = Vector2( 0, 3.8147e-05 )
 scale = Vector2( 1, 0.989 )
 shape = SubResource( 2 )
 
 [node name="attack_detection" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_detection"]
-position = Vector2( 0, -0.5 )
-shape = SubResource( 3 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="attack_detection"]
+position = Vector2( 1, 1 )
+scale = Vector2( 3.53752, 3.01419 )
+polygon = PoolVector2Array( 9.15681, -10.7484, 9.46203, 10.1161, 17.3979, 4.42581, 17.3979, -3.47742 )
+
+[connection signal="area_entered" from="attack_detection" to="Statemachine/Fight" method="_on_attack_detection_area_entered"]

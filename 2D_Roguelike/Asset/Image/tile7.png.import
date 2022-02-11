@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CharacterDraft1SpriteSheet.png-e528a7b89d745f2a6165d2fd9189aa2d.stex"
+path="res://.import/tile7.png-bbbca95ffe98ab79cd3eed53017c9e49.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/player/CharacterDraft1SpriteSheet.png"
-dest_files=[ "res://.import/CharacterDraft1SpriteSheet.png-e528a7b89d745f2a6165d2fd9189aa2d.stex" ]
+source_file="res://Asset/Image/tile7.png"
+dest_files=[ "res://.import/tile7.png-bbbca95ffe98ab79cd3eed53017c9e49.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0
