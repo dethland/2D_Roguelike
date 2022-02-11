@@ -1,9 +1,6 @@
 extends "res://Scene/Enemy/script/enemy_script_template.gd"
 
 class_name Idle
-
-export var gravity = 20
-
 var velocity:=Vector2(-40,0)
 var running_timer := 0
 var stop_timer:=0
@@ -29,7 +26,7 @@ func _physics_process(delta: float)-> void:
 			ram_stop = randi()%500
 			Stop_Or_Run = false
 		else:
-			velocity = player.move_and_slide(velocity, Vector2.UP)
+			velocity.y = player.move_and_slide(velocity, Vector2.UP).y
 			running_timer+=1
 	else:
 		if stop_timer >= 100 :
