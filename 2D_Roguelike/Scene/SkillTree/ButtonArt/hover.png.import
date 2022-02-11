@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CharacterDraft1SpriteSheet_WithHurt.png-cdade1321e2e63ee7f440305f886ec8b.stex"
+path="res://.import/hover.png-4380d2ac7ccb40822056dd5812ac2fc5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/player/CharacterDraft1SpriteSheet_WithHurt.png"
-dest_files=[ "res://.import/CharacterDraft1SpriteSheet_WithHurt.png-cdade1321e2e63ee7f440305f886ec8b.stex" ]
+source_file="res://Scene/SkillTree/ButtonArt/hover.png"
+dest_files=[ "res://.import/hover.png-4380d2ac7ccb40822056dd5812ac2fc5.stex" ]
 
 [params]
 
