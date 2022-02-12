@@ -17,7 +17,7 @@ func _ready() -> void:
 func _physics_process(delta: float)-> void:
 	#if is_able:
 	if Stop_Or_Run :
-		if (player.is_on_wall() or running_timer >= 500) : 
+		if (enemy.is_on_wall() or running_timer >= 500) : 
 			# run to a wall or out range in running mode
 			velocity*=-1.0
 			running_timer=0
@@ -26,7 +26,7 @@ func _physics_process(delta: float)-> void:
 			ram_stop = randi()%500
 			Stop_Or_Run = false
 		else:
-			velocity.y = player.move_and_slide(velocity, Vector2.UP).y
+			velocity = enemy.move_and_slide(velocity, Vector2.UP)
 			running_timer+=1
 	else:
 		if stop_timer >= 100 :
