@@ -37,7 +37,6 @@ func _physics_process(delta):
 		elif player.is_on_floor() and leave_floor:
 			leave_floor = false
 			velocity.y = 0
-			print('jump idle')
 			statemachine.change_state_to("Idle")
 			
 		player.move_and_slide(velocity, Vector2.UP)

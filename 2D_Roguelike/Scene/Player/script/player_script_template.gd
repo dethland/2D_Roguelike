@@ -36,5 +36,4 @@ func apply_gravity(gravity, delta_value) -> void:
 		gravity_velocity.y -= gravity * delta_value
 		player.move_and_slide(gravity_velocity, Vector2.UP)
 	else:
-		print("reset y")
 		gravity_velocity.y = 0
