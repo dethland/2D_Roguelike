@@ -4,7 +4,6 @@ extends Node2D
 func _ready():
 	turn_off_all()
 	change_state_to("Idle")
-	print(show_active_state())
 
 
 func turn_off_all() -> void:
@@ -30,6 +29,3 @@ func change_state_to(state_name) -> void:
 		if child.name == state_name:
 			child.turn_on()
 			
-func _process(delta):
-	if Input.is_action_just_pressed("ui_accept"):
-		print(show_active_state())

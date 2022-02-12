@@ -4,7 +4,7 @@ extends KinematicBody2D
 var is_player = true
 
 export var health = 100
-export(String, "Player", "Enemy") var type = "Player"
+export(String, "Player", "Enemy") var mob_type = "Player"
 
 func get_hit(from_object, damage):
 	# parry handling

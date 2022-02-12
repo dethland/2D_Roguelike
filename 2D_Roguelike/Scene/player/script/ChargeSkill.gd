@@ -15,4 +15,5 @@ func _physics_process(delta):
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "skill_use":
+		print("ha")
 		statemachine.change_state_to("Idle");

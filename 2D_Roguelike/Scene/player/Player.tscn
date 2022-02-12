@@ -18,7 +18,7 @@ script/source = "extends \"res://Scene/Player/script/player_script_template.gd\"
 "
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 30.5, 30.5 )
+extents = Vector2( 12.5004, 27.0054 )
 
 [sub_resource type="Animation" id=38]
 length = 0.001
@@ -107,10 +107,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 16, 17, 18, 19 ]
+"values": [ 16, 17, 18 ]
 }
 
 [sub_resource type="Animation" id=36]
@@ -238,14 +238,15 @@ script = SubResource( 35 )
 script = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.5, 0.5 )
+position = Vector2( 4.51208, 4.9562 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1, 0 )
 texture = ExtResource( 5 )
 hframes = 8
 vframes = 6
-frame = 36
+frame = 18
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 38 )
@@ -265,9 +266,15 @@ anims/skill_use = SubResource( 33 )
 is_able = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitboxs/Hitbox"]
-polygon = PoolVector2Array( 5, -16, 4, 19, 26, 30, 29, -23 )
+position = Vector2( 12.3055, 2.9511 )
+polygon = PoolVector2Array( 5, -16, 4.93808, 19.9268, 29.1249, 29.1295, 29, -23 )
 
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Attack" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Hurt" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Jump" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/ChargeSkill" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="body_entered" from="Hitboxs/Hitbox" to="Hitboxs/Hitbox" method="_on_Hitbox_body_entered"]
+[connection signal="body_exited" from="Hitboxs/Hitbox" to="Hitboxs/Hitbox" method="_on_Hitbox_body_exited"]

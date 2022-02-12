@@ -1,6 +1,7 @@
 extends Node2D
 
 var is_able : bool = false
+var gravity_velocity = Vector2.ZERO
 
 var statemachine : Node2D
 var player : KinematicBody2D
@@ -29,3 +30,11 @@ func get_horizental_input() -> int:
 		direction -= 1
 		
 	return direction
+
+func apply_gravity(gravity, delta_value) -> void:
+	if not player.is_on_floor():
+		gravity_velocity.y -= gravity * delta_value
+		player.move_and_slide(gravity_velocity, Vector2.UP)
+	else:
+		print("reset y")
+		gravity_velocity.y = 0
