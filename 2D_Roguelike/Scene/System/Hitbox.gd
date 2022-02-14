@@ -2,6 +2,7 @@ extends Area2D
 
 export var damage = 10
 export(String, "Enemy", "Player") var target = "Enemy"
+export var animation_name : String
 export var is_able : bool = true
 
 var in_range_object = []
@@ -31,5 +32,5 @@ func _process(delta):
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
-	if anim_name == "melee":
+	if anim_name == animation_name:
 		hit_once = true

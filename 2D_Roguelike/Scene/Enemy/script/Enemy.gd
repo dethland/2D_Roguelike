@@ -8,5 +8,5 @@ func get_hit(from_object, damage):
 	print(health)
 	# handle getting hurt (pozdnm)
 	health -= damage;
-	get_node("Statemachine").change_state_to("Hurt");
+	# handle the hurt animation here
 
