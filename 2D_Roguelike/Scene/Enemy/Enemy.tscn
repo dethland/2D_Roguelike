@@ -1,19 +1,24 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Asset/Image/icon.png" type="Texture" id=1]
 [ext_resource path="res://Scene/Enemy/script/Statemachine.gd" type="Script" id=2]
 [ext_resource path="res://Scene/Enemy/script/Fight.gd" type="Script" id=3]
 [ext_resource path="res://Scene/Enemy/script/Idle.gd" type="Script" id=4]
 [ext_resource path="res://Scene/Enemy/script/Search.gd" type="Script" id=5]
+[ext_resource path="res://Scene/Enemy/script/Enemy.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 200, 68.6887 )
+extents = Vector2( 200, 100 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 100, 100 )
 
 [node name="Enemy" type="KinematicBody2D"]
-position = Vector2( 299, 570 )
+collision_layer = 2
+script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -33,11 +38,41 @@ script = ExtResource( 3 )
 [node name="Search" type="Node2D" parent="Statemachine"]
 script = ExtResource( 5 )
 
-[node name="player_detection" type="Area2D" parent="."]
+[node name="Search_range" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player_detection"]
-position = Vector2( 0, -38.0668 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Search_range"]
+position = Vector2( -1, -66 )
 scale = Vector2( 1, 0.989 )
 shape = SubResource( 2 )
 
-[connection signal="body_entered" from="player_detection" to="Statemachine/Fight" method="_on_player_detection_body_entered"]
+[node name="Battle_range" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battle_range"]
+position = Vector2( -1, -66 )
+scale = Vector2( 1, 0.989 )
+shape = SubResource( 3 )
+
+[node name="Detection" type="Node2D" parent="."]
+
+[node name="RayCast2DRIght" type="RayCast2D" parent="Detection"]
+position = Vector2( 38, -1 )
+enabled = true
+
+[node name="RayCast2DLeft" type="RayCast2D" parent="Detection"]
+position = Vector2( -37, -1 )
+enabled = true
+
+[node name="WallRight" type="RayCast2D" parent="Detection"]
+position = Vector2( 32, 0 )
+rotation = -1.57079
+enabled = true
+cast_to = Vector2( 0, 5 )
+
+[node name="WallLeft" type="RayCast2D" parent="Detection"]
+position = Vector2( -32, 0 )
+rotation = 1.57079
+enabled = true
+cast_to = Vector2( 0, 5 )
+
+[connection signal="body_entered" from="Search_range" to="Statemachine" method="_on_search_range_body_entered"]
+[connection signal="body_entered" from="Battle_range" to="Statemachine" method="_on_battle_range_body_entered"]

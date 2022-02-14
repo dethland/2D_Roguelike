@@ -15,9 +15,8 @@ var direction = Vector2.ZERO
 var velocity = Vector2.ZERO
 
 func _ready():
-	print(jump_velocity)
-	print(jump_gravity)
-	print(fall_gravity)
+	statemachine.get_node("Run").fall_gravity = fall_gravity
+	statemachine.get_node("Idle").fall_gravity = fall_gravity
 
 func _physics_process(delta):
 	if is_able:
@@ -36,12 +35,9 @@ func _physics_process(delta):
 				velocity.y -= fall_gravity * delta
 			
 		elif player.is_on_floor() and leave_floor:
-			animator.play("land");
 			leave_floor = false
 			velocity.y = 0
+			statemachine.change_state_to("Idle")
 			
 		player.move_and_slide(velocity, Vector2.UP)
 
-func _on_AnimationPlayer_animation_finished(anim_name):
-	if anim_name == "land":
-		statemachine.change_state_to("Idle");

@@ -4,7 +4,7 @@ extends KinematicBody2D
 var is_player = true
 
 export var health = 100
-export(String, "Player", "Enemy") var type = "Player"
+export(String, "Player", "Enemy") var mob_type = "Player"
 
 func get_hit(from_object, damage):
 	# parry handling
@@ -18,5 +18,8 @@ func get_hit(from_object, damage):
 	# handle getting hurt (pozdnm)
 	health -= damage;
 	get_node("Statemachine").change_state_to("Hurt");
+	
+func _ready():
+	get_node("Sprite").material.set_shader_param("flash_modifier", 0.0)
 	
 	

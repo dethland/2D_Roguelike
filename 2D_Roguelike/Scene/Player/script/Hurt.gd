@@ -16,3 +16,4 @@ func hurt():
 		sucessful_parry()
 	else:
 		print("ouch")
+
