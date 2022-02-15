@@ -1,3 +1,8 @@
 Character 1: "Ghost1.png"
 Species: The Living Undead (?), Vivus Nonmortuus
 Weakness(es): fire/heat
+
+Protag:
+Name: Onuris
+Species: Human, Homo Sapien Sapien
+Weakness(es): attacks
