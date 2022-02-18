@@ -6,3 +6,7 @@ Protag:
 Name: Onuris
 Species: Human, Homo Sapien Sapien
 Weakness(es): attacks
+Weapons: Khopesh, Battle Axe
+
+Enemy:
+Eye Guy
