@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tile4.png-d3422b206309ab9aff99631228a6d24f.stex"
+path="res://.import/enemy_walkt.png-ddde732321e09e35f999b6c0a9b64653.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Image/tile4.png"
-dest_files=[ "res://.import/tile4.png-d3422b206309ab9aff99631228a6d24f.stex" ]
+source_file="res://Asset/Animation/Enemy/enemy_walkt.png"
+dest_files=[ "res://.import/enemy_walkt.png-ddde732321e09e35f999b6c0a9b64653.stex" ]
 
 [params]
 
