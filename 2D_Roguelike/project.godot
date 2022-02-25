@@ -8,16 +8,6 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Node2D",
-"class": "Idle",
-"language": "GDScript",
-"path": "res://Scene/Enemy/script/Idle.gd"
-} ]
-_global_script_class_icons={
-"Idle": ""
-}
-
 [application]
 
 config/name="2D_Roguelike"
@@ -27,6 +17,16 @@ config/icon="res://Asset/roguelike_logo.png"
 [autoload]
 
 global_tool="*res://global_tool.gd"
+
+[display]
+
+window/size/width=640
+window/size/height=360
+window/stretch/mode="viewport"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/smoothing/plugin.cfg" )
 
 [global]
 
@@ -80,4 +80,8 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+quality/intended_usage/framebuffer_allocation=0
+quality/intended_usage/framebuffer_allocation.mobile=0
+2d/snapping/use_gpu_pixel_snap=true
+environment/default_clear_color=Color( 0.458824, 0.0352941, 0.0352941, 1 )
 environment/default_environment="res://default_env.tres"
