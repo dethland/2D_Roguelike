@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/enemy_walkt.png-ddde732321e09e35f999b6c0a9b64653.stex"
+path="res://.import/tile7.png-bbbca95ffe98ab79cd3eed53017c9e49.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Animation/Enemy/enemy_walkt.png"
-dest_files=[ "res://.import/enemy_walkt.png-ddde732321e09e35f999b6c0a9b64653.stex" ]
+source_file="res://Asset/Image/tile7.png"
+dest_files=[ "res://.import/tile7.png-bbbca95ffe98ab79cd3eed53017c9e49.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
