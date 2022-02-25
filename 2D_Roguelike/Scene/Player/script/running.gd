@@ -30,6 +30,7 @@ func _physics_process(delta):
 			statemachine.change_state_to("ChargeSkill")
 			
 		apply_gravity(fall_gravity, delta)
+		
 			
 #		if not player.is_on_floor():
 #			statemachine.change_state_to("Jump")

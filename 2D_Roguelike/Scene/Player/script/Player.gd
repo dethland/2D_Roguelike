@@ -20,6 +20,7 @@ func get_hit(from_object, damage):
 	get_node("Statemachine").change_state_to("Hurt");
 	
 func _ready():
-	get_node("Sprite").material.set_shader_param("flash_modifier", 0.0)
+	get_node("AnimationSprites/Run").material.set_shader_param("flash_modifier", 0.0)
+	pass
 	
 	
