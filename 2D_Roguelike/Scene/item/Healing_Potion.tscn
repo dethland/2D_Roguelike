@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scene/item/Item.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scene/item/HP_healing.gd" type="Script" id=2]
+
+[node name="Healing_Potion" instance=ExtResource( 1 )]
+item_name = "Healing_Potion"
+item_path = "res://Scene/item/Healing_Potion.tscn"
+item_fun_path = "res://Scene/item/HP_healing.gd"
+
+[node name="HP_healing" type="Node2D" parent="." index="3"]
+script = ExtResource( 2 )
+
+[connection signal="body_entered" from="." to="HP_healing" method="_on_Healing_Potion_body_entered"]

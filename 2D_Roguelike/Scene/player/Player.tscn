@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Scene/Player/script/running.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player/script/Player.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Scene/System/Hitbox.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scene/Shader/flash.gdshader" type="Shader" id=10]
 [ext_resource path="res://Scene/player/script/ChargeSkill.gd" type="Script" id=11]
+[ext_resource path="res://Scene/Player/script/Package.gd" type="Script" id=12]
 
 [sub_resource type="GDScript" id=35]
 script/source = "extends \"res://Scene/Player/script/player_script_template.gd\"
@@ -318,6 +319,9 @@ polygon = PoolVector2Array( 5, -16, 4.93808, 19.9268, 29.1249, 29.1295, 29, -23 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 0.4, 0.4 )
+
+[node name="Package" type="Node2D" parent="."]
+script = ExtResource( 12 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Attack" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Hurt" method="_on_AnimationPlayer_animation_finished"]
