@@ -11,7 +11,14 @@ func test_parry() -> bool:
 	return is_parry
 	
 func sucessful_parry() -> void:
+	is_parry = false
+	statemachine.change_state_to("Idle")
 	print("parried")
+
+func unsucessful_parry() -> void:
+	is_parry = false
+	statemachine.change_state_to("Idle")
+	print("failed")
 
 func _physics_process(delta):
 	#print(parry_lockout)
