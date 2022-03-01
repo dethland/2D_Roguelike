@@ -1,16 +1,17 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Scene/Player/script/running.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player/script/Player.gd" type="Script" id=2]
 [ext_resource path="res://Scene/Player/script/Statemachine.gd" type="Script" id=3]
 [ext_resource path="res://Scene/Player/script/Hurt.gd" type="Script" id=4]
-[ext_resource path="res://Scene/player/CharacterDraft1SpriteSheet_WithHurt.png" type="Texture" id=5]
+[ext_resource path="res://Asset/Image/character_run_animation.png" type="Texture" id=5]
 [ext_resource path="res://Scene/Player/script/Attack.gd" type="Script" id=6]
 [ext_resource path="res://Scene/player/script/Jump.gd" type="Script" id=7]
 [ext_resource path="res://Scene/Player/script/Idle.gd" type="Script" id=8]
 [ext_resource path="res://Scene/System/Hitbox.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scene/Shader/flash.gdshader" type="Shader" id=10]
 [ext_resource path="res://Scene/player/script/ChargeSkill.gd" type="Script" id=11]
+[ext_resource path="res://Scene/Player/script/Package.gd" type="Script" id=12]
 
 [sub_resource type="GDScript" id=35]
 script/source = "extends \"res://Scene/Player/script/player_script_template.gd\"
@@ -19,12 +20,12 @@ script/source = "extends \"res://Scene/Player/script/player_script_template.gd\"
 "
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 12.5004, 27.0054 )
+extents = Vector2( 16.0828, 27.0054 )
 
 [sub_resource type="ShaderMaterial" id=40]
 shader = ExtResource( 10 )
 shader_param/flash_color = Color( 1, 1, 1, 1 )
-shader_param/flash_modifier = 0.0
+shader_param/flash_modifier = 1.0
 
 [sub_resource type="Animation" id=38]
 length = 0.001
@@ -51,6 +52,18 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 5 ]
 }
 
 [sub_resource type="Animation" id=28]
@@ -121,10 +134,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 0, 1, 2, 3, 4 ]
+"values": [ 4 ]
 }
 
 [sub_resource type="Animation" id=29]
@@ -191,6 +204,7 @@ tracks/1/keys = {
 resource_name = "run"
 length = 0.8
 loop = true
+step = 0.03
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -198,10 +212,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.03, 0.06, 0.09, 0.12, 0.15, 0.18, 0.21, 0.24, 0.27, 0.3, 0.33, 0.36, 0.39, 0.42, 0.45, 0.48, 0.51, 0.54, 0.57, 0.6, 0.63, 0.66, 0.69, 0.72, 0.75, 0.78 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 8, 9, 10, 11, 12, 13, 14, 15 ]
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 ]
 }
 
 [sub_resource type="Animation" id=32]
@@ -269,15 +283,15 @@ script = SubResource( 35 )
 script = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 4.51208, 4.9562 )
+position = Vector2( 1.40699, -3.8879 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 material = SubResource( 40 )
 position = Vector2( 1, 0 )
 texture = ExtResource( 5 )
-hframes = 8
-vframes = 6
+hframes = 4
+vframes = 7
 frame = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -299,11 +313,15 @@ animation_name = "melee"
 is_able = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitboxs/Hitbox"]
-position = Vector2( 12.3055, 2.9511 )
+position = Vector2( 12.8674, -5.1023 )
 polygon = PoolVector2Array( 5, -16, 4.93808, 19.9268, 29.1249, 29.1295, 29, -23 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+zoom = Vector2( 0.4, 0.4 )
+
+[node name="Package" type="Node2D" parent="."]
+script = ExtResource( 12 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Attack" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Hurt" method="_on_AnimationPlayer_animation_finished"]

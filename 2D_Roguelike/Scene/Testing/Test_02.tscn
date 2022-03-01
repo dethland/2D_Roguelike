@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scene/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Enemy/Enemy.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/System/TileMap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/item/Healing_Potion.tscn" type="PackedScene" id=5]
 
 [node name="Test_02" type="Node2D"]
 
@@ -14,3 +15,12 @@ position = Vector2( 564, 240 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 121, 231 )
+
+[node name="Healing_Potion" parent="." instance=ExtResource( 5 )]
+position = Vector2( 101, 505 )
+
+[node name="Healing_Potion2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 236, 507 )
+
+[node name="Healing_Potion3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 423, 337 )
