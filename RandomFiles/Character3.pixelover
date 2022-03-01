@@ -10,8 +10,8 @@ object_name="Canvas"
 canvas_max_size=Vector3( 512, 288, 0 )
 canvas_fit_childs=true
 object_position=Vector2( 257, 145 )
-object_size=Vector3( 111, 117, 0 )
-object_pivot=Vector2( 56, 59 )
+object_size=Vector3( 107, 109, 0 )
+object_pivot=Vector2( 54, 55 )
 
 [shader.2]
 
@@ -158,7 +158,7 @@ bone_length=16.0
 bone_rest_position=Vector2( -16, 0 )
 object_position=Vector2( 37, 34 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=274.6
+object_rotation=-93.7
 object_skew=0.0
 bone_rest_rotation=-0.1
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -176,7 +176,7 @@ bone_length=9.0
 bone_rest_position=Vector2( 0, -16 )
 object_position=Vector2( 16, 0 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=353.5
+object_rotation=355.2
 object_skew=0.0
 bone_rest_rotation=-90.2
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -270,7 +270,7 @@ bone_length=9.0
 bone_rest_position=Vector2( -6, -13 )
 object_position=Vector2( 13, -6 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=143.1
+object_rotation=107.6
 object_skew=0.0
 bone_rest_rotation=102.8
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -326,7 +326,7 @@ bone_length=10.0
 bone_rest_position=Vector2( 9, 0 )
 object_position=Vector2( 9, 0 )
 object_scale=Vector3( 100, 100, 0 )
-object_rotation=255.2
+object_rotation=-18.8
 object_skew=0.0
 bone_rest_rotation=-28.2
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -365,7 +365,7 @@ effect_trail=false
 effect_trail_time=0.1
 effect_trail_quality=10.0
 object_position=Vector2( 6, -7 )
-object_scale=Vector3( 100.529, 99.578, 1.00955 )
+object_scale=Vector3( 100, 100, 1 )
 object_rotation=-74.6
 object_pivot_percent=Vector2( 0.5, 0.5 )
 object_skew=0.0
@@ -436,9 +436,9 @@ object_visible=true
 object_basis=0
 bone_length=9.0
 bone_rest_position=Vector2( 13, 5 )
-object_position=Vector2( 13, 5 )
+object_position=Vector2( 4, 4 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=223.0
+object_rotation=85.6
 object_skew=0.0
 bone_rest_rotation=179.9
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -472,7 +472,7 @@ object_deform_top_right=Vector2( 0, 0 )
 object_deform_bottom_left=Vector2( 0, 0 )
 object_deform_bottom_right=Vector2( 0, 0 )
 object_opacity=100.0
-object_zlayer=-1.0
+object_zlayer=16.0
 effect_trail=false
 effect_trail_time=0.1
 effect_trail_quality=10.0
@@ -494,7 +494,7 @@ bone_length=8.0
 bone_rest_position=Vector2( 9, 0 )
 object_position=Vector2( 8, 0 )
 object_scale=Vector3( 83.256, 83.256, 1 )
-object_rotation=279.2
+object_rotation=16.9
 object_skew=0.0
 bone_rest_rotation=-5.2
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -528,7 +528,7 @@ object_deform_top_right=Vector2( 0, 0 )
 object_deform_bottom_left=Vector2( 0, 0 )
 object_deform_bottom_right=Vector2( 0, 0 )
 object_opacity=100.0
-object_zlayer=-1.0
+object_zlayer=16.0
 effect_trail=false
 effect_trail_time=0.347
 effect_trail_quality=90.0
@@ -588,7 +588,7 @@ bone_length=13.0
 bone_rest_position=Vector2( -2, 1 )
 object_position=Vector2( 36, 34 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=98.6
+object_rotation=97.8
 object_skew=0.0
 bone_rest_rotation=101.3
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -644,7 +644,7 @@ bone_length=16.0
 bone_rest_position=Vector2( -5, 14 )
 object_position=Vector2( 14, 0 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=45.0
+object_rotation=1.1
 object_skew=0.0
 bone_rest_rotation=96.2
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -700,7 +700,7 @@ bone_length=13.0
 bone_rest_position=Vector2( 1, 1 )
 object_position=Vector2( 39, 35 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=36.6
+object_rotation=61.5
 object_skew=0.0
 bone_rest_rotation=70.9
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -718,7 +718,7 @@ bone_length=16.0
 bone_rest_position=Vector2( 14, 0 )
 object_position=Vector2( 14, 0 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=35.2
+object_rotation=26.1
 object_skew=0.0
 bone_rest_rotation=18.8
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -1906,27 +1906,6 @@ disabled=false
 collapsed=false
 order=11
 
-[object_tracks.0.11]
-
-inputs={
-"object_zlayer": {
-"disabled": false,
-"order": 0,
-"step": 1.0,
-"tracks": 18,
-"tracks_data": [ {
-"id": 18,
-"keys": [  ],
-"modulo": 0.0,
-"type": 3,
-"wrap": true
-} ]
-}
-}
-disabled=false
-collapsed=false
-order=12
-
 [animation.1]
 
 animation_name="stare_at_palm"
@@ -2847,7 +2826,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 92,
 "tracks_data": [ {
@@ -2865,7 +2844,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 46, 47 ),
 "tracks_data": [ {
@@ -2964,7 +2943,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 93,
 "tracks_data": [ {
@@ -2982,7 +2961,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 48, 49 ),
 "tracks_data": [ {
@@ -3063,7 +3042,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 94,
 "tracks_data": [ {
@@ -3081,7 +3060,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 50, 51 ),
 "tracks_data": [ {
@@ -3162,7 +3141,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 95,
 "tracks_data": [ {
@@ -3180,7 +3159,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 52, 53 ),
 "tracks_data": [ {
@@ -3261,7 +3240,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 96,
 "tracks_data": [ {
@@ -3279,7 +3258,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 54, 55 ),
 "tracks_data": [ {
@@ -3378,7 +3357,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 97,
 "tracks_data": [ {
@@ -3396,7 +3375,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 56, 57 ),
 "tracks_data": [ {
@@ -3495,7 +3474,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 98,
 "tracks_data": [ {
@@ -3513,7 +3492,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 58, 59 ),
 "tracks_data": [ {
@@ -3594,7 +3573,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 99,
 "tracks_data": [ {
@@ -3612,7 +3591,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 60, 61 ),
 "tracks_data": [ {
@@ -3713,7 +3692,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 100,
 "tracks_data": [ {
@@ -3731,7 +3710,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 62, 63 ),
 "tracks_data": [ {
@@ -3812,7 +3791,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 101,
 "tracks_data": [ {
@@ -3830,7 +3809,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 64, 65 ),
 "tracks_data": [ {
@@ -3931,7 +3910,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 102,
 "tracks_data": [ {
@@ -3949,7 +3928,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 66, 67 ),
 "tracks_data": [ {
@@ -4030,7 +4009,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 103,
 "tracks_data": [ {
@@ -4048,7 +4027,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 68, 69 ),
 "tracks_data": [ {
@@ -4129,7 +4108,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 104,
 "tracks_data": [ {
@@ -4147,7 +4126,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 70, 71 ),
 "tracks_data": [ {
@@ -4246,7 +4225,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 105,
 "tracks_data": [ {
@@ -4264,7 +4243,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 72, 73 ),
 "tracks_data": [ {
@@ -4363,7 +4342,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 106,
 "tracks_data": [ {
@@ -4381,7 +4360,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 74, 75 ),
 "tracks_data": [ {
@@ -4482,7 +4461,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 107,
 "tracks_data": [ {
@@ -4500,7 +4479,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 76, 77 ),
 "tracks_data": [ {
@@ -4581,7 +4560,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 108,
 "tracks_data": [ {
@@ -4599,7 +4578,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 78, 79 ),
 "tracks_data": [ {
@@ -4698,7 +4677,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 109,
 "tracks_data": [ {
@@ -4716,7 +4695,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 80, 81 ),
 "tracks_data": [ {
@@ -4797,7 +4776,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 110,
 "tracks_data": [ {
@@ -4815,7 +4794,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 82, 83 ),
 "tracks_data": [ {
@@ -4914,7 +4893,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 111,
 "tracks_data": [ {
@@ -4932,7 +4911,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 84, 85 ),
 "tracks_data": [ {
@@ -5013,7 +4992,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 112,
 "tracks_data": [ {
@@ -5031,7 +5010,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 86, 87 ),
 "tracks_data": [ {
@@ -5112,7 +5091,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 113,
 "tracks_data": [ {
@@ -5130,7 +5109,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 88, 89 ),
 "tracks_data": [ {
@@ -5229,7 +5208,7 @@ inputs={
 },
 "object_rotation": {
 "disabled": false,
-"order": 1,
+"order": 2,
 "step": 0.1,
 "tracks": 114,
 "tracks_data": [ {
@@ -5247,7 +5226,7 @@ inputs={
 },
 "object_scale": {
 "disabled": false,
-"order": 2,
+"order": 1,
 "step": 0.001,
 "tracks": Vector2( 90, 91 ),
 "tracks_data": [ {
@@ -5375,65 +5354,6 @@ inputs={
 disabled=false
 collapsed=false
 order=24
-
-[object_tracks.3.2]
-
-inputs={
-"shader_modulate_color": {
-"disabled": false,
-"order": 0,
-"step": 0.0,
-"tracks": Color( 153, 154, 155, 156 ),
-"tracks_data": [ {
-"id": 153,
-"keys": [ {
-"in": Vector2( 0, 0 ),
-"out": Vector2( 0, 0 ),
-"time": 0.0,
-"value": 1.0
-} ],
-"modulo": 0.0,
-"type": 3,
-"wrap": true
-}, {
-"id": 154,
-"keys": [ {
-"in": Vector2( 0, 0 ),
-"out": Vector2( 0, 0 ),
-"time": 0.0,
-"value": 1.0
-} ],
-"modulo": 0.0,
-"type": 3,
-"wrap": true
-}, {
-"id": 155,
-"keys": [ {
-"in": Vector2( 0, 0 ),
-"out": Vector2( 0, 0 ),
-"time": 0.0,
-"value": 1.0
-} ],
-"modulo": 0.0,
-"type": 3,
-"wrap": true
-}, {
-"id": 156,
-"keys": [ {
-"in": Vector2( 0, 0 ),
-"out": Vector2( 0, 0 ),
-"time": 0.0,
-"value": 1.0
-} ],
-"modulo": 0.0,
-"type": 3,
-"wrap": true
-} ]
-}
-}
-disabled=false
-collapsed=false
-order=25
 
 [animation.4]
 
@@ -6422,7 +6342,7 @@ speed_scale=1.5
 snap=true
 step=0.1
 zoom=2.784
-loop=false
+loop=true
 collapsed=false
 length=0.3
 
@@ -11817,29 +11737,6 @@ disabled=false
 collapsed=false
 order=10
 
-[object_tracks.10.30]
-
-inputs={
-"object_visible": {
-"disabled": false,
-"order": 0,
-"step": 0.0,
-"tracks": 33,
-"tracks_data": [ {
-"id": 33,
-"keys": [ {
-"time": 0.0,
-"value": false
-} ],
-"type": 0,
-"wrap": true
-} ]
-}
-}
-disabled=false
-collapsed=false
-order=11
-
 [animation.11]
 
 animation_name="skill_use"
@@ -12684,67 +12581,9 @@ disabled=false
 collapsed=false
 order=11
 
-[object_tracks.11.11]
-
-inputs={
-"object_zlayer": {
-"disabled": false,
-"order": 0,
-"step": 1.0,
-"tracks": 36,
-"tracks_data": [ {
-"id": 36,
-"keys": [ {
-"in": Vector2( 0, 0 ),
-"in_normalized": Vector2( 0, 0 ),
-"out": Vector2( 0, 0 ),
-"out_normalized": Vector2( 0, 0 ),
-"time": 0.0,
-"value": 10.0
-}, {
-"in": Vector2( 0, 0 ),
-"in_normalized": Vector2( 0, 0 ),
-"out": Vector2( 0, 0 ),
-"out_normalized": Vector2( 0, 0 ),
-"time": 0.1,
-"value": 0.0
-} ],
-"modulo": 0.0,
-"type": 3,
-"wrap": true
-} ]
-}
-}
-disabled=false
-collapsed=false
-order=12
-
-[object_tracks.11.30]
-
-inputs={
-"object_visible": {
-"disabled": false,
-"order": 0,
-"step": 0.0,
-"tracks": 37,
-"tracks_data": [ {
-"id": 37,
-"keys": [ {
-"time": 0.0,
-"value": false
-} ],
-"type": 0,
-"wrap": true
-} ]
-}
-}
-disabled=false
-collapsed=false
-order=13
-
 [settings]
 
-show_bones=false
+export_path="C:/Users/misha/Documents/RCOS/2D_Roguelike_New/RandomFiles/Character3_pa.png"
 export_views={
 "Depth buffer": true,
 "No effects": true,
