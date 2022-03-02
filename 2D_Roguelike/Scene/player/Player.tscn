@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Scene/Player/script/running.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player/script/Player.gd" type="Script" id=2]
@@ -9,19 +9,18 @@
 [ext_resource path="res://Scene/player/script/Jump.gd" type="Script" id=7]
 [ext_resource path="res://Scene/Player/script/Idle.gd" type="Script" id=8]
 [ext_resource path="res://Scene/System/Hitbox.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scene/Shader/SmoothPixel.shader" type="Shader" id=10]
 [ext_resource path="res://Scene/player/script/ChargeSkill.gd" type="Script" id=11]
 [ext_resource path="res://Scene/Player/script/Package.gd" type="Script" id=12]
 
-[sub_resource type="GDScript" id=1]
-script/source = "extends \"res://Scene/Player/script/player_script_template.gd\"
-
-
-"
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16.0828, 27.0054 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 16.0828, 27.0054 )
 
-[sub_resource type="ShaderMaterial" id=3]
+[sub_resource type="ShaderMaterial" id=14]
+shader = ExtResource( 10 )
 
 [sub_resource type="Animation" id=4]
 length = 0.001
@@ -247,9 +246,7 @@ tracks/0/keys = {
 "values": [ 42, 43, 44, 44, 44, 44 ]
 }
 
-[node name="Player" type="KinematicBody2D" groups=[
-"Player",
-]]
+[node name="Player" type="KinematicBody2D" groups=["Player"]]
 collision_layer = 4
 script = ExtResource( 2 )
 
@@ -285,7 +282,7 @@ position = Vector2( 1.40699, -3.8879 )
 shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-material = SubResource( 3 )
+material = SubResource( 14 )
 position = Vector2( 1, 0 )
 texture = ExtResource( 5 )
 hframes = 4
@@ -321,10 +318,10 @@ zoom = Vector2( 0.4, 0.4 )
 [node name="Package" type="Node2D" parent="."]
 script = ExtResource( 12 )
 
+[connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Attack" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Hurt" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Jump" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/ChargeSkill" method="_on_AnimationPlayer_animation_finished"]
-[connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Hurt" method="_on_AnimationPlayer_animation_finished"]
-[connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Attack" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="Hitboxs/Hitbox" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="body_entered" from="Hitboxs/Hitbox" to="Hitboxs/Hitbox" method="_on_Hitbox_body_entered"]
 [connection signal="body_exited" from="Hitboxs/Hitbox" to="Hitboxs/Hitbox" method="_on_Hitbox_body_exited"]

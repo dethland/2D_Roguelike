@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/character_run_animation.png-3aaff59a280230d33284d332b2bcf504.stex"
+path="res://.import/charge_attack_ui.png-1ec7c95c73c5c4e82196d779e20c5b30.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Image/character_run_animation.png"
-dest_files=[ "res://.import/character_run_animation.png-3aaff59a280230d33284d332b2bcf504.stex" ]
+source_file="res://Asset/Image/charge_attack_ui.png"
+dest_files=[ "res://.import/charge_attack_ui.png-1ec7c95c73c5c4e82196d779e20c5b30.stex" ]
 
 [params]
 
