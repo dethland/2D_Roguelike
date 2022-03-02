@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scene/System/Hitbox.tscn" type="PackedScene" id=1]
+
+[node name="test_hitbox" type="Node2D"]
+
+[node name="Hitbox" parent="." instance=ExtResource( 1 )]
+target = "Player"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
+polygon = PoolVector2Array( -7, -21, -20, 10, 12, 19, 34, -15, -8, -25 )
