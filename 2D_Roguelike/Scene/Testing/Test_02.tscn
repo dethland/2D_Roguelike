@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scene/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Enemy/Enemy.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/System/TileMap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Asset/Image/protobg.png" type="Texture" id=4]
 [ext_resource path="res://Scene/item/Healing_Potion.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Asset/Image/spikelayers.png" type="Texture" id=6]
 
 [node name="Test_02" type="Node2D"]
 
@@ -24,3 +26,40 @@ position = Vector2( 236, 507 )
 
 [node name="Healing_Potion3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 423, 337 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Protobg" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 388, 274 )
+scale = Vector2( 0.476852, 0.476852 )
+texture = ExtResource( 4 )
+
+[node name="Back spikes" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.2, 1 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/Back spikes"]
+position = Vector2( 314, 389 )
+scale = Vector2( 0.813889, 0.813889 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 0, 740, 640, 360 )
+
+[node name="Middle Spikes" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.3, 1 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/Middle Spikes"]
+position = Vector2( 259, 388 )
+scale = Vector2( 0.813889, 0.813889 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 60, 370, 580, 360 )
+
+[node name="Front Spikes" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.5, 1 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Front Spikes"]
+position = Vector2( 256, 389 )
+scale = Vector2( 0.813889, 0.813889 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 640, 360 )

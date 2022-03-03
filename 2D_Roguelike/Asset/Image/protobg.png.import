@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/roguelike_logo.png-9926d5bbd8869011bbace335bb16481f.stex"
+path="res://.import/protobg.png-46260d1fd7810f350fd30bb75793a1f1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/roguelike_logo.png"
-dest_files=[ "res://.import/roguelike_logo.png-9926d5bbd8869011bbace335bb16481f.stex" ]
+source_file="res://Asset/Image/protobg.png"
+dest_files=[ "res://.import/protobg.png-46260d1fd7810f350fd30bb75793a1f1.stex" ]
 
 [params]
 
