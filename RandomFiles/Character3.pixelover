@@ -10,16 +10,16 @@ object_name="Canvas"
 canvas_max_size=Vector3( 512, 288, 0 )
 canvas_fit_childs=true
 object_position=Vector2( 257, 145 )
-object_size=Vector3( 94, 112, 0 )
+object_size=Vector3( 107, 110, 0 )
 object_pivot_preset=0
-object_pivot=Vector2( 48, 57 )
+object_pivot=Vector2( 55, 56 )
 
 [shader.2]
 
 object_name="Default shader"
 object_path=Object(Object,"script":Resource( "res://script/path_container.gd"),"absolute_path":"","relative_path":"","favorite":false,"is_folder":false)
 
-shader_modulate_color=Color( 1, 0.5, 0.5, 1 )
+shader_modulate_color=Color( 1, 0.835, 0.835, 1 )
 shader_hue_shift=0.0
 shader_brightness=100.0
 shader_contrast=100.0
@@ -113,7 +113,7 @@ sharp_bilinear=false
 mipmaps=false
 fill_color=Color( 1, 1, 1, 1 )
 image_flip_v=false
-object_visible=true
+object_visible=false
 object_basis=0
 object_deform_top_left=Vector2( 0, 0 )
 object_deform_top_right=Vector2( 0, 0 )
@@ -141,7 +141,7 @@ object_visible=true
 object_basis=0
 bone_length=66.0
 bone_rest_position=Vector2( -36, -35 )
-object_position=Vector2( -36, -34 )
+object_position=Vector2( -36, -35 )
 object_scale=Vector3( 100, 100, 1 )
 object_rotation=1.8
 object_skew=0.0
@@ -161,7 +161,7 @@ bone_length=16.0
 bone_rest_position=Vector2( -16, 0 )
 object_position=Vector2( 37, 34 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=276.2
+object_rotation=-93.7
 object_skew=0.0
 bone_rest_rotation=-0.1
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -179,7 +179,7 @@ bone_length=9.0
 bone_rest_position=Vector2( 0, -16 )
 object_position=Vector2( 16, 0 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=348.2
+object_rotation=355.2
 object_skew=0.0
 bone_rest_rotation=-90.2
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -275,9 +275,9 @@ object_visible=true
 object_basis=0
 bone_length=9.0
 bone_rest_position=Vector2( -6, -13 )
-object_position=Vector2( 14, -6 )
+object_position=Vector2( 13, -6 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=174.6
+object_rotation=107.6
 object_skew=0.0
 bone_rest_rotation=102.8
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -335,7 +335,7 @@ bone_length=10.0
 bone_rest_position=Vector2( 9, 0 )
 object_position=Vector2( 9, 0 )
 object_scale=Vector3( 100, 100, 0 )
-object_rotation=270.3
+object_rotation=339.2
 object_skew=0.0
 bone_rest_rotation=-28.2
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -421,7 +421,7 @@ sharp_bilinear=false
 mipmaps=false
 fill_color=Color( 1, 1, 1, 1 )
 image_flip_v=false
-object_visible=false
+object_visible=true
 object_basis=0
 object_deform_top_left=Vector2( 0, 0 )
 object_deform_top_right=Vector2( 0, 0 )
@@ -429,7 +429,7 @@ object_deform_bottom_left=Vector2( 0, 0 )
 object_deform_bottom_right=Vector2( 0, 0 )
 object_opacity=100.0
 object_zlayer=2.0
-effect_trail=false
+effect_trail=true
 effect_trail_time=0.014
 effect_trail_quality=10.0
 object_position=Vector2( 13, 2 )
@@ -449,9 +449,9 @@ object_visible=true
 object_basis=0
 bone_length=9.0
 bone_rest_position=Vector2( 13, 5 )
-object_position=Vector2( 14, 5 )
+object_position=Vector2( 4, 4 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=198.5
+object_rotation=85.6
 object_skew=0.0
 bone_rest_rotation=179.9
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -486,7 +486,7 @@ object_deform_top_right=Vector2( 0, 0 )
 object_deform_bottom_left=Vector2( 0, 0 )
 object_deform_bottom_right=Vector2( 0, 0 )
 object_opacity=100.0
-object_zlayer=0.0
+object_zlayer=-1.0
 effect_trail=false
 effect_trail_time=0.1
 effect_trail_quality=10.0
@@ -509,7 +509,7 @@ bone_length=8.0
 bone_rest_position=Vector2( 9, 0 )
 object_position=Vector2( 8, 0 )
 object_scale=Vector3( 83.256, 83.256, 1 )
-object_rotation=265.6
+object_rotation=370.3
 object_skew=0.0
 bone_rest_rotation=-5.2
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -544,12 +544,12 @@ object_deform_top_right=Vector2( 0, 0 )
 object_deform_bottom_left=Vector2( 0, 0 )
 object_deform_bottom_right=Vector2( 0, 0 )
 object_opacity=100.0
-object_zlayer=16.0
+object_zlayer=-1.0
 effect_trail=false
 effect_trail_time=0.347
 effect_trail_quality=90.0
 object_position=Vector2( 3, 6 )
-object_scale=Vector3( 99.467, 99.467, 1 )
+object_scale=Vector3( 100, 100, 1 )
 object_rotation=-80.4
 object_pivot_preset=0
 object_pivot_percent=Vector2( 0.5, 0.5 )
@@ -607,7 +607,7 @@ bone_length=13.0
 bone_rest_position=Vector2( -2, 1 )
 object_position=Vector2( 36, 34 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=89.5
+object_rotation=97.8
 object_skew=0.0
 bone_rest_rotation=101.3
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -665,7 +665,7 @@ bone_length=16.0
 bone_rest_position=Vector2( -5, 14 )
 object_position=Vector2( 14, 0 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=100.1
+object_rotation=1.1
 object_skew=0.0
 bone_rest_rotation=96.2
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -721,9 +721,9 @@ object_visible=true
 object_basis=0
 bone_length=13.0
 bone_rest_position=Vector2( 1, 1 )
-object_position=Vector2( 38, 35 )
+object_position=Vector2( 39, 35 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=58.7
+object_rotation=61.5
 object_skew=0.0
 bone_rest_rotation=70.9
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -741,7 +741,7 @@ bone_length=16.0
 bone_rest_position=Vector2( 14, 0 )
 object_position=Vector2( 14, 0 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=22.6
+object_rotation=26.1
 object_skew=0.0
 bone_rest_rotation=18.8
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -919,7 +919,7 @@ inputs={
 "out": Vector2( 0, 0 ),
 "out_normalized": Vector2( 0, 0 ),
 "time": 0.667,
-"value": 74.9
+"value": 67.3
 }, {
 "in": Vector2( 0, 0 ),
 "in_normalized": Vector2( 0, 0 ),
@@ -1046,9 +1046,11 @@ inputs={
 "value": 11.4
 }, {
 "in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
 "out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
 "time": 0.667,
-"value": 28.5
+"value": 36.3
 }, {
 "in": Vector2( 0, 0 ),
 "in_normalized": Vector2( 0, 0 ),
@@ -1208,6 +1210,13 @@ inputs={
 "out_normalized": Vector2( 0, 0 ),
 "time": 0.56,
 "value": 108.4
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.667,
+"value": 75.1
 }, {
 "in": Vector2( 0, 0 ),
 "in_normalized": Vector2( 0, 0 ),
@@ -12794,12 +12803,11 @@ order=11
 
 [settings]
 
-snap_grid=false
-snap_axes=false
-export_path="C:/Users/dethl/Github/2D_Roguelike/RandomFiles/Character3_pa.png"
 export_views={
 "Depth buffer": true,
 "No effects": true,
 "Normal buffer": true,
 "Preview": true
 }
+export_anim_spritesheet=true
+export_anim_spritesheet_size=5.0
