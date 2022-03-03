@@ -12,9 +12,7 @@
 [ext_resource path="res://Scene/Shader/SmoothPixel.shader" type="Shader" id=10]
 [ext_resource path="res://Scene/player/script/ChargeSkill.gd" type="Script" id=11]
 [ext_resource path="res://Scene/Player/script/Package.gd" type="Script" id=12]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16.0828, 27.0054 )
+[ext_resource path="res://Scene/Player/script/Animator.gd" type="Script" id=13]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 16.0828, 27.0054 )
@@ -271,9 +269,6 @@ script = ExtResource( 7 )
 jump_height = 200.0
 horizental_speed = 300
 
-[node name="Parry" type="Node2D" parent="Statemachine"]
-script = SubResource( 1 )
-
 [node name="ChargeSkill" type="Node2D" parent="Statemachine"]
 script = ExtResource( 11 )
 
@@ -300,6 +295,19 @@ anims/melee = SubResource( 10 )
 anims/run = SubResource( 11 )
 anims/skill_charge = SubResource( 12 )
 anims/skill_use = SubResource( 13 )
+script = ExtResource( 13 )
+
+[node name="run" type="Sprite" parent="AnimationPlayer"]
+
+[node name="melee" type="Sprite" parent="AnimationPlayer"]
+
+[node name="hurt" type="Sprite" parent="AnimationPlayer"]
+
+[node name="idle" type="Sprite" parent="AnimationPlayer"]
+
+[node name="jump" type="Sprite" parent="AnimationPlayer"]
+
+[node name="skill_charge" type="Sprite" parent="AnimationPlayer"]
 
 [node name="Hitboxs" type="Node2D" parent="."]
 
@@ -312,7 +320,6 @@ position = Vector2( 12.8674, -5.1023 )
 polygon = PoolVector2Array( 5, -16, 4.93808, 19.9268, 29.1249, 29.1295, 29, -23 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-current = true
 zoom = Vector2( 0.4, 0.4 )
 
 [node name="Package" type="Node2D" parent="."]
