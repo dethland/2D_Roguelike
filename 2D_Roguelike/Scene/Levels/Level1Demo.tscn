@@ -63,3 +63,19 @@ position = Vector2( 722, 203 )
 
 [node name="Item2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1412, 361 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control/Panel"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Words"
