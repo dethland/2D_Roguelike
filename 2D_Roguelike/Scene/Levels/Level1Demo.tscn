@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scene/System/TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/item/Item.tscn" type="PackedScene" id=2]
@@ -6,6 +6,10 @@
 [ext_resource path="res://Asset/Image/protobg.png" type="Texture" id=4]
 [ext_resource path="res://Scene/Enemy/Enemy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Asset/Image/spikelayers.png" type="Texture" id=6]
+[ext_resource path="res://Scene/System/LoreFloatUI.gd" type="Script" id=7]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.215686, 0.215686, 0.215686, 0.521569 )
 
 [node name="Level" type="Node2D"]
 
@@ -64,18 +68,36 @@ position = Vector2( 722, 203 )
 [node name="Item2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1412, 361 )
 
-[node name="Control" type="Control" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel" type="Panel" parent="Control"]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="Panel" type="Panel" parent="CanvasLayer/Control"]
+margin_left = 162.0
+margin_top = 288.0
+margin_right = 454.0
+margin_bottom = 328.0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Label" type="Label" parent="Control/Panel"]
-margin_right = 40.0
-margin_bottom = 14.0
-text = "Words"
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "[ Lore here ]"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="CanvasLayer/Control/Panel"]
+
+[connection signal="tween_completed" from="CanvasLayer/Control/Panel/Tween" to="CanvasLayer/Control/Panel" method="_on_Tween_tween_completed"]
