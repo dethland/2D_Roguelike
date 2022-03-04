@@ -44,6 +44,13 @@ texture = ExtResource( 6 )
 region_enabled = true
 region_rect = Rect2( 0, 740, 640, 360 )
 
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/Back spikes"]
+position = Vector2( 543, 476 )
+scale = Vector2( 0.813889, 0.813889 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 0, 970, 150, 130 )
+
 [node name="Middle Spikes" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.3, 1 )
 
@@ -54,11 +61,25 @@ texture = ExtResource( 6 )
 region_enabled = true
 region_rect = Rect2( 60, 370, 580, 360 )
 
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/Middle Spikes"]
+position = Vector2( 458, 387 )
+scale = Vector2( 0.813889, 0.813889 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 60, 370, 580, 360 )
+
 [node name="Front Spikes" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.5, 1 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Front Spikes"]
-position = Vector2( 256, 389 )
+position = Vector2( 191, 385 )
+scale = Vector2( 0.813889, 0.813889 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 640, 360 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/Front Spikes"]
+position = Vector2( 466, 388 )
 scale = Vector2( 0.813889, 0.813889 )
 texture = ExtResource( 6 )
 region_enabled = true
