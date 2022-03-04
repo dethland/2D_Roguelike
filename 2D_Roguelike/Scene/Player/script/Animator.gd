@@ -1,20 +1,26 @@
 extends AnimationPlayer
 
+onready var group = null;
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 	
+func get_group():
+	if (group != null): return
+	for child in get_parent().get_children():
+		if (child.name == "AnimGroup"):
+			group = child
+
+func hide_all():
+	for child in group.get_children():
+		child.visible = false;
+
 func hide_all_except(name:String):
-	for child in get_children():
+	for child in group.get_children():
 		# everything that is not requested name is set to invisible (pozdnm)
 		child.visible = child.name == name
 
 func _play(name:String):
-	hide_all_except(name)
+	get_group()
+	hide_all()
 	.play(name);
