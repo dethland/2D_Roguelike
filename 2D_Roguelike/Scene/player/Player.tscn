@@ -765,7 +765,7 @@ position = Vector2( 12.8674, -5.1023 )
 polygon = PoolVector2Array( 5, -16, 4.93808, 19.9268, 29.1249, 29.1295, 29, -23 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2( 0.4, 0.4 )
+current = true
 
 [node name="Package" type="Node2D" parent="."]
 script = ExtResource( 12 )
