@@ -23,9 +23,9 @@ func unsucessful_parry() -> void:
 
 func _physics_process(delta):
 	#print(parry_lockout)
-	if is_parry
+	if is_parry:
 		parry_duration -= delta
-		if parry_duration <= 0
+		if parry_duration <= 0:
 			statemachine.change_state_to("Idle")
 			is_parry = false
 
