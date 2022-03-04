@@ -4,7 +4,7 @@ var fall_gravity : float
 
 func turn_on()->void:
 	.turn_on()
-	animator.play("idle");
+	animator._play("idle");
 
 func _physics_process(delta):
 	# make the player face the correct direction (pozdnm)

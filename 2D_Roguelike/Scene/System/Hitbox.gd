@@ -26,6 +26,8 @@ func hurt():
 
 func _process(delta):
 	if is_able:
+		if Input.is_action_pressed("ui_down"):
+			hit_once = true
 		if hit_once:
 			hit_once = false
 			hurt()

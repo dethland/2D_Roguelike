@@ -2,7 +2,7 @@ extends "res://Scene/Player/script/Parry.gd"
 
 func turn_on()->void:
 	.turn_on()
-	animator.play("hurt");
+	animator._play("hurt");
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):

@@ -47,13 +47,13 @@ func _physics_process(delta)-> void:
 #			stop_timer=0
 #		stop_timer+=1
 		
-	if is_able:
+	if check_able():
 		enemy.move_and_slide(Vector2.ZERO, Vector2.UP)
 		if enemy.is_on_wall():
 			print("hit wall")
 		
 		walk()
-		apply_gravity(-98, delta)
+	apply_gravity(-98, delta)
 		
 		
 		

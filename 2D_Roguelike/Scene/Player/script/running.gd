@@ -9,7 +9,7 @@ var velocity = Vector2.ZERO
 
 func turn_on()->void:
 	.turn_on()
-	animator.play("run");
+	animator._play("run");
 
 func _physics_process(delta):
 	if is_able:
