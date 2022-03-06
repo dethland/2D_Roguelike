@@ -24,3 +24,6 @@ func _play(name:String):
 	get_group()
 	hide_all()
 	.play(name);
+	print(name)
+	
+
