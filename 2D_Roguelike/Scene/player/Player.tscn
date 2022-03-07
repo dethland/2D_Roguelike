@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Scene/Player/script/running.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player/script/Player.gd" type="Script" id=2]
@@ -13,7 +13,7 @@
 [ext_resource path="res://Scene/player/script/ChargeSkill.gd" type="Script" id=11]
 [ext_resource path="res://Scene/Player/script/Package.gd" type="Script" id=12]
 [ext_resource path="res://Scene/Player/script/Animator.gd" type="Script" id=13]
-[ext_resource path="res://Scene/Player/anim_sheets/run/Character3_pa_run.png" type="Texture" id=14]
+[ext_resource path="res://Asset/Animation/Run/Run_animation.png" type="Texture" id=14]
 [ext_resource path="res://Scene/Player/anim_sheets/attack_melee/Character3_pa_attack_melee.png" type="Texture" id=15]
 [ext_resource path="res://Scene/Player/anim_sheets/hurt/Character3_pa_hurt.png" type="Texture" id=16]
 [ext_resource path="res://Scene/Player/anim_sheets/idle/Character3_pa_idle.png" type="Texture" id=17]
@@ -28,6 +28,12 @@
 extents = Vector2( 16.0828, 27.0054 )
 
 [sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 10 )
+
+[sub_resource type="ShaderMaterial" id=14]
+shader = ExtResource( 10 )
+
+[sub_resource type="ShaderMaterial" id=15]
 shader = ExtResource( 10 )
 
 [sub_resource type="Animation" id=3]
@@ -682,12 +688,14 @@ frame = 5
 [node name="AnimGroup" type="Node2D" parent="."]
 
 [node name="run" type="Sprite" parent="AnimGroup"]
+material = SubResource( 14 )
 texture = ExtResource( 14 )
 hframes = 5
 vframes = 5
 
 [node name="melee" type="Sprite" parent="AnimGroup"]
 visible = false
+material = SubResource( 15 )
 texture = ExtResource( 15 )
 hframes = 5
 vframes = 4
