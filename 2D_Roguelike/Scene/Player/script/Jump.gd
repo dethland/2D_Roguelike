@@ -25,7 +25,7 @@ func _physics_process(delta):
 		velocity.x = direction * horizental_speed
 		if Input.is_action_just_pressed("ui_up") and not leave_floor:
 			velocity.y = -jump_velocity
-			animator.play("jump")
+			animator._play("jump")
 			leave_floor = true
 			
 		elif not player.is_on_floor():

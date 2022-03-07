@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Character3_pa_run.png-60af9cffc76132df3a4d0174942260f3.stex"
+path="res://.import/Character3_pa_run.png-0dcd5a4f9aad5ee2b129b258f21b4458.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/Player/anim_sheets/run/Character3_pa_run.png"
-dest_files=[ "res://.import/Character3_pa_run.png-60af9cffc76132df3a4d0174942260f3.stex" ]
+source_file="res://Scene/player/anim_sheets/run/Character3_pa_run.png"
+dest_files=[ "res://.import/Character3_pa_run.png-0dcd5a4f9aad5ee2b129b258f21b4458.stex" ]
 
 [params]
 

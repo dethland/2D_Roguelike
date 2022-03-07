@@ -1,6 +1,8 @@
 extends AnimationPlayer
 
 onready var group = null;
+var last_animation : String
+var second_last_animation : String
 
 func _ready():
 	pass
@@ -23,6 +25,8 @@ func hide_all():
 			child.visible = false
 	elif visible_count == 0:
 		print("error")
+		print("last animation: %s" % last_animation )
+		print("second last animation: %s" % second_last_animation)
 
 func hide_all_except(name:String):
 	for child in group.get_children():
@@ -33,6 +37,9 @@ func _play(name:String):
 	get_group()
 	hide_all()
 	.play(name);
+	second_last_animation = last_animation
+	last_animation = name
+	
 	
 
 	
