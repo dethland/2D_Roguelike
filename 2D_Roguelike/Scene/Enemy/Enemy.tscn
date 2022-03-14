@@ -99,7 +99,7 @@ rect_scale = Vector2( 0.91, 1 )
 custom_styles/fg = SubResource( 4 )
 custom_styles/bg = SubResource( 5 )
 step = 1.0
-value = 100.0
+value = 50.0
 percent_visible = false
 __meta__ = {
 "_edit_use_anchors_": false
