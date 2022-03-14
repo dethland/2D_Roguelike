@@ -8,13 +8,12 @@ func _ready():
 
 func _process(delta):
 	objs_in_area = detect.get_overlapping_bodies()
-
-func _physics_process(delta):
 	if objs_in_area.size() > 1:
 		for obj in objs_in_area:
 			if obj.get("is_player"):
 				not_able()
 				yield(get_tree().create_timer(3.0), "timeout")
 				print("enemy: attack")
+				pass
 	else:
 		is_able()
