@@ -720,7 +720,6 @@ hframes = 5
 vframes = 2
 
 [node name="idle" type="Sprite" parent="AnimGroup"]
-visible = false
 texture = ExtResource( 17 )
 hframes = 5
 vframes = 5
