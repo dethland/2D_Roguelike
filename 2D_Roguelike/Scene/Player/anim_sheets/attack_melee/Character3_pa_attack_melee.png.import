@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Character3_pa_attack_melee.png-5846636ac516c609d26a0d951cfe1e28.stex"
+path="res://.import/Character3_pa_attack_melee.png-e67212bbc7f9e76d82275386dad4c2db.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/Player/anim_sheets/attack_melee/Character3_pa_attack_melee.png"
-dest_files=[ "res://.import/Character3_pa_attack_melee.png-5846636ac516c609d26a0d951cfe1e28.stex" ]
+source_file="res://Scene/player/anim_sheets/attack_melee/Character3_pa_attack_melee.png"
+dest_files=[ "res://.import/Character3_pa_attack_melee.png-e67212bbc7f9e76d82275386dad4c2db.stex" ]
 
 [params]
 

@@ -8,6 +8,7 @@ export(String, "Player", "Enemy") var mob_type = "Player"
 
 func get_hit(from_object, damage):
 	# parry handling
+	print('something hit player')
 	if get_node("Statemachine").show_active_state() == "Parry":
 		# handle parry here
 		return	
