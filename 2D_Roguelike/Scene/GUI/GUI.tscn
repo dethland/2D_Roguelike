@@ -1,0 +1,37 @@
+[gd_scene format=2]
+
+[node name="GUI" type="MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 20.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 4.0
+margin_bottom = 14.0
+
+[node name="Bars" type="VBoxContainer" parent="HBoxContainer"]
+margin_bottom = 14.0
+
+[node name="Bar" type="HBoxContainer" parent="HBoxContainer/Bars"]
+margin_bottom = 14.0
+
+[node name="Count" type="MarginContainer" parent="HBoxContainer/Bars/Bar"]
+margin_bottom = 14.0
+
+[node name="BG" type="NinePatchRect" parent="HBoxContainer/Bars/Bar/Count"]
+margin_bottom = 14.0
+
+[node name="Title" type="TextureRect" parent="HBoxContainer/Bars/Bar/Count"]
+margin_bottom = 14.0
+
+[node name="Number" type="Label" parent="HBoxContainer/Bars/Bar/Count"]
+margin_bottom = 14.0
+
+[node name="Other" type="HBoxContainer" parent="HBoxContainer"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 14.0
