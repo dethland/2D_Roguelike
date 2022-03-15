@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lavastone_better.png-0d570df866dcfef87ed1ec539ac1a7b5.stex"
+path="res://.import/tile7.png-05e656004a5da14bbcaf1aa3b6fc7184.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Image/lavastone_better.png"
-dest_files=[ "res://.import/lavastone_better.png-0d570df866dcfef87ed1ec539ac1a7b5.stex" ]
+source_file="res://Asset/Image/Tiles/tile7.png"
+dest_files=[ "res://.import/tile7.png-05e656004a5da14bbcaf1aa3b6fc7184.stex" ]
 
 [params]
 
