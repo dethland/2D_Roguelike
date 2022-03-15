@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Character3_pa_attack_axe.png-5dc34ddcc1f7a9ffba2c632e1b8aab11.stex"
+path="res://.import/Character3_pa_attack_axe.png-1c00aa61af904d743d50da1ddbeeedea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/player/anim_sheets/attack_axe/Character3_pa_attack_axe.png"
-dest_files=[ "res://.import/Character3_pa_attack_axe.png-5dc34ddcc1f7a9ffba2c632e1b8aab11.stex" ]
+source_file="res://Scene/Player/anim_sheets/attack_axe/Character3_pa_attack_axe.png"
+dest_files=[ "res://.import/Character3_pa_attack_axe.png-1c00aa61af904d743d50da1ddbeeedea.stex" ]
 
 [params]
 
