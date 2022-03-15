@@ -91,15 +91,15 @@ position = Vector2( 0, -30 )
 script = ExtResource( 7 )
 
 [node name="ProgressBar" type="ProgressBar" parent="HealthBar"]
-margin_left = -29.0
+margin_left = -23.0
 margin_top = 6.0
-margin_right = 35.0
+margin_right = 24.0
 margin_bottom = 14.0
 rect_scale = Vector2( 0.91, 1 )
 custom_styles/fg = SubResource( 4 )
 custom_styles/bg = SubResource( 5 )
 step = 1.0
-value = 100.0
+value = 50.0
 percent_visible = false
 __meta__ = {
 "_edit_use_anchors_": false
