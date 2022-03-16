@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spikelayers.png-e65be499fa86b6cd60ba007c689c6012.stex"
+path="res://.import/tile1.png-3c9f4f41fc0e2d74b5980b621b75e806.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Image/spikelayers.png"
-dest_files=[ "res://.import/spikelayers.png-e65be499fa86b6cd60ba007c689c6012.stex" ]
+source_file="res://Asset/Image/Tiles/tile1.png"
+dest_files=[ "res://.import/tile1.png-3c9f4f41fc0e2d74b5980b621b75e806.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
