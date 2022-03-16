@@ -11,7 +11,7 @@
 [ext_resource path="res://Scene/System/Hitbox.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scene/Shader/SmoothPixel.shader" type="Shader" id=10]
 [ext_resource path="res://Scene/player/script/ChargeSkill.gd" type="Script" id=11]
-[ext_resource path="res://Scene/Player/script/Package.gd" type="Script" id=12]
+[ext_resource path="res://Scene/Player/Package/Package.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scene/Player/script/Animator.gd" type="Script" id=13]
 [ext_resource path="res://Asset/Animation/Run/Run_animation.png" type="Texture" id=14]
 [ext_resource path="res://Scene/Player/anim_sheets/attack_melee/Character3_pa_attack_melee.png" type="Texture" id=15]
@@ -655,6 +655,8 @@ bg_color = Color( 0.105882, 0.105882, 0.105882, 1 )
 collision_layer = 4
 script = ExtResource( 2 )
 
+[node name="Package" parent="." instance=ExtResource( 12 )]
+
 [node name="Statemachine" type="Node2D" parent="."]
 script = ExtResource( 3 )
 
@@ -780,9 +782,6 @@ polygon = PoolVector2Array( 5, -16, 4.93808, 19.9268, 29.1249, 29.1295, 29, -23 
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-
-[node name="Package" type="Node2D" parent="."]
-script = ExtResource( 12 )
 
 [node name="HealthBar" type="Node2D" parent="."]
 script = ExtResource( 24 )
