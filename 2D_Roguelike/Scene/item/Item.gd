@@ -1,14 +1,25 @@
 extends Area2D
 
-
+class_name Item
 export var item_name : String
 export var item_path:  String   # to find child node(healing_potion)
-export var item_fun_path:String # to find what to do function
+export var wtd_path:   String
 onready var anim_player:AnimationPlayer = get_node("AnimationPlayer")
+onready var player = global_tool.get_player()
 var Is_item = true 
-func What_to_do() -> void :
-	pass
+	
+func update_storage():
+	var package =player.get_node("Package")
+	var new_item = load(item_path)
+	var new_in = new_item.instance()
+	#new_in.get_node("CollisionShape2D").disabled=true
+	package.storage.append(new_item)
+	
 func _on_body_entered(body) -> void:
-	anim_player.play("fade_away")
-	What_to_do()
-	print("111")
+	if body.get("mob_type") == "Player":
+		update_storage()
+		print(item_name)
+		anim_player.play("fade_away")
+	
+		
+		
