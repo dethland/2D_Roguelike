@@ -13,7 +13,7 @@ func _process(delta):
 			if obj.get("is_player"):
 				not_able()
 				yield(get_tree().create_timer(3.0), "timeout")
-				print("enemy: attack")
+#				print("enemy: attack")
 				pass
 	else:
 		is_able()

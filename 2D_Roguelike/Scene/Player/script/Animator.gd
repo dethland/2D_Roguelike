@@ -23,10 +23,7 @@ func hide_all():
 	if visible_count > 0:
 		for child in group.get_children():
 			child.visible = false
-	elif visible_count == 0:
-		print("error")
-		print("last animation: %s" % last_animation )
-		print("second last animation: %s" % second_last_animation)
+
 
 func hide_all_except(name:String):
 	for child in group.get_children():

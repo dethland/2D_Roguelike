@@ -15,16 +15,12 @@ func walk() -> void:
 		pass
 	else:
 		velocity.x *= -1
-	enemy.move_and_slide(velocity, Vector2.UP)
+	velocity = enemy.move_and_slide(velocity, Vector2.UP)
 
 
 func _ready() -> void:
 	randomize()
 	velocity.x = speed
-#	ram_stop = randi() % 300
-#	print(ram_stop)
-#	running_timer=0
-
 	
 func _physics_process(delta)-> void:
 #	if Stop_Or_Run:
@@ -39,7 +35,6 @@ func _physics_process(delta)-> void:
 #		else:
 #			velocity = enemy.move_and_slide(velocity, Vector2.UP)
 #			running_timer+=1
-#			print(running_timer)
 #	else:
 #		if stop_timer >= 100 :
 #			# stop end start running 

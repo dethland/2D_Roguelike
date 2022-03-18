@@ -20,7 +20,6 @@ func _ready():
 	
 func ground_body_in(body):
 	if not body is KinematicBody2D:
-		print(body)
 		is_on_ground = true
 	
 func ground_body_out(body):
@@ -50,7 +49,6 @@ func get_horizental_input() -> int:
 
 func apply_gravity(gravity, delta_value) -> void:
 	if not is_on_ground:
-#		print(gravity_velocity)
 		gravity_velocity.y -= gravity * delta_value
 	else:
 		gravity_velocity.y = 0

@@ -16,7 +16,6 @@ func hurt():
 
 func _process(delta):
 	if is_able:
-		print(in_range_object)
 		if Input.is_action_pressed("ui_down"):
 			hit_once = true
 		if hit_once:
@@ -31,7 +30,6 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 
 
 func _on_Area2D_body_entered(body):
-	print(body.name)
 	if body.get("mob_type") != null:
 		if body.mob_type == target:
 			in_range_object.append(body)
