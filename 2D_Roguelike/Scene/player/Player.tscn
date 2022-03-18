@@ -24,6 +24,8 @@
 [ext_resource path="res://Scene/Player/anim_sheets/skill_use/Character3_pa_skill_use.png" type="Texture" id=22]
 [ext_resource path="res://Scene/Player/anim_sheets/attack_axe/Character3_pa_attack_axe.png" type="Texture" id=23]
 [ext_resource path="res://Scene/Player/script/HealthBar.gd" type="Script" id=24]
+[ext_resource path="res://Asset/UI/healthbar_under.png" type="Texture" id=25]
+[ext_resource path="res://Asset/UI/healthbar_cover.png" type="Texture" id=26]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16.0828, 27.0054 )
@@ -645,12 +647,6 @@ tracks/2/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 ]
 }
 
-[sub_resource type="StyleBoxFlat" id=16]
-bg_color = Color( 0.0627451, 0.760784, 0, 1 )
-
-[sub_resource type="StyleBoxFlat" id=17]
-bg_color = Color( 0.105882, 0.105882, 0.105882, 1 )
-
 [sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 10, 1.29303 )
 
@@ -789,17 +785,14 @@ current = true
 [node name="HealthBar" type="Node2D" parent="."]
 script = ExtResource( 24 )
 
-[node name="ProgressBar" type="ProgressBar" parent="HealthBar"]
-margin_left = -13.0
-margin_top = -37.0
-margin_right = 19.0
-margin_bottom = -32.0
-rect_scale = Vector2( 0.91, 1 )
-custom_styles/fg = SubResource( 16 )
-custom_styles/bg = SubResource( 17 )
-step = 1.0
+[node name="TextureProgress" type="TextureProgress" parent="HealthBar"]
+margin_left = -26.0
+margin_top = -36.0
+margin_right = 26.0
+margin_bottom = 4.0
 value = 50.0
-percent_visible = false
+texture_under = ExtResource( 25 )
+texture_progress = ExtResource( 26 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
