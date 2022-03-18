@@ -7,6 +7,8 @@
 [ext_resource path="res://Scene/Enemy/script/Search.gd" type="Script" id=5]
 [ext_resource path="res://Scene/Enemy/script/Enemy.gd" type="Script" id=6]
 [ext_resource path="res://Scene/Enemy/script/HealthBar.gd" type="Script" id=7]
+[ext_resource path="res://Asset/UI/healthbar_under.png" type="Texture" id=8]
+[ext_resource path="res://Asset/UI/healthbar_cover.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 26.5 )
@@ -16,12 +18,6 @@ extents = Vector2( 200, 100 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 100, 100 )
-
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 1, 0, 0, 1 )
-
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.176471, 0.176471, 0.176471, 1 )
 
 [node name="Enemy" type="KinematicBody2D"]
 collision_layer = 2
@@ -90,17 +86,14 @@ cast_to = Vector2( 0, 5 )
 position = Vector2( 0, -30 )
 script = ExtResource( 7 )
 
-[node name="ProgressBar" type="ProgressBar" parent="HealthBar"]
-margin_left = -23.0
-margin_top = 6.0
-margin_right = 24.0
-margin_bottom = 14.0
-rect_scale = Vector2( 0.91, 1 )
-custom_styles/fg = SubResource( 4 )
-custom_styles/bg = SubResource( 5 )
-step = 1.0
+[node name="TextureProgress" type="TextureProgress" parent="HealthBar"]
+margin_left = -26.0
+margin_top = 10.0
+margin_right = 26.0
+margin_bottom = 50.0
 value = 50.0
-percent_visible = false
+texture_under = ExtResource( 8 )
+texture_progress = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

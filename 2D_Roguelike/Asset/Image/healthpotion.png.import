@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/healthbar_cover.png-9431d6e7719c7b0eb57b7eb80f584ab1.stex"
+path="res://.import/healthpotion.png-8f02e5da6582e63625383ae4fb2672f5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/UI/healthbar_cover.png"
-dest_files=[ "res://.import/healthbar_cover.png-9431d6e7719c7b0eb57b7eb80f584ab1.stex" ]
+source_file="res://Asset/Image/healthpotion.png"
+dest_files=[ "res://.import/healthpotion.png-8f02e5da6582e63625383ae4fb2672f5.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0
