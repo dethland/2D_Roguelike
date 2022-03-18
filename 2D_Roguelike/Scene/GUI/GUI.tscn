@@ -5,45 +5,44 @@
 [ext_resource path="res://Asset/UI/stambar_under.png" type="Texture" id=3]
 [ext_resource path="res://Asset/UI/stambar_cover.png" type="Texture" id=4]
 
-[node name="GUI" type="MarginContainer"]
+[node name="GUI" type="Control"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 20.0
 margin_bottom = 20.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_right = 104.0
-margin_bottom = 10.0
+margin_right = 56.0
+margin_bottom = 16.0
 
 [node name="Bars" type="VBoxContainer" parent="HBoxContainer"]
-margin_right = 100.0
-margin_bottom = 10.0
-
-[node name="Bar" type="HBoxContainer" parent="HBoxContainer/Bars"]
-margin_right = 100.0
-margin_bottom = 10.0
-rect_min_size = Vector2( 100, 10 )
-
-[node name="HealthBar" type="TextureProgress" parent="HBoxContainer/Bars/Bar"]
 margin_right = 52.0
-margin_bottom = 10.0
+margin_bottom = 16.0
+
+[node name="HealthBar" type="TextureProgress" parent="HBoxContainer/Bars"]
+margin_right = 52.0
+margin_bottom = 6.0
 value = 50.0
 texture_under = ExtResource( 1 )
 texture_progress = ExtResource( 2 )
 
-[node name="StamBar" type="TextureProgress" parent="HBoxContainer/Bars/Bar"]
-margin_left = 56.0
-margin_right = 88.0
-margin_bottom = 10.0
+[node name="StamBar" type="TextureProgress" parent="HBoxContainer/Bars"]
+margin_top = 10.0
+margin_right = 52.0
+margin_bottom = 16.0
 value = 50.0
 texture_under = ExtResource( 3 )
 texture_progress = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Bar" type="HBoxContainer" parent="HBoxContainer/Bars"]
+visible = false
+margin_top = 10.0
+margin_right = 100.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 100, 10 )
 
 [node name="Counter" type="MarginContainer" parent="HBoxContainer/Bars/Bar"]
 visible = false
@@ -70,6 +69,6 @@ __meta__ = {
 }
 
 [node name="Other" type="HBoxContainer" parent="HBoxContainer"]
-margin_left = 104.0
-margin_right = 104.0
-margin_bottom = 10.0
+margin_left = 56.0
+margin_right = 56.0
+margin_bottom = 16.0
