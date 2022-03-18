@@ -15,6 +15,7 @@ func _physics_process(delta):
 			statemachine.change_state_to("Run")
 		if Input.is_action_just_pressed("ui_up"):
 			statemachine.change_state_to("Jump")
+			reset_gravity()
 		if Input.is_action_just_pressed("skill_use"):
 			statemachine.change_state_to("ChargeSkill")
 		if Input.is_action_just_pressed("melee"):

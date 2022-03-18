@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://Scene/Player/script/running.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player/script/Player.gd" type="Script" id=2]
@@ -651,6 +651,9 @@ bg_color = Color( 0.0627451, 0.760784, 0, 1 )
 [sub_resource type="StyleBoxFlat" id=17]
 bg_color = Color( 0.105882, 0.105882, 0.105882, 1 )
 
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 10, 1.29303 )
+
 [node name="Player" type="KinematicBody2D" groups=["Player"]]
 collision_layer = 4
 script = ExtResource( 2 )
@@ -800,6 +803,14 @@ percent_visible = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Detection" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="Detection"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection/Area2D"]
+position = Vector2( 0, 23.1634 )
+shape = SubResource( 18 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Attack" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Hurt" method="_on_AnimationPlayer_animation_finished"]
