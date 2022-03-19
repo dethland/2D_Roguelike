@@ -16,6 +16,8 @@ func walk() -> void:
 	else:
 		velocity.x *= -1
 	velocity = enemy.move_and_slide(velocity, Vector2.UP)
+	face_direction()
+	animator.play("walk");
 
 
 func _ready() -> void:
@@ -42,13 +44,24 @@ func _physics_process(delta)-> void:
 #			stop_timer=0
 #		stop_timer+=1
 		
-	if check_able():
+	if able:
 		enemy.move_and_slide(Vector2.ZERO, Vector2.UP)
 		if enemy.is_on_wall():
 			print("hit wall")
 		
 		walk()
 	apply_gravity(-98, delta)
-		
-		
-		
+	
+var last_scale = Vector2.ONE
+func face_direction():
+	var dir = velocity.x;
+	if (dir < 0): 	 last_scale = Vector2(-1,1);
+	elif (dir > 0):  last_scale = Vector2( 1,1);
+	enemy.scale = last_scale
+	# undo the artifacts of scaling (pozdnm)
+	enemy.global_rotation = 0;
+
+func _on_Search_range_body_entered(body):
+	if able:
+		if body.is_in_group("Player"):
+				statemachine.change_state_to("Search")

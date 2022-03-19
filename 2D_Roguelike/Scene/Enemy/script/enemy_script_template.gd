@@ -3,6 +3,7 @@ extends Node2D
 var able : bool = false
 
 var statemachine : Node2D
+var animator : AnimationPlayer
 var enemy : KinematicBody2D
 var left_edge_detection : RayCast2D
 var right_edge_detection : RayCast2D
@@ -14,14 +15,15 @@ func _ready():
 	enemy = get_parent().get_parent()
 	left_edge_detection = enemy.get_node("Detection/RayCast2DLeft")
 	right_edge_detection = enemy.get_node("Detection/RayCast2DRIght")
+	animator = enemy.get_node("AnimationPlayer");
 
 func turn_on() -> void:
 	# turn on the state script
-	is_able()
+	able = true
 	
 func turn_off() -> void:
 	# turn off the state script
-	not_able()
+	able = false
 	
 func apply_gravity(gravity, delta_value) -> void:
 	if not enemy.is_on_floor():
@@ -30,13 +32,8 @@ func apply_gravity(gravity, delta_value) -> void:
 	else:
 		gravity_velocity.y = 0
 		
-func not_able():
-	able = false
-	
-func is_able():
-	able = true
-
-func check_able():
-	return able
+func get_player():
+	# do not know if this works
+	get_tree().get_nodes_in_group("Player")[0];
 
 
