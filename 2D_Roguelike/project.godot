@@ -41,6 +41,7 @@ enabled=PoolStringArray(  )
 [global]
 
 icon=false
+windows=false
 
 [input]
 
