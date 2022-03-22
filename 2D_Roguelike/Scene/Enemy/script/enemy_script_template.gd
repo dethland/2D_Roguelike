@@ -13,8 +13,8 @@ var gravity_velocity = Vector2.ZERO
 func _ready():
 	statemachine = get_parent()
 	enemy = get_parent().get_parent()
-	left_edge_detection = enemy.get_node("Detection/RayCast2DLeft")
-	right_edge_detection = enemy.get_node("Detection/RayCast2DRIght")
+	left_edge_detection = enemy.get_node("Detection/WallLeft")
+	right_edge_detection = enemy.get_node("Detection/WallRight")
 	animator = enemy.get_node("AnimationPlayer");
 
 func turn_on() -> void:
