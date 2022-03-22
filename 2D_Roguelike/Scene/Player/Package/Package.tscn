@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scene/Player/script/Package.gd" type="Script" id=1]
+[ext_resource path="res://Scene/Player/Package/slot.tscn" type="PackedScene" id=2]
+
+[node name="Package" type="Node2D"]
+visible = false
+position = Vector2( 0, -103 )
+script = ExtResource( 1 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_right = 361.0
+margin_bottom = 307.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slot1" parent="NinePatchRect" instance=ExtResource( 2 )]
+margin_left = 30.0
+margin_top = 71.0
+margin_right = -325.0
+margin_bottom = -236.0
+no = "slot1"
+
+[node name="slot2" parent="NinePatchRect" instance=ExtResource( 2 )]
+margin_left = 230.0
+margin_top = 221.0
+margin_right = -123.0
+margin_bottom = -86.0
+no = "slot2"
+
+[node name="slot3" parent="NinePatchRect" instance=ExtResource( 2 )]
+margin_left = 130.0
+margin_top = 221.0
+margin_right = -225.0
+margin_bottom = -86.0
+no = "slot3"
+
+[node name="slot4" parent="NinePatchRect" instance=ExtResource( 2 )]
+margin_left = 30.0
+margin_top = 221.0
+margin_right = -325.0
+margin_bottom = -86.0
+no = "slot4"
+
+[node name="slot5" parent="NinePatchRect" instance=ExtResource( 2 )]
+margin_left = 230.0
+margin_top = 71.0
+margin_right = -123.0
+margin_bottom = -236.0
+no = "slot5"
+
+[node name="slot6" parent="NinePatchRect" instance=ExtResource( 2 )]
+margin_left = 130.0
+margin_top = 71.0
+margin_right = -225.0
+margin_bottom = -236.0
+no = "slot6"

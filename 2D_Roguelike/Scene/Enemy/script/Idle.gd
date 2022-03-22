@@ -15,16 +15,14 @@ func walk() -> void:
 		pass
 	else:
 		velocity.x *= -1
-	enemy.move_and_slide(velocity, Vector2.UP)
+	velocity = enemy.move_and_slide(velocity, Vector2.UP)
+	face_direction()
+	animator.play("walk");
 
 
 func _ready() -> void:
 	randomize()
 	velocity.x = speed
-#	ram_stop = randi() % 300
-#	print(ram_stop)
-#	running_timer=0
-
 	
 func _physics_process(delta)-> void:
 #	if Stop_Or_Run:
@@ -39,7 +37,6 @@ func _physics_process(delta)-> void:
 #		else:
 #			velocity = enemy.move_and_slide(velocity, Vector2.UP)
 #			running_timer+=1
-#			print(running_timer)
 #	else:
 #		if stop_timer >= 100 :
 #			# stop end start running 
@@ -47,13 +44,24 @@ func _physics_process(delta)-> void:
 #			stop_timer=0
 #		stop_timer+=1
 		
-	if check_able():
+	if able:
 		enemy.move_and_slide(Vector2.ZERO, Vector2.UP)
 		if enemy.is_on_wall():
 			print("hit wall")
 		
 		walk()
 	apply_gravity(-98, delta)
-		
-		
-		
+	
+var last_scale = Vector2.ONE
+func face_direction():
+	var dir = velocity.x;
+	if (dir < 0): 	 last_scale = Vector2(-1,1);
+	elif (dir > 0):  last_scale = Vector2( 1,1);
+	enemy.scale = last_scale
+	# undo the artifacts of scaling (pozdnm)
+	enemy.global_rotation = 0;
+
+func _on_Search_range_body_entered(body):
+	if able:
+		if body.is_in_group("Player"):
+				statemachine.change_state_to("Search")

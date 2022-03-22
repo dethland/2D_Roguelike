@@ -9,7 +9,6 @@ var hit_once : bool = true
 	
 
 func hurt():
-	print('ha')
 	for target in in_range_object:
 		target.get_hit(self, damage)
 
@@ -25,7 +24,6 @@ func _process(delta):
 
 func _on_Area2D_body_entered(body):
 	if body.get("mob_type") != null:
-		print(body.name)
 		in_range_object.append(body)
 
 

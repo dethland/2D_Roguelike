@@ -4,7 +4,7 @@
 [ext_resource path="res://Scene/item/Item.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 27, 28 )
+extents = Vector2( 29, 28.5 )
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -74,15 +74,17 @@ collision_mask = 5
 script = ExtResource( 2 )
 item_name = "???"
 item_path = "res://Scene/item/Item.tscn"
-item_fun_path = "res://Scene/item/Item.tscn"
 
 [node name="UnknownItem" type="Sprite" parent="."]
 position = Vector2( 0, -10 )
+scale = Vector2( 1.05, 1.10345 )
 texture = ExtResource( 1 )
+region_rect = Rect2( 45, 48, 45, 48 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1, -12 )
+position = Vector2( -1, 1 )
 shape = SubResource( 1 )
+disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )

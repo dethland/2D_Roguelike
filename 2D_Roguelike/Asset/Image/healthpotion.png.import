@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tile3.png-93c42a34742d163d4e66aa9523bac4dd.stex"
+path="res://.import/healthpotion.png-8f02e5da6582e63625383ae4fb2672f5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Image/tile3.png"
-dest_files=[ "res://.import/tile3.png-93c42a34742d163d4e66aa9523bac4dd.stex" ]
+source_file="res://Asset/Image/healthpotion.png"
+dest_files=[ "res://.import/healthpotion.png-8f02e5da6582e63625383ae4fb2672f5.stex" ]
 
 [params]
 

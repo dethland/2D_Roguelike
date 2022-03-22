@@ -1,18 +1,24 @@
-extends Node
+extends TextureRect
 
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var tb : TextureProgress
-var player : KinematicBody2D
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	tb = get_child(0)
-	player = global_tool.get_player()
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	tb.value = player.get("health")
+#func _process(delta):
+#	pass
+
+
+func _on_TextureRect_mouse_entered():
+	get_node("use").visible= true
+
+
+func _on_TextureRect_mouse_exited():
+	get_node("use").visible= false

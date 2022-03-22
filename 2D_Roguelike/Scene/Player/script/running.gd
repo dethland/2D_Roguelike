@@ -26,15 +26,17 @@ func _physics_process(delta):
 			statemachine.change_state_to("Idle")
 		if Input.is_action_just_pressed("ui_up"):
 			statemachine.change_state_to("Jump")
+			reset_gravity()
 		if Input.is_action_just_pressed("skill_use"):
 			statemachine.change_state_to("ChargeSkill")
 		if Input.is_action_just_pressed("parry"):
 			statemachine.change_state_to("Parry")
 			
-		apply_gravity(fall_gravity, delta)
+		
 			
 #		if not player.is_on_floor():
 #			statemachine.change_state_to("Jump")
 #			statemachine.get_node("Jump").leave_floor = true
 		
 		velocity = player.move_and_slide(velocity, Vector2.UP)
+		apply_gravity(fall_gravity, delta)

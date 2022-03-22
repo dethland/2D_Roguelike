@@ -1,12 +1,14 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://Asset/Animation/Enemy/enemy_walkt.png" type="Texture" id=1]
 [ext_resource path="res://Scene/Enemy/script/Statemachine.gd" type="Script" id=2]
 [ext_resource path="res://Scene/Enemy/script/Fight.gd" type="Script" id=3]
 [ext_resource path="res://Scene/Enemy/script/Idle.gd" type="Script" id=4]
 [ext_resource path="res://Scene/Enemy/script/Search.gd" type="Script" id=5]
 [ext_resource path="res://Scene/Enemy/script/Enemy.gd" type="Script" id=6]
 [ext_resource path="res://Scene/Enemy/script/HealthBar.gd" type="Script" id=7]
+[ext_resource path="res://Asset/UI/healthbar_under.png" type="Texture" id=8]
+[ext_resource path="res://Asset/UI/healthbar_cover.png" type="Texture" id=9]
+[ext_resource path="res://Asset/Animation/Enemy/enemy-2-Sheet.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 26.5 )
@@ -15,13 +17,87 @@ extents = Vector2( 32, 26.5 )
 extents = Vector2( 200, 100 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 100, 100 )
+extents = Vector2( 47, 30.7887 )
 
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 1, 0, 0, 1 )
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 10, 15.5 )
 
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.176471, 0.176471, 0.176471, 1 )
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Icon:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "attack"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Icon:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 16, 17, 18, 19, 20, 21, 22, 23 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Hitbox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, false, true ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "idle"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Icon:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 8, 9, 10, 11, 12, 13, 14, 15 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "walk"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Icon:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
 
 [node name="Enemy" type="KinematicBody2D"]
 collision_layer = 2
@@ -34,9 +110,8 @@ shape = SubResource( 1 )
 [node name="Icon" type="Sprite" parent="."]
 position = Vector2( 0, 10.438 )
 scale = Vector2( 0.7, 0.7 )
-texture = ExtResource( 1 )
-hframes = 3
-vframes = 3
+texture = ExtResource( 10 )
+hframes = 24
 
 [node name="Statemachine" type="Node2D" parent="."]
 script = ExtResource( 2 )
@@ -46,6 +121,10 @@ script = ExtResource( 4 )
 
 [node name="Fight" type="Node2D" parent="Statemachine"]
 script = ExtResource( 3 )
+
+[node name="AttackTimer" type="Timer" parent="Statemachine/Fight"]
+wait_time = 3.0
+one_shot = true
 
 [node name="Search" type="Node2D" parent="Statemachine"]
 script = ExtResource( 5 )
@@ -60,11 +139,19 @@ shape = SubResource( 2 )
 [node name="Battle_range" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Battle_range"]
-position = Vector2( -1, -66 )
+position = Vector2( -3, 2.45 )
 scale = Vector2( 1, 0.989 )
 shape = SubResource( 3 )
 
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2( -34, 2.5 )
+shape = SubResource( 7 )
+disabled = true
+
 [node name="Detection" type="Node2D" parent="."]
+position = Vector2( -23, 9 )
 
 [node name="RayCast2DRIght" type="RayCast2D" parent="Detection"]
 position = Vector2( 38, -1 )
@@ -90,20 +177,28 @@ cast_to = Vector2( 0, 5 )
 position = Vector2( 0, -30 )
 script = ExtResource( 7 )
 
-[node name="ProgressBar" type="ProgressBar" parent="HealthBar"]
+[node name="TextureProgress" type="TextureProgress" parent="HealthBar"]
 margin_left = -23.0
 margin_top = 6.0
 margin_right = 24.0
 margin_bottom = 14.0
 rect_scale = Vector2( 0.91, 1 )
-custom_styles/fg = SubResource( 4 )
-custom_styles/bg = SubResource( 5 )
-step = 1.0
 value = 50.0
-percent_visible = false
+texture_under = ExtResource( 8 )
+texture_progress = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="body_entered" from="Search_range" to="Statemachine" method="_on_search_range_body_entered"]
-[connection signal="body_entered" from="Battle_range" to="Statemachine" method="_on_battle_range_body_entered"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 6 )
+anims/attack = SubResource( 4 )
+anims/idle = SubResource( 8 )
+anims/walk = SubResource( 5 )
+
+[connection signal="timeout" from="Statemachine/Fight/AttackTimer" to="Statemachine/Fight" method="attack"]
+[connection signal="body_entered" from="Search_range" to="Statemachine/Idle" method="_on_Search_range_body_entered"]
+[connection signal="body_exited" from="Search_range" to="Statemachine/Search" method="_on_Search_range_body_exited"]
+[connection signal="body_entered" from="Battle_range" to="Statemachine/Search" method="_on_Battle_range_body_entered"]
+[connection signal="body_exited" from="Battle_range" to="Statemachine/Fight" method="_on_Battle_range_body_exited"]
+[connection signal="body_entered" from="Hitbox" to="Statemachine/Fight" method="_on_Hitbox_body_entered"]

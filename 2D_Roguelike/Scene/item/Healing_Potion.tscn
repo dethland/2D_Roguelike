@@ -6,7 +6,11 @@
 [node name="Healing_Potion" instance=ExtResource( 1 )]
 item_name = "Healing_Potion"
 item_path = "res://Scene/item/Healing_Potion.tscn"
-item_fun_path = "res://Scene/item/HP_healing.gd"
+wtd_path = "HP_healing"
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( -1, -11 )
+disabled = false
 
 [node name="HP_healing" type="Node2D" parent="." index="3"]
 script = ExtResource( 2 )
