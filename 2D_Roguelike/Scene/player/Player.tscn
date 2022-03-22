@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Scene/Player/script/running.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player/script/Player.gd" type="Script" id=2]
@@ -22,9 +22,6 @@
 [ext_resource path="res://Scene/Player/anim_sheets/skill_charge/Character3_pa_skill_charge.png" type="Texture" id=21]
 [ext_resource path="res://Scene/Player/anim_sheets/skill_use/Character3_pa_skill_use.png" type="Texture" id=22]
 [ext_resource path="res://Scene/Player/anim_sheets/attack_axe/Character3_pa_attack_axe.png" type="Texture" id=23]
-[ext_resource path="res://Scene/Player/script/HealthBar.gd" type="Script" id=24]
-[ext_resource path="res://Asset/UI/healthbar_under.png" type="Texture" id=25]
-[ext_resource path="res://Asset/UI/healthbar_cover.png" type="Texture" id=26]
 
 [sub_resource type="ShaderMaterial" id=14]
 shader = ExtResource( 10 )
@@ -597,21 +594,6 @@ is_able = false
 position = Vector2( 12.8674, -5.1023 )
 polygon = PoolVector2Array( 5, -16, 4.93808, 19.9268, 29.1249, 29.1295, 29, -23 )
 
-[node name="HealthBar" type="Node2D" parent="."]
-script = ExtResource( 24 )
-
-[node name="TextureProgress" type="TextureProgress" parent="HealthBar"]
-margin_left = -26.0
-margin_top = -36.0
-margin_right = 26.0
-margin_bottom = 4.0
-value = 50.0
-texture_under = ExtResource( 25 )
-texture_progress = ExtResource( 26 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Detection" type="Node2D" parent="."]
 
 [node name="Area2D" type="Area2D" parent="Detection"]
@@ -637,8 +619,6 @@ anims/run = SubResource( 11 )
 anims/skill_charge = SubResource( 12 )
 anims/skill_use = SubResource( 13 )
 script = ExtResource( 13 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="body_entered" from="Hitboxs/Hitbox" to="Hitboxs/Hitbox" method="_on_Hitbox_body_entered"]
 [connection signal="body_exited" from="Hitboxs/Hitbox" to="Hitboxs/Hitbox" method="_on_Hitbox_body_exited"]

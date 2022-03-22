@@ -10,16 +10,27 @@ margin_left = 20.0
 margin_top = 20.0
 margin_right = 20.0
 margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_right = 56.0
 margin_bottom = 16.0
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Bars" type="VBoxContainer" parent="HBoxContainer"]
 margin_right = 52.0
 margin_bottom = 16.0
 
-[node name="HealthBar" type="TextureProgress" parent="HBoxContainer/Bars"]
+[node name="Health" type="VBoxContainer" parent="HBoxContainer/Bars"]
+margin_right = 52.0
+margin_bottom = 6.0
+
+[node name="HealthBar" type="TextureProgress" parent="HBoxContainer/Bars/Health"]
 margin_right = 52.0
 margin_bottom = 6.0
 value = 50.0
@@ -27,6 +38,7 @@ texture_under = ExtResource( 1 )
 texture_progress = ExtResource( 2 )
 
 [node name="StamBar" type="TextureProgress" parent="HBoxContainer/Bars"]
+visible = false
 margin_top = 10.0
 margin_right = 52.0
 margin_bottom = 16.0

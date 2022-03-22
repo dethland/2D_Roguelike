@@ -32,5 +32,5 @@ func change_state_to(state_name) -> void:
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
-		print(show_active_state())
+		pass
 
