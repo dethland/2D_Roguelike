@@ -517,12 +517,17 @@ script = ExtResource( 7 )
 jump_height = 200.0
 horizental_speed = 300
 
+[node name="LandDetector" type="RayCast2D" parent="Statemachine/Jump"]
+position = Vector2( 0, 29 )
+enabled = true
+
 [node name="ChargeSkill" type="Node2D" parent="Statemachine"]
 script = ExtResource( 11 )
 
 [node name="AnimGroup" type="Node2D" parent="."]
 
 [node name="run" type="Sprite" parent="AnimGroup"]
+visible = false
 material = SubResource( 14 )
 texture = ExtResource( 14 )
 hframes = 5
