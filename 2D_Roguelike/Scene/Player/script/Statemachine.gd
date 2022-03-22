@@ -18,7 +18,7 @@ func show_active_state() -> String:
 	for child in get_children():
 		if not child.get("is_able") == null:
 			if child.is_able:
-				string_value = "Player State: %s" %(child.name)
+				string_value = "%s" %(child.name)
 	return string_value
 	
 	
