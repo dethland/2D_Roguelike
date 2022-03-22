@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scene/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Enemy/Enemy.tscn" type="PackedScene" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://Scene/item/Healing_Potion.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Asset/Image/spikelayers.png" type="Texture" id=6]
 [ext_resource path="res://Scene/System/hitplayer_hitbox.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scene/GUI/Scripts/camera.gd" type="Script" id=8]
+[ext_resource path="res://Scene/GUI/GUI.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scene/GUI/Scripts/HealthBar.gd" type="Script" id=10]
 
 [node name="Test_02" type="Node2D"]
 
@@ -68,3 +71,15 @@ region_rect = Rect2( 0, 0, 640, 360 )
 
 [node name="Area2D" parent="." instance=ExtResource( 7 )]
 position = Vector2( 205.179, 312.813 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 122, 231 )
+current = true
+script = ExtResource( 8 )
+
+[node name="GUI" parent="Camera2D" instance=ExtResource( 9 )]
+margin_left = -312.0
+margin_top = -172.0
+margin_right = -312.0
+margin_bottom = -172.0
+script = ExtResource( 10 )
