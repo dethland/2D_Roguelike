@@ -35,7 +35,7 @@ func turn_on() -> void:
 func turn_off() -> void:
 	# turn off the state script
 	is_able = false
-	
+		
 func get_horizental_input() -> int:
 	# get horizental input return 1, -1 or 0
 	var direction : int = 0
