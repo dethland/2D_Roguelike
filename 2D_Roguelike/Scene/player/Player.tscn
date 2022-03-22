@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Scene/Player/script/running.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player/script/Player.gd" type="Script" id=2]

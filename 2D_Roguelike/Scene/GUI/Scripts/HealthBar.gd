@@ -18,10 +18,8 @@ func _ready():
 func _process(delta):
 	curr_health = player.health
 	if(curr_health != prev_health):
-		tween.interpolate_property(bar, "value", prev_health, curr_health, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+		tween.interpolate_property(bar, "value", prev_health, curr_health, .6, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
 	
 	prev_health = curr_health
-	# Check if current health is different from last recorded health
-	# Wait half a second before changing second bar
 	
