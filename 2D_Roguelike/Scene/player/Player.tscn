@@ -634,7 +634,6 @@ anims/skill_use = SubResource( 13 )
 script = ExtResource( 13 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-current = true
 
 [connection signal="body_entered" from="Hitboxs/Hitbox" to="Hitboxs/Hitbox" method="_on_Hitbox_body_entered"]
 [connection signal="body_exited" from="Hitboxs/Hitbox" to="Hitboxs/Hitbox" method="_on_Hitbox_body_exited"]
