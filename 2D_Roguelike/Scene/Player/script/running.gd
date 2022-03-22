@@ -30,7 +30,8 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("skill_use"):
 			statemachine.change_state_to("ChargeSkill")
 		if Input.is_action_just_pressed("parry"):
-			statemachine.change_state_to("Parry")
+			if statemachine.get_node("Parry").can_parry():
+				statemachine.change_state_to("Parry")
 			
 		
 			

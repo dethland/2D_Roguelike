@@ -7,16 +7,15 @@ export var health = 100
 export(String, "Player", "Enemy") var mob_type = "Player"
 
 func _ready():
-	if get_node("Sprite").material:
-		get_node("Sprite").material.set_shader_param("flash_modifier", 0.0)
-		
+	pass
 
 func get_hit(from_object, damage):
 	# parry handling
 	if get_node("Statemachine").show_active_state() == "Parry":
+		get_node("Statemachine").get_node("Parry").success()
 		# handle parry here
 		return	
-	
+
 	# invlunerable during Hurt animation (pozdnm)
 	if get_node("Statemachine").show_active_state() == "Hurt": return
 	
