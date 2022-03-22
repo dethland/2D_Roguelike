@@ -29,6 +29,9 @@ func _physics_process(delta):
 			reset_gravity()
 		if Input.is_action_just_pressed("skill_use"):
 			statemachine.change_state_to("ChargeSkill")
+		if Input.is_action_just_pressed("parry"):
+			if statemachine.get_node("Parry").can_parry():
+				statemachine.change_state_to("Parry")
 			
 		
 			

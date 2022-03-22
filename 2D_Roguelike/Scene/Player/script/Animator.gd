@@ -32,7 +32,7 @@ func hide_all_except(name:String):
 
 func _play(name:String):
 	get_group()
-	hide_all()
+	hide_all_except(name)
 	.play(name);
 	second_last_animation = last_animation
 	last_animation = name

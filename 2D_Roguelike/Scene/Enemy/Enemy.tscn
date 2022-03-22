@@ -17,7 +17,7 @@ extents = Vector2( 32, 26.5 )
 extents = Vector2( 200, 100 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 47, 30.7887 )
+extents = Vector2( 40.2155, 30.1534 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 10, 15.5 )
@@ -139,7 +139,7 @@ shape = SubResource( 2 )
 [node name="Battle_range" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Battle_range"]
-position = Vector2( -3, 2.45 )
+position = Vector2( -0.258026, -0.386738 )
 scale = Vector2( 1, 0.989 )
 shape = SubResource( 3 )
 
@@ -151,13 +151,13 @@ shape = SubResource( 7 )
 disabled = true
 
 [node name="Detection" type="Node2D" parent="."]
-position = Vector2( -23, 9 )
+position = Vector2( -0.0688477, 0.0269356 )
 
-[node name="RayCast2DRIght" type="RayCast2D" parent="Detection"]
+[node name="EdgeRight" type="RayCast2D" parent="Detection"]
 position = Vector2( 38, -1 )
 enabled = true
 
-[node name="RayCast2DLeft" type="RayCast2D" parent="Detection"]
+[node name="EdgeLeft" type="RayCast2D" parent="Detection"]
 position = Vector2( -37, -1 )
 enabled = true
 

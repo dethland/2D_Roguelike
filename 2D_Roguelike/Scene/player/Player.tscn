@@ -4,6 +4,7 @@
 [ext_resource path="res://Scene/Player/script/Player.gd" type="Script" id=2]
 [ext_resource path="res://Scene/Player/script/Statemachine.gd" type="Script" id=3]
 [ext_resource path="res://Scene/Player/script/Hurt.gd" type="Script" id=4]
+[ext_resource path="res://Scene/Player/script/Parry.gd" type="Script" id=5]
 [ext_resource path="res://Scene/Player/script/Attack.gd" type="Script" id=6]
 [ext_resource path="res://Scene/player/script/Jump.gd" type="Script" id=7]
 [ext_resource path="res://Scene/Player/script/Idle.gd" type="Script" id=8]
@@ -489,6 +490,7 @@ tracks/1/keys = {
 
 [node name="Player" type="KinematicBody2D" groups=["Player"]]
 collision_layer = 4
+collision_mask = 9
 script = ExtResource( 2 )
 
 [node name="Package" parent="." instance=ExtResource( 12 )]
@@ -514,12 +516,20 @@ script = ExtResource( 7 )
 jump_height = 200.0
 horizental_speed = 300
 
+[node name="LandDetector" type="RayCast2D" parent="Statemachine/Jump"]
+position = Vector2( 0, 29 )
+enabled = true
+
 [node name="ChargeSkill" type="Node2D" parent="Statemachine"]
 script = ExtResource( 11 )
+
+[node name="Parry" type="Node2D" parent="Statemachine"]
+script = ExtResource( 5 )
 
 [node name="AnimGroup" type="Node2D" parent="."]
 
 [node name="run" type="Sprite" parent="AnimGroup"]
+visible = false
 material = SubResource( 14 )
 texture = ExtResource( 14 )
 hframes = 5
