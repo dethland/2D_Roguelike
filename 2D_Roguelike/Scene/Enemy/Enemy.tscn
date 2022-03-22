@@ -153,11 +153,11 @@ disabled = true
 [node name="Detection" type="Node2D" parent="."]
 position = Vector2( -0.0688477, 0.0269356 )
 
-[node name="RayCast2DRIght" type="RayCast2D" parent="Detection"]
+[node name="EdgeRight" type="RayCast2D" parent="Detection"]
 position = Vector2( 38, -1 )
 enabled = true
 
-[node name="RayCast2DLeft" type="RayCast2D" parent="Detection"]
+[node name="EdgeLeft" type="RayCast2D" parent="Detection"]
 position = Vector2( -37, -1 )
 enabled = true
 

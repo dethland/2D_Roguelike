@@ -489,6 +489,7 @@ tracks/1/keys = {
 
 [node name="Player" type="KinematicBody2D" groups=["Player"]]
 collision_layer = 4
+collision_mask = 9
 script = ExtResource( 2 )
 
 [node name="Package" parent="." instance=ExtResource( 12 )]

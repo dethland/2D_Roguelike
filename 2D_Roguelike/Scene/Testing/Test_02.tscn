@@ -24,12 +24,11 @@ position = Vector2( 121, 231 )
 
 [node name="Healing_Potion" parent="." instance=ExtResource( 5 )]
 position = Vector2( 101, 505 )
+collision_mask = 5
 
 [node name="Healing_Potion2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 236, 507 )
-
-[node name="Healing_Potion3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 423, 337 )
+collision_mask = 5
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 

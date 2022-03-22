@@ -4,6 +4,7 @@
 [ext_resource path="res://Scene/item/HP_healing.gd" type="Script" id=2]
 
 [node name="Healing_Potion" instance=ExtResource( 1 )]
+collision_mask = 0
 item_name = "Healing_Potion"
 item_path = "res://Scene/item/Healing_Potion.tscn"
 wtd_path = "HP_healing"

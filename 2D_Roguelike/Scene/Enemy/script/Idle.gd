@@ -15,6 +15,8 @@ func walk() -> void:
 	# Enemy will walk across the paltform with random stop
 	if left_edge_detection.is_colliding() or right_edge_detection.is_colliding():
 		if reverse_walk_protection_trigger:
+			print(left_edge_detection.get_collider())
+			print(right_edge_detection.get_collider())
 			velocity.x *= -1
 			reverse_walk_protection_timer.start(3)
 			reverse_walk_protection_trigger = false
