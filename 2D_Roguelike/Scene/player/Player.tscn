@@ -31,10 +31,11 @@ shader = ExtResource( 10 )
 shader = ExtResource( 10 )
 
 [sub_resource type="RectangleShape2D" id=18]
-extents = Vector2( 10, 1.29303 )
+extents = Vector2( 4.18404, 1.29303 )
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16.0828, 27.0054 )
+[sub_resource type="CapsuleShape2D" id=19]
+radius = 12.25
+height = 33.6777
 
 [sub_resource type="Animation" id=3]
 length = 0.001
@@ -527,6 +528,7 @@ script = ExtResource( 11 )
 script = ExtResource( 5 )
 
 [node name="AnimGroup" type="Node2D" parent="."]
+position = Vector2( -1.375, 2.5 )
 
 [node name="run" type="Sprite" parent="AnimGroup"]
 visible = false
@@ -596,7 +598,7 @@ animation_name = "melee"
 is_able = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitboxs/Hitbox"]
-position = Vector2( 12.8674, -5.1023 )
+position = Vector2( 7.25, -1.977 )
 polygon = PoolVector2Array( 5, -16, 4.93808, 19.9268, 29.1249, 29.1295, 29, -23 )
 
 [node name="Detection" type="Node2D" parent="."]
@@ -604,12 +606,12 @@ polygon = PoolVector2Array( 5, -16, 4.93808, 19.9268, 29.1249, 29.1295, 29, -23 
 [node name="Area2D" type="Area2D" parent="Detection"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detection/Area2D"]
-position = Vector2( 0, 23.1634 )
+position = Vector2( -0.195152, 33.0636 )
 shape = SubResource( 18 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1.40699, -3.8879 )
-shape = SubResource( 1 )
+position = Vector2( 0, 4 )
+shape = SubResource( 19 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 3 )

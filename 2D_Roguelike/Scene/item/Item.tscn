@@ -4,7 +4,7 @@
 [ext_resource path="res://Scene/item/Item.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 29, 28.5 )
+extents = Vector2( 18.3517, 29.0682 )
 
 [sub_resource type="Animation" id=2]
 length = 0.001
