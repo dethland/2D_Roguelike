@@ -9,8 +9,7 @@ func _ready():
 func turn_off_all() -> void:
 	# trun off all state
 	for child in get_children():
-		if not child.get("is_able") == null:
-			child.is_able = false
+		child.turn_off()
 
 func show_active_state() -> String:
 	# return the name of active state
@@ -18,7 +17,7 @@ func show_active_state() -> String:
 	for child in get_children():
 		if not child.get("is_able") == null:
 			if child.is_able:
-				string_value = "Enemy State: %s" %(child.name)
+				string_value = "%s" %(child.name)
 	return string_value
 
 
@@ -32,15 +31,6 @@ func change_state_to(state_name) -> void:
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
-		print(show_active_state())
-
-func _on_search_range_body_entered(body):
-	if body.get("mob_type") != null:
-		if body.mob_type == "Player":
-			change_state_to("Search")
-
-
-func _on_battle_range_body_entered(body):
-	if body.get("mob_type") != null:
-		if body.mob_type == "Player":
-			change_state_to("Fight")
+		for child in get_children():
+			if child.able:
+				print(child.name)

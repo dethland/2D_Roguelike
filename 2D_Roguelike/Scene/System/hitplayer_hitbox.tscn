@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scene/System/hitplayer_hitbox.gd" type="Script" id=1]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -6.14834, -3.6302, -6.50189, 9.80483, 26.5553, 20.5882, 21.6056, -10.878, -12.3355, -16.3581 )
+
+[connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Area2D_body_exited"]

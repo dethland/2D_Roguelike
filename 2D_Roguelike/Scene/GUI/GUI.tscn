@@ -1,6 +1,11 @@
-[gd_scene format=2]
+[gd_scene load_steps=5 format=2]
 
-[node name="GUI" type="MarginContainer"]
+[ext_resource path="res://Asset/UI/healthbar_under.png" type="Texture" id=1]
+[ext_resource path="res://Asset/UI/healthbar_cover.png" type="Texture" id=2]
+[ext_resource path="res://Asset/UI/stambar_under.png" type="Texture" id=3]
+[ext_resource path="res://Asset/UI/stambar_cover.png" type="Texture" id=4]
+
+[node name="GUI" type="Control"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 20.0
@@ -9,29 +14,47 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_right = 4.0
-margin_bottom = 14.0
+[node name="Container" type="HBoxContainer" parent="."]
+margin_right = 302.0
+margin_bottom = 163.0
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Bars" type="VBoxContainer" parent="HBoxContainer"]
-margin_bottom = 14.0
+[node name="Bars" type="VBoxContainer" parent="Container"]
+margin_right = 52.0
+margin_bottom = 163.0
 
-[node name="Bar" type="HBoxContainer" parent="HBoxContainer/Bars"]
-margin_bottom = 14.0
+[node name="Health" type="VBoxContainer" parent="Container/Bars"]
+margin_right = 52.0
+margin_bottom = 6.0
 
-[node name="Count" type="MarginContainer" parent="HBoxContainer/Bars/Bar"]
-margin_bottom = 14.0
+[node name="Tween" type="Tween" parent="Container/Bars/Health"]
 
-[node name="BG" type="NinePatchRect" parent="HBoxContainer/Bars/Bar/Count"]
-margin_bottom = 14.0
+[node name="HealthBar" type="TextureProgress" parent="Container/Bars/Health"]
+margin_right = 52.0
+margin_bottom = 6.0
+value = 50.0
+texture_under = ExtResource( 1 )
+texture_progress = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Title" type="TextureRect" parent="HBoxContainer/Bars/Bar/Count"]
-margin_bottom = 14.0
+[node name="StamBar" type="TextureProgress" parent="Container/Bars"]
+visible = false
+margin_top = 10.0
+margin_right = 52.0
+margin_bottom = 16.0
+value = 50.0
+texture_under = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Number" type="Label" parent="HBoxContainer/Bars/Bar/Count"]
-margin_bottom = 14.0
-
-[node name="Other" type="HBoxContainer" parent="HBoxContainer"]
-margin_left = 4.0
-margin_right = 4.0
-margin_bottom = 14.0
+[node name="Other" type="HBoxContainer" parent="Container"]
+margin_left = 56.0
+margin_right = 56.0
+margin_bottom = 163.0

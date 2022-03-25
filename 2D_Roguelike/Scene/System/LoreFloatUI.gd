@@ -27,5 +27,6 @@ func start_fade_out():
 	$Tween.start();
 	
 func _on_Tween_tween_completed(object, key):
-	$Tween.interpolate_callback(self,3,"start_fade_out");
-	$Tween.start();
+	if(key == ":fade_in"):
+		$Tween.interpolate_callback(self,3,"start_fade_out");
+		$Tween.start();
