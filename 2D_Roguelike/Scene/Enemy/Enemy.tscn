@@ -123,7 +123,7 @@ script = ExtResource( 4 )
 script = ExtResource( 3 )
 
 [node name="AttackTimer" type="Timer" parent="Statemachine/Fight"]
-wait_time = 3.0
+wait_time = 4.0
 one_shot = true
 
 [node name="Search" type="Node2D" parent="Statemachine"]
