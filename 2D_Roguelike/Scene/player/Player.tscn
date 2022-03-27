@@ -31,7 +31,7 @@ shader = ExtResource( 10 )
 shader = ExtResource( 10 )
 
 [sub_resource type="RectangleShape2D" id=18]
-extents = Vector2( 4.18404, 1.29303 )
+extents = Vector2( 10, 1.29303 )
 
 [sub_resource type="CapsuleShape2D" id=19]
 radius = 12.25
