@@ -4,7 +4,6 @@
 [ext_resource path="res://Scene/Player/Package/slot.tscn" type="PackedScene" id=2]
 
 [node name="Package" type="Node2D"]
-visible = false
 position = Vector2( 0, -103 )
 script = ExtResource( 1 )
 
@@ -16,10 +15,10 @@ __meta__ = {
 }
 
 [node name="slot1" parent="NinePatchRect" instance=ExtResource( 2 )]
-margin_left = 30.0
-margin_top = 71.0
-margin_right = -325.0
-margin_bottom = -236.0
+margin_left = 96.0
+margin_top = 219.0
+margin_right = -259.0
+margin_bottom = -88.0
 no = "slot1"
 
 [node name="slot2" parent="NinePatchRect" instance=ExtResource( 2 )]
@@ -30,9 +29,9 @@ margin_bottom = -86.0
 no = "slot2"
 
 [node name="slot3" parent="NinePatchRect" instance=ExtResource( 2 )]
-margin_left = 130.0
+margin_left = 164.0
 margin_top = 221.0
-margin_right = -225.0
+margin_right = -191.0
 margin_bottom = -86.0
 no = "slot3"
 
@@ -51,8 +50,8 @@ margin_bottom = -236.0
 no = "slot5"
 
 [node name="slot6" parent="NinePatchRect" instance=ExtResource( 2 )]
-margin_left = 130.0
-margin_top = 71.0
-margin_right = -225.0
-margin_bottom = -236.0
+margin_left = 29.0
+margin_top = 72.0
+margin_right = -326.0
+margin_bottom = -235.0
 no = "slot6"

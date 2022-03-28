@@ -4,7 +4,7 @@
 [ext_resource path="res://Scene/item/Item.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 18.3517, 29.0682 )
+extents = Vector2( 26.5, 31.5 )
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -82,7 +82,7 @@ texture = ExtResource( 1 )
 region_rect = Rect2( 45, 48, 45, 48 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1, 1 )
+position = Vector2( 0.5, -6.5 )
 shape = SubResource( 1 )
 disabled = true
 
@@ -92,3 +92,4 @@ anims/bouncing = SubResource( 3 )
 anims/fade_away = SubResource( 4 )
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
