@@ -1,6 +1,7 @@
 extends Control
 
-
+onready var flash = preload("res://Asset/UI/healthbar_cover_flash.png")
+onready var normal = preload("res://Asset/UI/healthbar_cover.png")
 onready var bar = $Container/Bars/Health/HealthBar
 onready var tween = $Container/Bars/Health/Tween
 var player : KinematicBody2D
