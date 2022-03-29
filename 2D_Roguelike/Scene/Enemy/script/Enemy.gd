@@ -8,5 +8,10 @@ func get_hit(from_object, damage):
 #	print(health)
 	# handle getting hurt (pozdnm)
 	health -= damage;
+	if health <= 0:
+		die()
 	# handle the hurt animation here
 
+func die():
+	print("%s died" % self.name)
+	queue_free()

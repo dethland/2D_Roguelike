@@ -4,8 +4,12 @@ class_name Item
 export var item_name : String
 export var item_path:  String   # to find child node(healing_potion)
 export var wtd_path:   String
+export var img_path:   String
 onready var anim_player:AnimationPlayer = get_node("AnimationPlayer")
 onready var player = global_tool.get_player()
+func _ready():
+	get_node("UnknownItem").texture = load(img_path)
+	
 var Is_item = true 
 	
 func update_storage():
@@ -23,3 +27,7 @@ func _on_body_entered(body) -> void:
 	
 		
 		
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	queue_free()

@@ -14,7 +14,8 @@ onready var texturerect = get_node("TextureRect")
 
 func _physics_process(delta):
 	if container[0] != null :
-		texturerect.texture=container[0].instance().get_node("UnknownItem").texture#???
+		container[0].instance()._ready()
+		texturerect.texture=load(container[0].instance().img_path)#???
 
 		
 func _input(event):	

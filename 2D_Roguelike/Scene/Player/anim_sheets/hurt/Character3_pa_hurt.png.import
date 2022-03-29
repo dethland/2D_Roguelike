@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Character3_pa_hurt.png-58394ed1b255c6bbf94b5bf73bdb7288.stex"
+path="res://.import/Character3_pa_hurt.png-3a8f4b8e10ae6a66acfbe9f55f9fcf40.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/Player/anim_sheets/hurt/Character3_pa_hurt.png"
-dest_files=[ "res://.import/Character3_pa_hurt.png-58394ed1b255c6bbf94b5bf73bdb7288.stex" ]
+source_file="res://Scene/player/anim_sheets/hurt/Character3_pa_hurt.png"
+dest_files=[ "res://.import/Character3_pa_hurt.png-3a8f4b8e10ae6a66acfbe9f55f9fcf40.stex" ]
 
 [params]
 

@@ -6,8 +6,6 @@ var is_player = true
 export var health = 100
 export(String, "Player", "Enemy") var mob_type = "Player"
 
-func _ready():
-	pass
 
 func get_hit(from_object, damage):
 	# parry handling
@@ -22,3 +20,10 @@ func get_hit(from_object, damage):
 	# handle getting hurt (pozdnm)
 	health -= damage;
 	get_node("Statemachine").change_state_to("Hurt");
+	
+	if health <= 0:
+		die()
+	
+func die():
+	print("%s died" % self.name)
+	
