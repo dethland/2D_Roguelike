@@ -1,0 +1,35 @@
+[gd_scene format=2]
+
+[node name="Particles" type="Node2D"]
+
+[node name="FirstAttempt" type="CPUParticles2D" parent="."]
+visible = false
+emitting = false
+amount = 20
+one_shot = true
+explosiveness = 0.2
+emission_shape = 2
+emission_rect_extents = Vector2( 10, 5 )
+spread = 20.0
+gravity = Vector2( 0, -50 )
+initial_velocity = 100.0
+linear_accel = -30.0
+damping = 100.0
+scale_amount = 1.5
+scale_amount_random = 1.0
+color = Color( 0.678431, 0.0588235, 0.0588235, 1 )
+hue_variation = 0.06
+hue_variation_random = 0.5
+
+[node name="SecondAttempt" type="CPUParticles2D" parent="."]
+amount = 20
+explosiveness = 0.75
+emission_shape = 2
+emission_rect_extents = Vector2( 1, 1 )
+spread = 10.0
+gravity = Vector2( 0, -45 )
+initial_velocity = 150.0
+initial_velocity_random = 0.34
+linear_accel = -100.0
+damping = 30.0
+color = Color( 0.929412, 0.227451, 0.121569, 1 )
