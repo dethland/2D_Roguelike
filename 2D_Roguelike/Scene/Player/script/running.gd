@@ -30,4 +30,5 @@ func _physics_process(delta):
 				statemachine.change_state_to("Parry")
 
 		velocity = player.move_and_slide(velocity, Vector2.UP)
+		velocity.y = 0
 		apply_gravity(fall_gravity, delta)
