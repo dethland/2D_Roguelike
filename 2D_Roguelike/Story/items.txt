@@ -9,3 +9,6 @@ Restores 50% of a user's health upon consumption.
 
 Soul.png:
 souls of the undead released upon their defeat. Some traders will accept them as payment for goods.
+
+Camp_fire.png:
+A nice place to rest up after a long day of fighting.
