@@ -1,0 +1,3 @@
+Healthpotion.png:
+Restores 10% of a user's health upon consumption.
+
