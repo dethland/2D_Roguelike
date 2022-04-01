@@ -11,4 +11,4 @@ Soul.png:
 souls of the undead released upon their defeat. Some traders will accept them as payment for goods.
 
 Camp_fire.png:
-A nice place to rest up after a long day of fighting.
+A warm and cozy place to rest up after a long day of fighting.
