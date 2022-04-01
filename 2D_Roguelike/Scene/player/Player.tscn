@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Scene/Player/script/running.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player/script/Player.gd" type="Script" id=2]
@@ -18,6 +18,8 @@
 [ext_resource path="res://Scene/Player/anim_sheets/hurt/Character3_pa_hurt.png" type="Texture" id=16]
 [ext_resource path="res://Asset/Animation/Idle/Original_pa_idle.png" type="Texture" id=17]
 [ext_resource path="res://Asset/Animation/Jump/Original_pa_jump.png" type="Texture" id=18]
+[ext_resource path="res://Scene/Player/anim_sheets/fall/Character3_pa_fall.png" type="Texture" id=19]
+[ext_resource path="res://Scene/Player/anim_sheets/land/Character3_pa_land.png" type="Texture" id=20]
 [ext_resource path="res://Scene/Player/anim_sheets/skill_charge/Character3_pa_skill_charge.png" type="Texture" id=21]
 [ext_resource path="res://Scene/Player/anim_sheets/skill_use/Character3_pa_skill_use.png" type="Texture" id=22]
 [ext_resource path="res://Scene/Player/anim_sheets/attack_axe/Character3_pa_attack_axe.png" type="Texture" id=23]
@@ -170,6 +172,30 @@ tracks/10/keys = {
 "update": 0,
 "values": [ 0 ]
 }
+tracks/11/type = "value"
+tracks/11/path = NodePath("AnimGroup/land:frame")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("AnimGroup/fall:frame")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "attack_axe"
@@ -198,6 +224,36 @@ tracks/1/keys = {
 "transitions": PoolRealArray(  ),
 "update": 1,
 "values": [  ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "fall"
+length = 0.9
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimGroup/fall:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimGroup/fall:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -298,6 +354,35 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "land"
+length = 0.15
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimGroup/land:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimGroup/land:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12, 0.13, 0.14 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ]
 }
 
 [sub_resource type="Animation" id=10]
@@ -489,7 +574,7 @@ horizental_speed = 300
 [node name="LandDetector" type="RayCast2D" parent="Statemachine/Jump"]
 position = Vector2( 0, 29 )
 enabled = true
-cast_to = Vector2( 0, 300 )
+cast_to = Vector2( 0, 25 )
 
 [node name="ChargeSkill" type="Node2D" parent="Statemachine"]
 script = ExtResource( 11 )
@@ -527,7 +612,6 @@ hframes = 5
 vframes = 2
 
 [node name="idle" type="Sprite" parent="AnimGroup"]
-visible = false
 texture = ExtResource( 17 )
 hframes = 5
 vframes = 5
@@ -537,6 +621,20 @@ visible = false
 texture = ExtResource( 18 )
 hframes = 5
 vframes = 2
+
+[node name="fall" type="Sprite" parent="AnimGroup"]
+visible = false
+texture = ExtResource( 19 )
+hframes = 5
+vframes = 4
+frame = 1
+
+[node name="land" type="Sprite" parent="AnimGroup"]
+visible = false
+texture = ExtResource( 20 )
+hframes = 5
+vframes = 3
+frame = 1
 
 [node name="skill_charge" type="Sprite" parent="AnimGroup"]
 visible = false
@@ -580,9 +678,11 @@ shape = SubResource( 19 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 3 )
 anims/attack_axe = SubResource( 4 )
+anims/fall = SubResource( 21 )
 anims/hurt = SubResource( 6 )
 anims/idle = SubResource( 7 )
 anims/jump = SubResource( 8 )
+anims/land = SubResource( 22 )
 anims/melee = SubResource( 10 )
 anims/parry = SubResource( 20 )
 anims/run = SubResource( 11 )
