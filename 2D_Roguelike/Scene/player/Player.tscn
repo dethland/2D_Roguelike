@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Scene/Player/script/running.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player/script/Player.gd" type="Script" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://Scene/Player/anim_sheets/skill_charge/Character3_pa_skill_charge.png" type="Texture" id=21]
 [ext_resource path="res://Scene/Player/anim_sheets/skill_use/Character3_pa_skill_use.png" type="Texture" id=22]
 [ext_resource path="res://Scene/Player/anim_sheets/attack_axe/Character3_pa_attack_axe.png" type="Texture" id=23]
+[ext_resource path="res://Asset/Animation/Parry/Parry.png" type="Texture" id=24]
 
 [sub_resource type="ShaderMaterial" id=14]
 shader = ExtResource( 10 )
@@ -166,6 +167,30 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("AnimGroup/parry:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("AnimGroup/parry:frame")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
@@ -401,6 +426,35 @@ tracks/2/keys = {
 "values": [ true ]
 }
 
+[sub_resource type="Animation" id=20]
+resource_name = "parry"
+length = 0.62
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimGroup/parry:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimGroup/parry:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.02, 0.04, 0.06, 0.08, 0.1, 0.12, 0.14, 0.16, 0.18, 0.2, 0.26, 0.28, 0.3, 0.32, 0.34, 0.36, 0.38, 0.4, 0.42, 0.44, 0.46, 0.48, 0.5, 0.52, 0.54, 0.56, 0.58, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 6, 6, 6, 6, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 ]
+}
+
 [sub_resource type="Animation" id=11]
 resource_name = "run"
 length = 0.65
@@ -557,6 +611,7 @@ hframes = 5
 vframes = 2
 
 [node name="idle" type="Sprite" parent="AnimGroup"]
+visible = false
 texture = ExtResource( 17 )
 hframes = 5
 vframes = 5
@@ -591,6 +646,11 @@ texture = ExtResource( 20 )
 hframes = 5
 vframes = 4
 
+[node name="parry" type="Sprite" parent="AnimGroup"]
+texture = ExtResource( 24 )
+hframes = 5
+vframes = 5
+
 [node name="Hitboxs" type="Node2D" parent="."]
 
 [node name="Hitbox" parent="Hitboxs" instance=ExtResource( 9 )]
@@ -622,6 +682,7 @@ anims/idle = SubResource( 7 )
 anims/jump = SubResource( 8 )
 anims/land = SubResource( 9 )
 anims/melee = SubResource( 10 )
+anims/parry = SubResource( 20 )
 anims/run = SubResource( 11 )
 anims/skill_charge = SubResource( 12 )
 anims/skill_use = SubResource( 13 )
