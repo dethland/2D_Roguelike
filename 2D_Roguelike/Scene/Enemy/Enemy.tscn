@@ -1,5 +1,6 @@
 [gd_scene load_steps=18 format=2]
 
+[ext_resource path="res://Asset/Animation/Enemy/enemy-2_sheet.png" type="Texture" id=1]
 [ext_resource path="res://Scene/Enemy/script/Statemachine.gd" type="Script" id=2]
 [ext_resource path="res://Scene/Enemy/script/Fight.gd" type="Script" id=3]
 [ext_resource path="res://Scene/Enemy/script/Idle.gd" type="Script" id=4]
@@ -8,7 +9,6 @@
 [ext_resource path="res://Scene/Enemy/script/HealthBar.gd" type="Script" id=7]
 [ext_resource path="res://Asset/UI/healthbar_under.png" type="Texture" id=8]
 [ext_resource path="res://Asset/UI/healthbar_cover.png" type="Texture" id=9]
-[ext_resource path="res://Asset/Animation/Enemy/enemy-2-Sheet.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 26.5 )
@@ -108,9 +108,9 @@ position = Vector2( 0, 6.372 )
 shape = SubResource( 1 )
 
 [node name="Icon" type="Sprite" parent="."]
-position = Vector2( 0, 10.438 )
-scale = Vector2( 0.7, 0.7 )
-texture = ExtResource( 10 )
+position = Vector2( 5, 1 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
 hframes = 24
 
 [node name="Statemachine" type="Node2D" parent="."]

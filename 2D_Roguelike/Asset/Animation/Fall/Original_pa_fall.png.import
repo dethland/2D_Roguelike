@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Run_animation.png-1695c3f011fcb0976d77b39458e92c98.stex"
+path="res://.import/Original_pa_fall.png-181df51d369e433a35606159f3d5b0a6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Animation/Run/Run_animation.png"
-dest_files=[ "res://.import/Run_animation.png-1695c3f011fcb0976d77b39458e92c98.stex" ]
+source_file="res://Asset/Animation/Fall/Original_pa_fall.png"
+dest_files=[ "res://.import/Original_pa_fall.png-181df51d369e433a35606159f3d5b0a6.stex" ]
 
 [params]
 

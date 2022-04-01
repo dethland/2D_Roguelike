@@ -9,6 +9,8 @@ onready var jump_velocity : float = (2.0 * jump_height) / jump_time_to_peak
 onready var jump_gravity : float = (-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)
 onready var fall_gravity : float = (-2.0 * jump_height) / (jump_time_to_descent * jump_time_to_descent)
 
+var fall_play_switch : bool = true
+
 var leave_floor : bool = false
 
 var direction = Vector2.ZERO
@@ -42,11 +44,6 @@ func _physics_process(delta):
 			elif velocity.y >= 0:
 				velocity.y -= fall_gravity * delta
 
-				# fall or land animation detection
-				if $LandDetector.is_colliding():
-					animator._play("land")
-				else:
-					animator._play("fall")
 
 		# reset the leave_floor, velocity, and states when player landed
 		elif player.is_on_floor() and leave_floor:
@@ -55,3 +52,6 @@ func _physics_process(delta):
 			statemachine.change_state_to("Idle")
 
 		player.move_and_slide(velocity, Vector2.UP)
+
+
+
