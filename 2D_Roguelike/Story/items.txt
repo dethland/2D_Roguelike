@@ -1,0 +1,14 @@
+Healthpotion.png:
+Restores 10% of a user's health upon consumption.
+
+Pot.png:
+Used to create various stews. The better the stew tastes, the more health it restores.
+
+Strengthstamina.png:
+Restores 50% of a user's health upon consumption.
+
+Soul.png:
+souls of the undead released upon their defeat. Some traders will accept them as payment for goods.
+
+Camp_fire.png:
+A warm and cozy place to rest up after a long day of fighting.
