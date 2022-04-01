@@ -72,7 +72,7 @@ position = Vector2( 122, 231 )
 current = true
 script = ExtResource( 8 )
 
-[node name="GUI" parent="Camera2D" instance=ExtResource( 9 )]
+[node name="Healthbar" parent="Camera2D" instance=ExtResource( 9 )]
 margin_left = -312.0
 margin_top = -172.0
 margin_right = -312.0
