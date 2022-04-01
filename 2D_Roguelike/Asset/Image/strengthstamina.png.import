@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Parry.png-74a5e44649cf3dc528d5cf318033cd1f.stex"
+path="res://.import/strengthstamina.png-4087e0bf3e5ff426e223ebfe1b497036.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Animation/Parry/Parry.png"
-dest_files=[ "res://.import/Parry.png-74a5e44649cf3dc528d5cf318033cd1f.stex" ]
+source_file="res://Asset/Image/strengthstamina.png"
+dest_files=[ "res://.import/strengthstamina.png-4087e0bf3e5ff426e223ebfe1b497036.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

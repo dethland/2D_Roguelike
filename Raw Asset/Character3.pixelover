@@ -10,9 +10,9 @@ object_name="Canvas"
 canvas_max_size=Vector3( 512, 288, 0 )
 canvas_fit_childs=true
 object_position=Vector2( 258, 145 )
-object_size=Vector3( 102, 96, 0 )
+object_size=Vector3( 110, 97, 0 )
 object_pivot_preset=0
-object_pivot=Vector2( 52, 49 )
+object_pivot=Vector2( 57, 49 )
 
 [shader.2]
 
@@ -113,7 +113,7 @@ sharp_bilinear=false
 mipmaps=false
 fill_color=Color( 1, 1, 1, 1 )
 image_flip_v=false
-object_visible=true
+object_visible=false
 object_basis=0
 object_deform_top_left=Vector2( 0, 0 )
 object_deform_top_right=Vector2( 0, 0 )
@@ -161,7 +161,7 @@ bone_length=16.0
 bone_rest_position=Vector2( -16, 0 )
 object_position=Vector2( 38, 34 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=272.7
+object_rotation=273.0
 object_skew=0.0
 bone_rest_rotation=-0.1
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -277,7 +277,7 @@ bone_length=9.0
 bone_rest_position=Vector2( -6, -13 )
 object_position=Vector2( 14, -5 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=201.3
+object_rotation=197.4
 object_skew=0.0
 bone_rest_rotation=102.8
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -335,7 +335,7 @@ bone_length=10.0
 bone_rest_position=Vector2( 9, 0 )
 object_position=Vector2( 9, 0 )
 object_scale=Vector3( 100, 100, 0 )
-object_rotation=325.5
+object_rotation=312.2
 object_skew=0.0
 bone_rest_rotation=-28.2
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -451,7 +451,7 @@ bone_length=9.0
 bone_rest_position=Vector2( 13, 5 )
 object_position=Vector2( 13, 4 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=163.8
+object_rotation=159.8
 object_skew=0.0
 bone_rest_rotation=179.9
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -507,9 +507,9 @@ object_visible=true
 object_basis=0
 bone_length=8.0
 bone_rest_position=Vector2( 9, 0 )
-object_position=Vector2( 10, 0 )
+object_position=Vector2( 10, -1 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=329.6
+object_rotation=318.7
 object_skew=0.0
 bone_rest_rotation=-5.2
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -607,7 +607,7 @@ bone_length=13.0
 bone_rest_position=Vector2( -2, 1 )
 object_position=Vector2( 36, 34 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=94.6
+object_rotation=96.9
 object_skew=0.0
 bone_rest_rotation=101.3
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -723,7 +723,7 @@ bone_length=13.0
 bone_rest_position=Vector2( 1, 1 )
 object_position=Vector2( 39, 35 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=61.5
+object_rotation=58.7
 object_skew=0.0
 bone_rest_rotation=70.9
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -741,7 +741,7 @@ bone_length=16.0
 bone_rest_position=Vector2( 14, 0 )
 object_position=Vector2( 14, 0 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=26.1
+object_rotation=28.9
 object_skew=0.0
 bone_rest_rotation=18.8
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -13021,6 +13021,13 @@ inputs={
 "out": Vector2( 0, 0 ),
 "out_normalized": Vector2( 0, 0 ),
 "time": 0.2,
+"value": 137.8
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.6,
 "value": 177.8
 } ],
 "modulo": 360.0,
@@ -13121,6 +13128,13 @@ inputs={
 "out_normalized": Vector2( 0, 0 ),
 "time": 0.0,
 "value": 9.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.6,
+"value": 9.0
 } ],
 "modulo": 0.0,
 "type": 3,
@@ -13134,6 +13148,13 @@ inputs={
 "out_normalized": Vector2( 0, 0 ),
 "time": 0.0,
 "value": 0.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.6,
+"value": -2.0
 } ],
 "modulo": 0.0,
 "type": 3,
@@ -13160,6 +13181,11 @@ inputs={
 "out": Vector2( 0, 0 ),
 "out_normalized": Vector2( 0, 0 ),
 "time": 0.2,
+"value": -115.4
+}, {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.6,
 "value": -115.4
 } ],
 "modulo": 360.0,
@@ -13299,7 +13325,7 @@ inputs={
 "out": Vector2( 0, 0 ),
 "out_normalized": Vector2( 0, 0 ),
 "time": 0.2,
-"value": 124.6
+"value": 91.3
 } ],
 "modulo": 360.0,
 "type": 3,
@@ -13399,6 +13425,27 @@ inputs={
 "out_normalized": Vector2( 0, 0 ),
 "time": 0.0,
 "value": 10.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.1,
+"value": 9.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.2,
+"value": 9.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.6,
+"value": 9.0
 } ],
 "modulo": 0.0,
 "type": 3,
@@ -13411,7 +13458,28 @@ inputs={
 "out": Vector2( 0, 0 ),
 "out_normalized": Vector2( 0, 0 ),
 "time": 0.0,
-"value": 0.0
+"value": -1.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.1,
+"value": -1.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.2,
+"value": -1.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.6,
+"value": -2.0
 } ],
 "modulo": 0.0,
 "type": 3,
@@ -13438,6 +13506,11 @@ inputs={
 "out": Vector2( 0, 0 ),
 "out_normalized": Vector2( 0, 0 ),
 "time": 0.2,
+"value": -96.6
+}, {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.6,
 "value": -96.6
 } ],
 "modulo": 360.0,
@@ -13716,6 +13789,11 @@ inputs={
 "out": Vector2( 0, 0 ),
 "out_normalized": Vector2( 0, 0 ),
 "time": 0.2,
+"value": 108.4
+}, {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.6,
 "value": 108.4
 } ],
 "modulo": 360.0,
@@ -14134,6 +14212,11 @@ inputs={
 "out_normalized": Vector2( 0, 0 ),
 "time": 0.2,
 "value": 43.1
+}, {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.6,
+"value": 43.1
 } ],
 "modulo": 360.0,
 "type": 3,
@@ -14247,6 +14330,11 @@ inputs={
 "out_normalized": Vector2( 0, 0 ),
 "time": 0.2,
 "value": -36.0
+}, {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.6,
+"value": -36.0
 } ],
 "modulo": 0.0,
 "type": 3,
@@ -14266,6 +14354,11 @@ inputs={
 "out": Vector2( 0, 0 ),
 "out_normalized": Vector2( 0, 0 ),
 "time": 0.2,
+"value": -33.0
+}, {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.6,
 "value": -33.0
 } ],
 "modulo": 0.0,
@@ -14379,6 +14472,7 @@ order=10
 
 snap_grid=false
 snap_axes=false
+show_bones=false
 export_path="C:/Users/Jason Li/Documents/GitHub/roguelike/Raw Asset/Character3_pa.png"
 export_views={
 "Depth buffer": true,
@@ -14386,3 +14480,5 @@ export_views={
 "Normal buffer": true,
 "Preview": true
 }
+export_anim_folder=false
+export_anim_all=false

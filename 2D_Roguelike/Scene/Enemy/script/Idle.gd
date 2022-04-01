@@ -15,13 +15,11 @@ func walk() -> void:
 	# Enemy will walk across the paltform with random stop
 	if left_edge_detection.is_colliding() or right_edge_detection.is_colliding():
 		if reverse_walk_protection_trigger:
-			print(left_edge_detection.get_collider())
-			print(right_edge_detection.get_collider())
 			velocity.x *= -1
 			reverse_walk_protection_timer.start(3)
 			reverse_walk_protection_trigger = false
 			
-	velocity = enemy.move_and_slide(velocity, Vector2.UP)
+	enemy.move_and_slide(velocity, Vector2.UP)
 	face_direction()
 	animator.play("walk");
 
@@ -30,6 +28,7 @@ func reverse_walk_trigger_reset():
 
 func _ready() -> void:
 	reverse_walk_protection_timer = Timer.new()
+	reverse_walk_protection_timer.one_shot = true
 	self.add_child(reverse_walk_protection_timer)
 	reverse_walk_protection_timer.connect("timeout", self, "reverse_walk_trigger_reset")
 	
