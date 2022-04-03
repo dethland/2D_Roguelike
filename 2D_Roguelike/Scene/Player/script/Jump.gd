@@ -51,7 +51,6 @@ func _physics_process(delta):
 
 		# reset the leave_floor, velocity, and states when player landed
 		elif player.is_on_floor() and leave_floor:
-			leave_floor = false
 			velocity.y = 0
 
 		player.move_and_slide(velocity, Vector2.UP)

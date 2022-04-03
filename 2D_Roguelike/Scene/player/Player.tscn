@@ -22,7 +22,7 @@
 [ext_resource path="res://Scene/Player/anim_sheets/land/Character3_pa_land.png" type="Texture" id=20]
 [ext_resource path="res://Scene/Player/anim_sheets/skill_charge/Character3_pa_skill_charge.png" type="Texture" id=21]
 [ext_resource path="res://Scene/Player/anim_sheets/skill_use/Character3_pa_skill_use.png" type="Texture" id=22]
-[ext_resource path="res://Scene/Player/anim_sheets/attack_axe/Character3_pa_attack_axe.png" type="Texture" id=23]
+[ext_resource path="res://Asset/Animation/Attack/Axe_attack_animation.png" type="Texture" id=23]
 [ext_resource path="res://Asset/Animation/Parry/Parry.png" type="Texture" id=24]
 
 [sub_resource type="ShaderMaterial" id=14]
@@ -600,9 +600,8 @@ hframes = 5
 vframes = 4
 
 [node name="attack_axe" type="Sprite" parent="AnimGroup"]
-visible = false
 texture = ExtResource( 23 )
-hframes = 5
+hframes = 4
 vframes = 3
 
 [node name="hurt" type="Sprite" parent="AnimGroup"]
@@ -612,6 +611,7 @@ hframes = 5
 vframes = 2
 
 [node name="idle" type="Sprite" parent="AnimGroup"]
+visible = false
 texture = ExtResource( 17 )
 hframes = 5
 vframes = 5
