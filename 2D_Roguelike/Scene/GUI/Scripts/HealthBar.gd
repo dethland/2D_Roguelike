@@ -19,7 +19,7 @@ func _ready():
 func _process(delta):
 	curr_health = player.health
 	if(curr_health != prev_health):
-		tween.interpolate_property(bar, "value", prev_health, curr_health, .6, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+		tween.interpolate_property(bar, "value", prev_health, curr_health, .3, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
 	
 	prev_health = curr_health
