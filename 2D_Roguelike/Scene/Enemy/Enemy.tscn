@@ -11,16 +11,16 @@
 [ext_resource path="res://Asset/UI/healthbar_cover.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32, 26.5 )
+extents = Vector2( 24.5, 29.936 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 200, 100 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 40.2155, 30.1534 )
+extents = Vector2( 30, 29.738 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 10, 15.5 )
+extents = Vector2( 8, 12 )
 
 [sub_resource type="Animation" id=6]
 length = 0.001
@@ -59,7 +59,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.5 ),
+"times": PoolRealArray( 0, 0.3, 0.319829, 0.357989 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ true, false, false, true ]
@@ -104,7 +104,7 @@ collision_layer = 2
 script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 6.372 )
+position = Vector2( -7.5, 2.936 )
 shape = SubResource( 1 )
 
 [node name="Icon" type="Sprite" parent="."]
@@ -139,16 +139,15 @@ shape = SubResource( 2 )
 [node name="Battle_range" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Battle_range"]
-position = Vector2( -0.258026, -0.386738 )
+position = Vector2( -21, 2.41086 )
 scale = Vector2( 1, 0.989 )
 shape = SubResource( 3 )
 
 [node name="Hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2( -34, 2.5 )
+position = Vector2( -43, -11 )
 shape = SubResource( 7 )
-disabled = true
 
 [node name="Detection" type="Node2D" parent="."]
 position = Vector2( -0.0688477, 0.0269356 )
@@ -174,7 +173,7 @@ enabled = true
 cast_to = Vector2( 0, 5 )
 
 [node name="HealthBar" type="Node2D" parent="."]
-position = Vector2( 0, -30 )
+position = Vector2( 0, -41 )
 script = ExtResource( 7 )
 
 [node name="TextureProgress" type="TextureProgress" parent="HealthBar"]
