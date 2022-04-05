@@ -12,6 +12,9 @@ margin_top = 20.0
 margin_right = 20.0
 margin_bottom = 20.0
 mouse_filter = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Package" parent="." instance=ExtResource( 5 )]
 visible = false

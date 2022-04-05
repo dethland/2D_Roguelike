@@ -13,6 +13,9 @@ margin_bottom = -346.0
 rect_scale = Vector2( 3, 3 )
 texture = ExtResource( 5 )
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="use" type="Button" parent="."]
 visible = false

@@ -18,6 +18,10 @@ func get_hit(from_object, damage):
 	if get_node("Statemachine").show_active_state() == "Hurt": return
 	
 	# handle getting hurt (pozdnm)
+	if get_node("Statemachine").show_active_state() == "Jump":
+		get_node("Statemachine/Jump").velocity.y = 0
+		get_node("Statemachine/Jump").leave_floor = false
+		
 	health -= damage;
 	get_node("Statemachine").change_state_to("Hurt");
 	
