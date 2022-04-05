@@ -20,7 +20,7 @@ extents = Vector2( 200, 100 )
 extents = Vector2( 30, 29.738 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 8, 12 )
+extents = Vector2( 25.5, 28 )
 
 [sub_resource type="Animation" id=6]
 length = 0.001
@@ -146,7 +146,7 @@ shape = SubResource( 3 )
 [node name="Hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2( -43, -11 )
+position = Vector2( -25.5, 5 )
 shape = SubResource( 7 )
 
 [node name="Detection" type="Node2D" parent="."]
