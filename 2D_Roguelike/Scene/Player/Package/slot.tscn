@@ -1,44 +1,44 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Asset/Image/slot.png" type="Texture" id=1]
 [ext_resource path="res://Scene/Player/Package/TextureRect.gd" type="Script" id=2]
 [ext_resource path="res://Scene/Player/Package/Button.gd" type="Script" id=3]
 [ext_resource path="res://Scene/Player/Package/slot.gd" type="Script" id=4]
+[ext_resource path="res://Asset/UI/backpack_under.png" type="Texture" id=5]
 
-[node name="slot" type="Control"]
+[node name="slot" type="TextureRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -628.0
+margin_bottom = -346.0
+rect_scale = Vector2( 3, 3 )
+texture = ExtResource( 5 )
 script = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 45.0
-margin_bottom = 48.0
-texture = ExtResource( 1 )
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="use" type="Button" parent="TextureRect"]
+[node name="use" type="Button" parent="."]
 visible = false
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1.0
-margin_top = -12.0
-margin_right = -1.0
-margin_bottom = 8.0
+margin_top = -1.66667
+margin_right = 24.0
+margin_bottom = 18.3333
+rect_scale = Vector2( 0.33, 0.33 )
+mouse_filter = 1
 text = "use"
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="mouse_entered" from="TextureRect" to="TextureRect" method="_on_TextureRect_mouse_entered"]
-[connection signal="mouse_exited" from="TextureRect" to="TextureRect" method="_on_TextureRect_mouse_exited"]
-[connection signal="mouse_entered" from="TextureRect/use" to="TextureRect/use" method="_on_slot_mouse_entered"]
-[connection signal="mouse_exited" from="TextureRect/use" to="TextureRect/use" method="_on_slot_mouse_exited"]
-[connection signal="pressed" from="TextureRect/use" to="TextureRect/use" method="_on_Button_pressed"]
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -2.33333
+margin_top = -1.66667
+margin_right = 29.6667
+margin_bottom = 30.3333
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+script = ExtResource( 2 )
+
+[connection signal="mouse_entered" from="." to="." method="_on_slot_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_slot_mouse_exited"]
+[connection signal="pressed" from="use" to="use" method="_on_Button_pressed"]
