@@ -696,4 +696,5 @@ script = ExtResource( 13 )
 [connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Hurt" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Jump" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/ChargeSkill" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="Statemachine/Parry" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationPlayer" to="Hitboxs/Hitbox" method="_on_AnimationPlayer_animation_finished"]
