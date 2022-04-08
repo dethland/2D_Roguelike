@@ -8,7 +8,7 @@
 [ext_resource path="res://Asset/Image/spikelayers.png" type="Texture" id=6]
 [ext_resource path="res://Asset/Image/bg2.png" type="Texture" id=7]
 [ext_resource path="res://Scene/GUI/Scripts/camera.gd" type="Script" id=8]
-[ext_resource path="res://Scene/GUI/GUI.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scene/GUI/Bars.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scene/GUI/Scripts/HealthBar.gd" type="Script" id=10]
 
 [node name="Test_02" type="Node2D"]

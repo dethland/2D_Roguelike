@@ -6,7 +6,7 @@
 [ext_resource path="res://Asset/UI/stambar_cover.png" type="Texture" id=4]
 [ext_resource path="res://Scene/Player/Package/Package.tscn" type="PackedScene" id=5]
 
-[node name="GUI" type="Control" groups=["gui"]]
+[node name="Bars" type="Control" groups=["gui"]]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 20.0
@@ -19,6 +19,14 @@ __meta__ = {
 [node name="Package" parent="." instance=ExtResource( 5 )]
 visible = false
 position = Vector2( 360, 168 )
+
+[node name="Other" type="HBoxContainer" parent="."]
+margin_left = 112.0
+margin_right = 112.0
+margin_bottom = 163.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Container" type="HBoxContainer" parent="."]
 margin_right = 302.0
@@ -50,6 +58,7 @@ __meta__ = {
 }
 
 [node name="StamBar" type="TextureProgress" parent="Container/Bars"]
+visible = false
 margin_top = 10.0
 margin_right = 52.0
 margin_bottom = 16.0
@@ -59,8 +68,3 @@ texture_progress = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Other" type="HBoxContainer" parent="Container"]
-margin_left = 56.0
-margin_right = 56.0
-margin_bottom = 163.0
