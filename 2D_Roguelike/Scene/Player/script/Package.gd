@@ -23,9 +23,7 @@ func _physics_process(delta):
 		else :
 			r = search_empty_slot()
 			var slot = get_node("NinePatchRect" + "/"+r)
-			#print_all_slot()
 			slot.add_in(item_sc,1) 
-			#print_all_slot()
 	
 
 func search_slot( name)-> String:

@@ -4,6 +4,7 @@
 [ext_resource path="res://Scene/player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Player/Camera2D.gd" type="Script" id=3]
 
+
 [node name="Node2D" type="Node2D"]
 position = Vector2( 1, -1 )
 

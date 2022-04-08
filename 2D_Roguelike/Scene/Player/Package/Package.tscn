@@ -4,6 +4,7 @@
 [ext_resource path="res://Scene/Player/Package/slot.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Asset/UI/backpack_ui.png" type="Texture" id=3]
 
+
 [node name="Package" type="Node2D"]
 position = Vector2( -16, 9 )
 scale = Vector2( 4, 4 )
