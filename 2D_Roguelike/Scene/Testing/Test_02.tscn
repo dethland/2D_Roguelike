@@ -101,7 +101,7 @@ margin_top = -42.0
 margin_right = -56.0
 margin_bottom = -42.0
 
-[node name="Package" parent="Camera2D" instance=ExtResource( 12 )]
+[node name="Package" parent="Camera2D" groups=["gui"] instance=ExtResource( 12 )]
 visible = false
 position = Vector2( -1, 0 )
 
