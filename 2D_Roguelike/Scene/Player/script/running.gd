@@ -26,8 +26,9 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("skill_use"):
 			statemachine.change_state_to("ChargeSkill")
 		if Input.is_action_just_pressed("parry"):
-			if statemachine.get_node("Parry").can_parry():
+			if animator.current_animation != "parry":
 				statemachine.change_state_to("Parry")
 
 		velocity = player.move_and_slide(velocity, Vector2.UP)
+		velocity.y = 0
 		apply_gravity(fall_gravity, delta)

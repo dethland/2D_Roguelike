@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg (wip).png-6fcf59a85cbab54c1c6f1aafc4e4f7f5.stex"
+path="res://.import/Original_pa_idle.png-0847833c8293edf43541155b1794d2cf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Image/bg (wip).png"
-dest_files=[ "res://.import/bg (wip).png-6fcf59a85cbab54c1c6f1aafc4e4f7f5.stex" ]
+source_file="res://Asset/Animation/Idle/Original_pa_idle.png"
+dest_files=[ "res://.import/Original_pa_idle.png-0847833c8293edf43541155b1794d2cf.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
