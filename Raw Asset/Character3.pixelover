@@ -1,6 +1,6 @@
 [pixelover]
 
-version="0.9"
+version="0.9.2"
 
 [object.0]
 
@@ -9,17 +9,17 @@ tree_item_collapsed=false
 object_name="Canvas"
 canvas_max_size=Vector3( 512, 288, 0 )
 canvas_fit_childs=true
-object_position=Vector2( 257, 145 )
-object_size=Vector3( 107, 110, 0 )
+object_position=Vector2( 258, 145 )
+object_size=Vector3( 110, 97, 0 )
 object_pivot_preset=0
-object_pivot=Vector2( 55, 56 )
+object_pivot=Vector2( 57, 49 )
 
 [shader.2]
 
 object_name="Default shader"
 object_path=Object(Object,"script":Resource( "res://script/path_container.gd"),"absolute_path":"","relative_path":"","favorite":false,"is_folder":false)
 
-shader_modulate_color=Color( 1, 0.835, 0.835, 1 )
+shader_modulate_color=Color( 1, 1, 1, 1 )
 shader_hue_shift=0.0
 shader_brightness=100.0
 shader_contrast=100.0
@@ -159,9 +159,9 @@ object_visible=true
 object_basis=0
 bone_length=16.0
 bone_rest_position=Vector2( -16, 0 )
-object_position=Vector2( 37, 34 )
+object_position=Vector2( 38, 34 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=-93.7
+object_rotation=273.0
 object_skew=0.0
 bone_rest_rotation=-0.1
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -228,7 +228,7 @@ parent_id=15
 
 [resource.4]
 
-path=Object(Object,"script":Resource( "res://script/path_container.gd"),"absolute_path":"C:/Users/dethl/Dropbox/Roguelike/Character_2/output2.0/torso.png","relative_path":"","favorite":false,"is_folder":false)
+path=Object(Object,"script":Resource( "res://script/path_container.gd"),"absolute_path":"","relative_path":"","favorite":false,"is_folder":false)
 
 type="image"
 image=PoolByteArray( 137, 80, 78, 71, 13, 10, 26, 10, 0, 0, 0, 13, 73, 72, 68, 82, 0, 0, 0, 64, 0, 0, 0, 64, 8, 6, 0, 0, 0, 170, 105, 113, 222, 0, 0, 0, 1, 115, 82, 71, 66, 0, 174, 206, 28, 233, 0, 0, 2, 27, 73, 68, 65, 84, 120, 156, 237, 216, 203, 110, 18, 97, 20, 192, 241, 255, 48, 48, 124, 20, 65, 105, 45, 21, 208, 24, 130, 4, 77, 186, 48, 164, 46, 26, 99, 76, 124, 4, 31, 195, 151, 240, 169, 124, 130, 46, 76, 92, 176, 48, 38, 134, 116, 81, 155, 40, 163, 182, 82, 228, 54, 195, 245, 115, 129, 140, 180, 214, 101, 15, 73, 61, 191, 205, 100, 152, 144, 115, 225, 204, 97, 0, 148, 82, 74, 41, 165, 148, 82, 74, 169, 255, 142, 35, 29, 112, 191, 90, 7, 176, 23, 99, 191, 61, 108, 72, 167, 2, 23, 147, 184, 106, 251, 213, 58, 174, 19, 99, 102, 231, 118, 37, 254, 185, 102, 72, 55, 34, 38, 26, 13, 152, 217, 185, 205, 38, 210, 203, 83, 187, 114, 180, 16, 77, 136, 24, 233, 6, 88, 128, 238, 100, 64, 54, 145, 102, 165, 17, 209, 245, 96, 28, 138, 38, 36, 62, 1, 126, 251, 251, 185, 194, 179, 137, 52, 245, 59, 143, 162, 107, 41, 207, 216, 127, 189, 247, 42, 136, 54, 96, 20, 134, 212, 118, 202, 52, 191, 29, 1, 139, 73, 232, 78, 6, 192, 162, 248, 194, 102, 30, 207, 245, 36, 83, 146, 159, 128, 147, 222, 15, 106, 59, 229, 168, 240, 193, 40, 160, 241, 245, 35, 133, 205, 60, 0, 198, 36, 69, 243, 17, 111, 0, 252, 217, 1, 23, 121, 174, 199, 131, 204, 93, 209, 92, 214, 210, 0, 184, 188, 9, 187, 219, 21, 14, 62, 93, 227, 175, 193, 246, 184, 199, 212, 177, 12, 70, 1, 131, 81, 128, 223, 63, 229, 205, 227, 74, 116, 126, 112, 220, 160, 176, 149, 151, 76, 137, 184, 104, 52, 32, 110, 23, 207, 60, 73, 99, 0, 120, 217, 56, 230, 89, 185, 78, 103, 220, 231, 116, 212, 161, 59, 232, 201, 230, 35, 26, 204, 113, 157, 246, 184, 103, 205, 124, 17, 118, 217, 4, 128, 207, 39, 62, 0, 185, 116, 86, 244, 233, 84, 244, 22, 152, 218, 25, 0, 185, 91, 57, 134, 97, 192, 52, 152, 0, 240, 238, 232, 61, 120, 49, 118, 75, 85, 220, 185, 236, 90, 90, 203, 18, 60, 235, 156, 177, 97, 82, 196, 83, 9, 128, 197, 113, 60, 231, 195, 151, 67, 220, 184, 43, 154, 139, 248, 14, 0, 216, 48, 41, 134, 97, 128, 107, 23, 197, 78, 131, 9, 222, 13, 15, 99, 146, 252, 28, 246, 69, 115, 17, 157, 128, 173, 226, 19, 0, 134, 97, 112, 233, 4, 132, 221, 128, 248, 237, 135, 146, 41, 201, 54, 192, 100, 43, 118, 239, 197, 235, 191, 118, 192, 52, 152, 128, 23, 99, 122, 239, 57, 55, 239, 63, 21, 253, 45, 176, 150, 91, 160, 180, 247, 138, 18, 224, 183, 154, 20, 138, 53, 252, 86, 147, 237, 98, 13, 126, 191, 38, 73, 180, 1, 198, 100, 28, 191, 213, 140, 62, 225, 101, 241, 133, 149, 226, 141, 201, 136, 255, 75, 165, 148, 82, 74, 41, 165, 148, 82, 74, 41, 165, 148, 82, 74, 41, 165, 148, 82, 234, 186, 251, 5, 44, 239, 186, 87, 7, 95, 51, 215, 0, 0, 0, 0, 73, 69, 78, 68, 174, 66, 96, 130 )
@@ -275,9 +275,9 @@ object_visible=true
 object_basis=0
 bone_length=9.0
 bone_rest_position=Vector2( -6, -13 )
-object_position=Vector2( 13, -6 )
+object_position=Vector2( 14, -5 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=107.6
+object_rotation=197.4
 object_skew=0.0
 bone_rest_rotation=102.8
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -286,7 +286,7 @@ parent_id=16
 
 [resource.5]
 
-path=Object(Object,"script":Resource( "res://script/path_container.gd"),"absolute_path":"C:/Users/dethl/Dropbox/Roguelike/Character_2/output2.0/l_u_arm.png","relative_path":"","favorite":false,"is_folder":false)
+path=Object(Object,"script":Resource( "res://script/path_container.gd"),"absolute_path":"","relative_path":"","favorite":false,"is_folder":false)
 
 type="image"
 image=PoolByteArray( 137, 80, 78, 71, 13, 10, 26, 10, 0, 0, 0, 13, 73, 72, 68, 82, 0, 0, 0, 64, 0, 0, 0, 64, 8, 6, 0, 0, 0, 170, 105, 113, 222, 0, 0, 0, 1, 115, 82, 71, 66, 0, 174, 206, 28, 233, 0, 0, 0, 88, 73, 68, 65, 84, 120, 156, 237, 213, 49, 10, 128, 64, 12, 4, 192, 104, 43, 231, 255, 223, 169, 88, 123, 149, 15, 176, 56, 87, 116, 166, 74, 151, 101, 9, 164, 10, 0, 0, 0, 0, 126, 101, 26, 189, 96, 93, 218, 121, 205, 219, 177, 15, 223, 119, 215, 156, 14, 144, 166, 128, 116, 128, 52, 5, 164, 3, 164, 61, 89, 192, 235, 62, 64, 149, 11, 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 240, 109, 29, 49, 22, 4, 19, 212, 90, 122, 246, 0, 0, 0, 0, 73, 69, 78, 68, 174, 66, 96, 130 )
@@ -335,7 +335,7 @@ bone_length=10.0
 bone_rest_position=Vector2( 9, 0 )
 object_position=Vector2( 9, 0 )
 object_scale=Vector3( 100, 100, 0 )
-object_rotation=339.2
+object_rotation=312.2
 object_skew=0.0
 bone_rest_rotation=-28.2
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -344,7 +344,7 @@ parent_id=22
 
 [resource.9]
 
-path=Object(Object,"script":Resource( "res://script/path_container.gd"),"absolute_path":"C:/Users/dethl/Dropbox/Roguelike/Character_2/output2.0/l_l_arm.png","relative_path":"","favorite":false,"is_folder":false)
+path=Object(Object,"script":Resource( "res://script/path_container.gd"),"absolute_path":"","relative_path":"","favorite":false,"is_folder":false)
 
 type="image"
 image=PoolByteArray( 137, 80, 78, 71, 13, 10, 26, 10, 0, 0, 0, 13, 73, 72, 68, 82, 0, 0, 0, 64, 0, 0, 0, 64, 8, 6, 0, 0, 0, 170, 105, 113, 222, 0, 0, 0, 1, 115, 82, 71, 66, 0, 174, 206, 28, 233, 0, 0, 0, 124, 73, 68, 65, 84, 120, 156, 237, 214, 189, 14, 133, 32, 12, 6, 80, 188, 43, 129, 247, 127, 206, 107, 156, 117, 209, 193, 201, 56, 208, 146, 120, 78, 194, 220, 242, 241, 147, 150, 2, 0, 0, 0, 0, 0, 192, 55, 44, 163, 11, 244, 218, 246, 171, 214, 127, 91, 71, 151, 123, 237, 151, 221, 64, 54, 1, 100, 55, 144, 77, 0, 217, 13, 100, 11, 13, 160, 215, 86, 122, 109, 145, 37, 31, 69, 6, 176, 159, 107, 42, 209, 79, 96, 41, 147, 133, 144, 241, 7, 12, 31, 190, 222, 136, 8, 224, 182, 225, 217, 166, 193, 168, 27, 48, 213, 169, 3, 0, 0, 0, 0, 0, 240, 69, 7, 149, 36, 10, 63, 36, 240, 122, 167, 0, 0, 0, 0, 73, 69, 78, 68, 174, 66, 96, 130 )
@@ -449,9 +449,9 @@ object_visible=true
 object_basis=0
 bone_length=9.0
 bone_rest_position=Vector2( 13, 5 )
-object_position=Vector2( 4, 4 )
+object_position=Vector2( 13, 4 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=85.6
+object_rotation=159.8
 object_skew=0.0
 bone_rest_rotation=179.9
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -460,7 +460,7 @@ parent_id=16
 
 [resource.16]
 
-path=Object(Object,"script":Resource( "res://script/path_container.gd"),"absolute_path":"C:/Users/dethl/Dropbox/Roguelike/Character_2/output2.0/r_u_arm.png","relative_path":"","favorite":false,"is_folder":false)
+path=Object(Object,"script":Resource( "res://script/path_container.gd"),"absolute_path":"","relative_path":"","favorite":false,"is_folder":false)
 
 type="image"
 image=PoolByteArray( 137, 80, 78, 71, 13, 10, 26, 10, 0, 0, 0, 13, 73, 72, 68, 82, 0, 0, 0, 64, 0, 0, 0, 64, 8, 6, 0, 0, 0, 170, 105, 113, 222, 0, 0, 0, 1, 115, 82, 71, 66, 0, 174, 206, 28, 233, 0, 0, 0, 88, 73, 68, 65, 84, 120, 156, 237, 212, 177, 10, 128, 48, 16, 68, 193, 104, 43, 250, 255, 223, 105, 176, 214, 74, 16, 123, 111, 3, 206, 84, 215, 229, 177, 69, 90, 3, 0, 0, 0, 128, 95, 153, 210, 1, 79, 219, 178, 158, 247, 189, 31, 189, 164, 109, 174, 120, 100, 100, 6, 72, 7, 164, 25, 32, 29, 240, 82, 254, 41, 143, 54, 64, 57, 3, 164, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 190, 116, 1, 129, 228, 4, 19, 110, 94, 117, 210, 0, 0, 0, 0, 73, 69, 78, 68, 174, 66, 96, 130 )
@@ -507,9 +507,9 @@ object_visible=true
 object_basis=0
 bone_length=8.0
 bone_rest_position=Vector2( 9, 0 )
-object_position=Vector2( 8, 0 )
-object_scale=Vector3( 83.256, 83.256, 1 )
-object_rotation=370.3
+object_position=Vector2( 10, -1 )
+object_scale=Vector3( 100, 100, 1 )
+object_rotation=318.7
 object_skew=0.0
 bone_rest_rotation=-5.2
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -518,7 +518,7 @@ parent_id=24
 
 [resource.17]
 
-path=Object(Object,"script":Resource( "res://script/path_container.gd"),"absolute_path":"C:/Users/dethl/Dropbox/Roguelike/Character_2/output2.0/r_l_arm.png","relative_path":"","favorite":false,"is_folder":false)
+path=Object(Object,"script":Resource( "res://script/path_container.gd"),"absolute_path":"","relative_path":"","favorite":false,"is_folder":false)
 
 type="image"
 image=PoolByteArray( 137, 80, 78, 71, 13, 10, 26, 10, 0, 0, 0, 13, 73, 72, 68, 82, 0, 0, 0, 64, 0, 0, 0, 64, 8, 6, 0, 0, 0, 170, 105, 113, 222, 0, 0, 0, 1, 115, 82, 71, 66, 0, 174, 206, 28, 233, 0, 0, 0, 123, 73, 68, 65, 84, 120, 156, 237, 214, 49, 14, 131, 48, 12, 64, 81, 211, 53, 74, 238, 127, 206, 162, 206, 116, 40, 11, 236, 150, 141, 250, 158, 20, 137, 205, 230, 79, 142, 0, 0, 0, 0, 0, 0, 224, 63, 108, 213, 11, 220, 173, 49, 143, 243, 115, 123, 127, 246, 244, 121, 175, 244, 9, 205, 9, 80, 189, 64, 53, 1, 170, 23, 168, 214, 58, 192, 26, 51, 214, 152, 169, 51, 58, 7, 56, 206, 151, 170, 115, 128, 136, 223, 157, 146, 26, 161, 123, 128, 136, 228, 99, 173, 99, 128, 203, 15, 103, 95, 131, 29, 3, 68, 52, 60, 209, 1, 0, 0, 0, 0, 0, 120, 186, 47, 173, 182, 10, 63, 57, 203, 232, 146, 0, 0, 0, 0, 73, 69, 78, 68, 174, 66, 96, 130 )
@@ -549,7 +549,7 @@ effect_trail=false
 effect_trail_time=0.347
 effect_trail_quality=90.0
 object_position=Vector2( 3, 6 )
-object_scale=Vector3( 100, 100, 1 )
+object_scale=Vector3( 99.467, 99.467, 1 )
 object_rotation=-80.4
 object_pivot_preset=0
 object_pivot_percent=Vector2( 0.5, 0.5 )
@@ -607,7 +607,7 @@ bone_length=13.0
 bone_rest_position=Vector2( -2, 1 )
 object_position=Vector2( 36, 34 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=97.8
+object_rotation=96.9
 object_skew=0.0
 bone_rest_rotation=101.3
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -616,7 +616,7 @@ parent_id=27
 
 [resource.18]
 
-path=Object(Object,"script":Resource( "res://script/path_container.gd"),"absolute_path":"C:/Users/dethl/Dropbox/Roguelike/Character_2/output2.0/l_u_leg.png","relative_path":"","favorite":false,"is_folder":false)
+path=Object(Object,"script":Resource( "res://script/path_container.gd"),"absolute_path":"","relative_path":"","favorite":false,"is_folder":false)
 
 type="image"
 image=PoolByteArray( 137, 80, 78, 71, 13, 10, 26, 10, 0, 0, 0, 13, 73, 72, 68, 82, 0, 0, 0, 64, 0, 0, 0, 64, 8, 6, 0, 0, 0, 170, 105, 113, 222, 0, 0, 0, 1, 115, 82, 71, 66, 0, 174, 206, 28, 233, 0, 0, 0, 190, 73, 68, 65, 84, 120, 156, 237, 215, 33, 18, 194, 48, 20, 132, 225, 13, 116, 0, 141, 192, 128, 226, 92, 156, 129, 195, 112, 64, 20, 87, 64, 85, 128, 1, 3, 141, 234, 100, 55, 3, 255, 167, 218, 137, 120, 121, 59, 175, 105, 43, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 240, 243, 138, 171, 208, 225, 120, 126, 95, 62, 62, 235, 223, 174, 23, 215, 54, 190, 44, 28, 69, 42, 205, 79, 221, 219, 89, 2, 120, 169, 53, 27, 13, 193, 25, 64, 151, 8, 160, 117, 129, 221, 254, 212, 186, 196, 44, 205, 3, 88, 173, 183, 173, 75, 204, 226, 122, 4, 226, 167, 125, 13, 103, 64, 122, 3, 50, 126, 140, 77, 113, 4, 208, 237, 248, 75, 125, 76, 64, 84, 58, 128, 232, 248, 75, 249, 0, 162, 63, 66, 82, 7, 1, 164, 53, 15, 96, 28, 239, 181, 165, 248, 248, 75, 134, 0, 134, 97, 83, 109, 52, 61, 254, 146, 33, 128, 82, 150, 93, 191, 6, 1, 0, 0, 0, 0, 248, 67, 79, 114, 42, 20, 33, 128, 137, 228, 60, 0, 0, 0, 0, 73, 69, 78, 68, 174, 66, 96, 130 )
@@ -663,7 +663,7 @@ object_visible=true
 object_basis=0
 bone_length=16.0
 bone_rest_position=Vector2( -5, 14 )
-object_position=Vector2( 14, 0 )
+object_position=Vector2( 13, 0 )
 object_scale=Vector3( 100, 100, 1 )
 object_rotation=1.1
 object_skew=0.0
@@ -674,7 +674,7 @@ parent_id=17
 
 [resource.19]
 
-path=Object(Object,"script":Resource( "res://script/path_container.gd"),"absolute_path":"C:/Users/dethl/Dropbox/Roguelike/Character_2/output2.0/l_l_leg.png","relative_path":"","favorite":false,"is_folder":false)
+path=Object(Object,"script":Resource( "res://script/path_container.gd"),"absolute_path":"","relative_path":"","favorite":false,"is_folder":false)
 
 type="image"
 image=PoolByteArray( 137, 80, 78, 71, 13, 10, 26, 10, 0, 0, 0, 13, 73, 72, 68, 82, 0, 0, 0, 64, 0, 0, 0, 64, 8, 6, 0, 0, 0, 170, 105, 113, 222, 0, 0, 0, 1, 115, 82, 71, 66, 0, 174, 206, 28, 233, 0, 0, 0, 246, 73, 68, 65, 84, 120, 156, 237, 213, 177, 74, 195, 80, 20, 135, 241, 47, 105, 130, 24, 42, 93, 29, 132, 130, 184, 116, 169, 111, 225, 227, 248, 48, 125, 45, 125, 134, 118, 41, 210, 161, 75, 168, 168, 212, 212, 235, 160, 118, 170, 96, 134, 67, 46, 242, 253, 166, 11, 129, 115, 114, 255, 57, 135, 128, 36, 73, 146, 36, 73, 146, 36, 73, 146, 36, 73, 146, 36, 73, 146, 36, 233, 255, 41, 162, 10, 95, 93, 223, 255, 28, 211, 169, 231, 235, 229, 34, 172, 119, 31, 101, 112, 253, 147, 151, 207, 73, 116, 0, 217, 51, 128, 161, 95, 96, 104, 145, 1, 100, 191, 255, 48, 220, 4, 100, 241, 7, 0, 87, 192, 0, 12, 32, 176, 246, 111, 123, 158, 205, 254, 67, 240, 4, 156, 209, 30, 47, 91, 243, 92, 240, 125, 249, 245, 114, 17, 217, 182, 151, 208, 175, 113, 123, 115, 71, 83, 108, 19, 192, 235, 232, 188, 168, 199, 43, 30, 30, 159, 34, 91, 246, 22, 58, 1, 77, 177, 61, 158, 235, 241, 42, 29, 218, 11, 230, 211, 25, 243, 233, 44, 178, 109, 47, 161, 1, 124, 212, 111, 0, 116, 147, 13, 85, 123, 73, 183, 47, 19, 144, 14, 213, 75, 100, 219, 94, 170, 208, 234, 101, 71, 55, 217, 0, 95, 33, 236, 119, 239, 0, 140, 186, 38, 180, 173, 244, 119, 159, 211, 101, 42, 244, 178, 16, 186, 222, 0, 0, 0, 0, 73, 69, 78, 68, 174, 66, 96, 130 )
@@ -723,7 +723,7 @@ bone_length=13.0
 bone_rest_position=Vector2( 1, 1 )
 object_position=Vector2( 39, 35 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=61.5
+object_rotation=58.7
 object_skew=0.0
 bone_rest_rotation=70.9
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -741,7 +741,7 @@ bone_length=16.0
 bone_rest_position=Vector2( 14, 0 )
 object_position=Vector2( 14, 0 )
 object_scale=Vector3( 100, 100, 1 )
-object_rotation=26.1
+object_rotation=28.9
 object_skew=0.0
 bone_rest_rotation=18.8
 bone_rest_scale=Vector3( 100, 100, 1 )
@@ -750,7 +750,7 @@ parent_id=20
 
 [resource.20]
 
-path=Object(Object,"script":Resource( "res://script/path_container.gd"),"absolute_path":"C:/Users/dethl/Dropbox/Roguelike/Character_2/output2.0/r_l_leg.png","relative_path":"","favorite":false,"is_folder":false)
+path=Object(Object,"script":Resource( "res://script/path_container.gd"),"absolute_path":"","relative_path":"","favorite":false,"is_folder":false)
 
 type="image"
 image=PoolByteArray( 137, 80, 78, 71, 13, 10, 26, 10, 0, 0, 0, 13, 73, 72, 68, 82, 0, 0, 0, 64, 0, 0, 0, 64, 8, 6, 0, 0, 0, 170, 105, 113, 222, 0, 0, 0, 1, 115, 82, 71, 66, 0, 174, 206, 28, 233, 0, 0, 0, 236, 73, 68, 65, 84, 120, 156, 237, 215, 49, 10, 194, 64, 16, 133, 225, 183, 209, 32, 138, 98, 107, 33, 8, 98, 99, 163, 183, 240, 56, 30, 198, 107, 233, 25, 76, 35, 98, 97, 19, 20, 20, 141, 198, 66, 34, 54, 17, 132, 140, 187, 200, 255, 85, 129, 192, 206, 228, 177, 12, 19, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 240, 127, 156, 239, 6, 36, 169, 63, 156, 231, 37, 175, 156, 36, 109, 214, 11, 179, 218, 145, 217, 201, 213, 40, 11, 166, 50, 161, 7, 96, 142, 0, 124, 55, 224, 91, 40, 1, 124, 26, 198, 166, 115, 32, 148, 0, 188, 33, 0, 223, 13, 248, 70, 0, 190, 27, 120, 83, 54, 8, 77, 183, 213, 32, 2, 40, 86, 221, 134, 210, 215, 199, 198, 58, 58, 253, 96, 85, 15, 226, 95, 160, 48, 29, 205, 212, 114, 251, 92, 146, 78, 181, 166, 139, 219, 137, 150, 171, 173, 105, 205, 32, 110, 64, 161, 229, 246, 175, 231, 184, 157, 228, 183, 180, 163, 201, 96, 108, 90, 51, 168, 0, 238, 241, 89, 146, 148, 117, 119, 170, 167, 61, 101, 151, 40, 151, 241, 34, 84, 183, 60, 252, 107, 81, 166, 172, 187, 147, 244, 12, 225, 114, 184, 122, 110, 8, 255, 239, 1, 242, 187, 39, 126, 92, 130, 185, 75, 0, 0, 0, 0, 73, 69, 78, 68, 174, 66, 96, 130 )
@@ -790,7 +790,7 @@ parent_id=21
 
 [resource.21]
 
-path=Object(Object,"script":Resource( "res://script/path_container.gd"),"absolute_path":"C:/Users/dethl/Dropbox/Roguelike/Character_2/output2.0/r_u_leg.png","relative_path":"","favorite":false,"is_folder":false)
+path=Object(Object,"script":Resource( "res://script/path_container.gd"),"absolute_path":"","relative_path":"","favorite":false,"is_folder":false)
 
 type="image"
 image=PoolByteArray( 137, 80, 78, 71, 13, 10, 26, 10, 0, 0, 0, 13, 73, 72, 68, 82, 0, 0, 0, 64, 0, 0, 0, 64, 8, 6, 0, 0, 0, 170, 105, 113, 222, 0, 0, 0, 1, 115, 82, 71, 66, 0, 174, 206, 28, 233, 0, 0, 0, 170, 73, 68, 65, 84, 120, 156, 237, 215, 177, 17, 194, 48, 12, 5, 80, 133, 2, 122, 10, 26, 168, 152, 139, 25, 24, 134, 1, 169, 216, 3, 90, 46, 119, 118, 23, 73, 7, 239, 149, 110, 100, 255, 179, 148, 56, 2, 0, 0, 0, 0, 0, 0, 0, 248, 117, 75, 101, 241, 203, 245, 30, 17, 241, 94, 45, 47, 17, 17, 175, 231, 35, 101, 15, 187, 148, 42, 99, 235, 195, 143, 214, 54, 83, 29, 192, 208, 233, 124, 75, 169, 211, 54, 128, 253, 225, 152, 82, 167, 107, 0, 105, 109, 208, 53, 128, 136, 200, 105, 131, 214, 1, 100, 16, 64, 113, 253, 233, 127, 72, 198, 32, 172, 14, 96, 38, 101, 16, 118, 14, 32, 133, 0, 170, 55, 16, 197, 239, 145, 210, 0, 178, 30, 60, 51, 29, 110, 64, 169, 46, 1, 140, 218, 96, 243, 47, 65, 121, 0, 95, 109, 80, 58, 11, 0, 0, 0, 224, 143, 124, 0, 173, 50, 15, 33, 232, 31, 30, 41, 0, 0, 0, 0, 73, 69, 78, 68, 174, 66, 96, 130 )
@@ -12801,13 +12801,1684 @@ disabled=false
 collapsed=false
 order=11
 
+[animation.12]
+
+animation_name="parry"
+fps=0.0333333
+speed_scale=1.0
+snap=true
+step=0.1
+zoom=1.0
+loop=true
+collapsed=false
+length=0.8
+
+[object_tracks.12.15]
+
+inputs={
+"bone_length": {
+"disabled": false,
+"order": 0,
+"step": 1.0,
+"tracks": 0,
+"tracks_data": [ {
+"id": 0,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 9.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_position": {
+"disabled": false,
+"order": 1,
+"step": 1.0,
+"tracks": Vector2( 1, 2 ),
+"tracks_data": [ {
+"id": 1,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 16.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 2,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 0.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_rotation": {
+"disabled": false,
+"order": 3,
+"step": 0.1,
+"tracks": 5,
+"tracks_data": [ {
+"id": 5,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 355.2
+} ],
+"modulo": 360.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_scale": {
+"disabled": false,
+"order": 2,
+"step": 0.001,
+"tracks": Vector2( 3, 4 ),
+"tracks_data": [ {
+"id": 3,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 4,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_skew": {
+"disabled": false,
+"order": 4,
+"step": 0.1,
+"tracks": 6,
+"tracks_data": [ {
+"id": 6,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 0.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+}
+}
+disabled=false
+collapsed=false
+order=0
+
+[object_tracks.12.22]
+
+inputs={
+"bone_length": {
+"disabled": false,
+"order": 0,
+"step": 1.0,
+"tracks": 7,
+"tracks_data": [ {
+"id": 7,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 9.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_position": {
+"disabled": false,
+"order": 1,
+"step": 1.0,
+"tracks": Vector2( 8, 9 ),
+"tracks_data": [ {
+"id": 8,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 14.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 9,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": -5.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_rotation": {
+"disabled": false,
+"order": 3,
+"step": 0.1,
+"tracks": 12,
+"tracks_data": [ {
+"id": 12,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": -158.7
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.2,
+"value": 137.8
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.6,
+"value": 177.8
+} ],
+"modulo": 360.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_scale": {
+"disabled": false,
+"order": 2,
+"step": 0.001,
+"tracks": Vector2( 10, 11 ),
+"tracks_data": [ {
+"id": 10,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 11,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_skew": {
+"disabled": false,
+"order": 4,
+"step": 0.1,
+"tracks": 13,
+"tracks_data": [ {
+"id": 13,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 0.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+}
+}
+disabled=false
+collapsed=false
+order=1
+
+[object_tracks.12.23]
+
+inputs={
+"bone_length": {
+"disabled": false,
+"order": 0,
+"step": 1.0,
+"tracks": 14,
+"tracks_data": [ {
+"id": 14,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 10.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_position": {
+"disabled": false,
+"order": 1,
+"step": 1.0,
+"tracks": Vector2( 15, 16 ),
+"tracks_data": [ {
+"id": 15,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 9.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.6,
+"value": 9.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 16,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 0.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.6,
+"value": -2.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_rotation": {
+"disabled": false,
+"order": 3,
+"step": 0.1,
+"tracks": 19,
+"tracks_data": [ {
+"id": 19,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": -34.5
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.2,
+"value": -115.4
+}, {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.6,
+"value": -115.4
+} ],
+"modulo": 360.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_scale": {
+"disabled": false,
+"order": 2,
+"step": 0.001,
+"tracks": Vector2( 17, 18 ),
+"tracks_data": [ {
+"id": 17,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 18,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_skew": {
+"disabled": false,
+"order": 4,
+"step": 0.1,
+"tracks": 20,
+"tracks_data": [ {
+"id": 20,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 0.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+}
+}
+disabled=false
+collapsed=false
+order=2
+
+[object_tracks.12.24]
+
+inputs={
+"bone_length": {
+"disabled": false,
+"order": 0,
+"step": 1.0,
+"tracks": 21,
+"tracks_data": [ {
+"id": 21,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 9.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_position": {
+"disabled": false,
+"order": 1,
+"step": 1.0,
+"tracks": Vector2( 22, 23 ),
+"tracks_data": [ {
+"id": 22,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 13.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 23,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 4.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_rotation": {
+"disabled": false,
+"order": 3,
+"step": 0.1,
+"tracks": 26,
+"tracks_data": [ {
+"id": 26,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 163.8
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.2,
+"value": 91.3
+} ],
+"modulo": 360.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_scale": {
+"disabled": false,
+"order": 2,
+"step": 0.001,
+"tracks": Vector2( 24, 25 ),
+"tracks_data": [ {
+"id": 24,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 25,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_skew": {
+"disabled": false,
+"order": 4,
+"step": 0.1,
+"tracks": 27,
+"tracks_data": [ {
+"id": 27,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 0.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+}
+}
+disabled=false
+collapsed=false
+order=3
+
+[object_tracks.12.25]
+
+inputs={
+"bone_length": {
+"disabled": false,
+"order": 0,
+"step": 1.0,
+"tracks": 28,
+"tracks_data": [ {
+"id": 28,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 8.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_position": {
+"disabled": false,
+"order": 1,
+"step": 1.0,
+"tracks": Vector2( 29, 30 ),
+"tracks_data": [ {
+"id": 29,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 10.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.1,
+"value": 9.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.2,
+"value": 9.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.6,
+"value": 9.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 30,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": -1.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.1,
+"value": -1.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.2,
+"value": -1.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.6,
+"value": -2.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_rotation": {
+"disabled": false,
+"order": 3,
+"step": 0.1,
+"tracks": 33,
+"tracks_data": [ {
+"id": 33,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": -30.4
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.2,
+"value": -96.6
+}, {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.6,
+"value": -96.6
+} ],
+"modulo": 360.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_scale": {
+"disabled": false,
+"order": 2,
+"step": 0.001,
+"tracks": Vector2( 31, 32 ),
+"tracks_data": [ {
+"id": 31,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 32,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_skew": {
+"disabled": false,
+"order": 4,
+"step": 0.1,
+"tracks": 34,
+"tracks_data": [ {
+"id": 34,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 0.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+}
+}
+disabled=false
+collapsed=false
+order=4
+
+[object_tracks.12.16]
+
+inputs={
+"bone_length": {
+"disabled": false,
+"order": 0,
+"step": 1.0,
+"tracks": 35,
+"tracks_data": [ {
+"id": 35,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 16.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_position": {
+"disabled": false,
+"order": 1,
+"step": 1.0,
+"tracks": Vector2( 36, 37 ),
+"tracks_data": [ {
+"id": 36,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 38.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 37,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 34.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_rotation": {
+"disabled": false,
+"order": 3,
+"step": 0.1,
+"tracks": 40,
+"tracks_data": [ {
+"id": 40,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": -87.3
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.2,
+"value": -81.3
+} ],
+"modulo": 360.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_scale": {
+"disabled": false,
+"order": 2,
+"step": 0.001,
+"tracks": Vector2( 38, 39 ),
+"tracks_data": [ {
+"id": 38,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 39,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_skew": {
+"disabled": false,
+"order": 4,
+"step": 0.1,
+"tracks": 41,
+"tracks_data": [ {
+"id": 41,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 0.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+}
+}
+disabled=false
+collapsed=false
+order=5
+
+[object_tracks.12.17]
+
+inputs={
+"bone_length": {
+"disabled": false,
+"order": 0,
+"step": 1.0,
+"tracks": 42,
+"tracks_data": [ {
+"id": 42,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 13.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_position": {
+"disabled": false,
+"order": 1,
+"step": 1.0,
+"tracks": Vector2( 43, 44 ),
+"tracks_data": [ {
+"id": 43,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 36.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 44,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 34.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_rotation": {
+"disabled": false,
+"order": 3,
+"step": 0.1,
+"tracks": 47,
+"tracks_data": [ {
+"id": 47,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 94.6
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.2,
+"value": 108.4
+}, {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.6,
+"value": 108.4
+} ],
+"modulo": 360.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_scale": {
+"disabled": false,
+"order": 2,
+"step": 0.001,
+"tracks": Vector2( 45, 46 ),
+"tracks_data": [ {
+"id": 45,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 46,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_skew": {
+"disabled": false,
+"order": 4,
+"step": 0.1,
+"tracks": 48,
+"tracks_data": [ {
+"id": 48,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 0.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+}
+}
+disabled=false
+collapsed=false
+order=6
+
+[object_tracks.12.20]
+
+inputs={
+"bone_length": {
+"disabled": false,
+"order": 0,
+"step": 1.0,
+"tracks": 49,
+"tracks_data": [ {
+"id": 49,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 13.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_position": {
+"disabled": false,
+"order": 1,
+"step": 1.0,
+"tracks": Vector2( 50, 51 ),
+"tracks_data": [ {
+"id": 50,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 39.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 51,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 35.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_rotation": {
+"disabled": false,
+"order": 3,
+"step": 0.1,
+"tracks": 54,
+"tracks_data": [ {
+"id": 54,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 61.5
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.2,
+"value": 44.5
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.6,
+"value": 44.5
+} ],
+"modulo": 360.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_scale": {
+"disabled": false,
+"order": 2,
+"step": 0.001,
+"tracks": Vector2( 52, 53 ),
+"tracks_data": [ {
+"id": 52,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 53,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_skew": {
+"disabled": false,
+"order": 4,
+"step": 0.1,
+"tracks": 55,
+"tracks_data": [ {
+"id": 55,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 0.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+}
+}
+disabled=false
+collapsed=false
+order=7
+
+[object_tracks.12.19]
+
+inputs={
+"bone_length": {
+"disabled": false,
+"order": 0,
+"step": 1.0,
+"tracks": 56,
+"tracks_data": [ {
+"id": 56,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 16.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_position": {
+"disabled": false,
+"order": 1,
+"step": 1.0,
+"tracks": Vector2( 57, 58 ),
+"tracks_data": [ {
+"id": 57,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 13.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 58,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 0.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_rotation": {
+"disabled": false,
+"order": 3,
+"step": 0.1,
+"tracks": 61,
+"tracks_data": [ {
+"id": 61,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 1.1
+} ],
+"modulo": 360.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_scale": {
+"disabled": false,
+"order": 2,
+"step": 0.001,
+"tracks": Vector2( 59, 60 ),
+"tracks_data": [ {
+"id": 59,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 60,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_skew": {
+"disabled": false,
+"order": 4,
+"step": 0.1,
+"tracks": 62,
+"tracks_data": [ {
+"id": 62,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 0.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+}
+}
+disabled=false
+collapsed=false
+order=8
+
+[object_tracks.12.21]
+
+inputs={
+"bone_length": {
+"disabled": false,
+"order": 0,
+"step": 1.0,
+"tracks": 63,
+"tracks_data": [ {
+"id": 63,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 16.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_position": {
+"disabled": false,
+"order": 1,
+"step": 1.0,
+"tracks": Vector2( 64, 65 ),
+"tracks_data": [ {
+"id": 64,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 14.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 65,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 0.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_rotation": {
+"disabled": false,
+"order": 3,
+"step": 0.1,
+"tracks": 68,
+"tracks_data": [ {
+"id": 68,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 26.1
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.2,
+"value": 43.1
+}, {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.6,
+"value": 43.1
+} ],
+"modulo": 360.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_scale": {
+"disabled": false,
+"order": 2,
+"step": 0.001,
+"tracks": Vector2( 66, 67 ),
+"tracks_data": [ {
+"id": 66,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 67,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_skew": {
+"disabled": false,
+"order": 4,
+"step": 0.1,
+"tracks": 69,
+"tracks_data": [ {
+"id": 69,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 0.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+}
+}
+disabled=false
+collapsed=false
+order=9
+
+[object_tracks.12.27]
+
+inputs={
+"bone_length": {
+"disabled": false,
+"order": 0,
+"step": 1.0,
+"tracks": 70,
+"tracks_data": [ {
+"id": 70,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 66.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.2,
+"value": 66.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_position": {
+"disabled": false,
+"order": 1,
+"step": 1.0,
+"tracks": Vector2( 71, 72 ),
+"tracks_data": [ {
+"id": 71,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": -36.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.2,
+"value": -36.0
+}, {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.6,
+"value": -36.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 72,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": -35.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.2,
+"value": -33.0
+}, {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.6,
+"value": -33.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_rotation": {
+"disabled": false,
+"order": 3,
+"step": 0.1,
+"tracks": 75,
+"tracks_data": [ {
+"id": 75,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 1.8
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.2,
+"value": 1.8
+} ],
+"modulo": 360.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_scale": {
+"disabled": false,
+"order": 2,
+"step": 0.001,
+"tracks": Vector2( 73, 74 ),
+"tracks_data": [ {
+"id": 73,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.2,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+}, {
+"id": 74,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 100.0
+}, {
+"in": Vector2( 0, 0 ),
+"in_normalized": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"out_normalized": Vector2( 0, 0 ),
+"time": 0.2,
+"value": 100.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+},
+"object_skew": {
+"disabled": false,
+"order": 4,
+"step": 0.1,
+"tracks": 76,
+"tracks_data": [ {
+"id": 76,
+"keys": [ {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.0,
+"value": 0.0
+}, {
+"in": Vector2( 0, 0 ),
+"out": Vector2( 0, 0 ),
+"time": 0.2,
+"value": 0.0
+} ],
+"modulo": 0.0,
+"type": 3,
+"wrap": true
+} ]
+}
+}
+disabled=false
+collapsed=false
+order=10
+
 [settings]
 
+snap_grid=false
+snap_axes=false
+show_bones=false
+export_path="C:/Users/Jason Li/Documents/GitHub/roguelike/Raw Asset/Character3_pa.png"
 export_views={
 "Depth buffer": true,
 "No effects": true,
 "Normal buffer": true,
 "Preview": true
 }
-export_anim_spritesheet=true
-export_anim_spritesheet_size=5.0
+export_anim_folder=false
+export_anim_all=false

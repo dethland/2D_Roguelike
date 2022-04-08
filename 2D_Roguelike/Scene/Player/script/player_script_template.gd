@@ -8,12 +8,15 @@ var player : KinematicBody2D
 var animator : AnimationPlayer
 var ground_detect : Area2D
 
-var is_on_ground : bool = false
+var is_on_ground : bool = false # use when is_on_floor failed
 
 func _ready():
+	# set up easy access
 	statemachine = get_parent()
 	player = get_parent().get_parent()
 	animator = player.get_node("AnimationPlayer");
+	
+	# connect ground_detect signal
 	ground_detect = player.get_node("Detection/Area2D")
 	ground_detect.connect("body_entered", self, "ground_body_in")
 	ground_detect.connect("body_exited", self, "ground_body_out")
@@ -26,8 +29,6 @@ func ground_body_out(body):
 	if not body is KinematicBody2D:
 		is_on_ground = false
 	
-	
-
 func turn_on() -> void:
 	# turn on the state script
 	is_able = true
@@ -35,7 +36,7 @@ func turn_on() -> void:
 func turn_off() -> void:
 	# turn off the state script
 	is_able = false
-	
+		
 func get_horizental_input() -> int:
 	# get horizental input return 1, -1 or 0
 	var direction : int = 0

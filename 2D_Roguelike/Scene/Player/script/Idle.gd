@@ -20,6 +20,11 @@ func _physics_process(delta):
 			statemachine.change_state_to("ChargeSkill")
 		if Input.is_action_just_pressed("melee"):
 			statemachine.change_state_to("Attack")
+		if Input.is_action_just_pressed("parry"):
+			if animator.current_animation != "parry":
+				statemachine.change_state_to("Parry")
+		if Input.is_action_just_pressed("axe_attack"):
+			statemachine.change_state_to("Attack")
 			
 		apply_gravity(fall_gravity, delta)
 			

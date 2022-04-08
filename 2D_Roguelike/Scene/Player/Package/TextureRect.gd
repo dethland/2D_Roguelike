@@ -16,9 +16,4 @@ func _ready():
 #	pass
 
 
-func _on_TextureRect_mouse_entered():
-	get_node("use").visible= true
 
-
-func _on_TextureRect_mouse_exited():
-	get_node("use").visible= false

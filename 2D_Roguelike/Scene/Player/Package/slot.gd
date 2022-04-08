@@ -14,20 +14,20 @@ onready var texturerect = get_node("TextureRect")
 
 func _physics_process(delta):
 	if container[0] != null :
-		texturerect.texture=container[0].instance().get_node("UnknownItem").texture#???
+		container[0].instance()._ready()
+		texturerect.texture=load(container[0].instance().img_path)#???
 
 		
 func _input(event):	
 	if Input.is_key_pressed(KEY_U) and container!=null:
-		print("!!")
 		print(container.wtd_path)
 		container.get_node(container.wtd_path).what_to_do()
 		container.queue_free()
 		container=null
 		#get_parent().texture=container.get_node("UnknownItem").texture
 		get_parent().texture= load("res://Asset/Image/slot.png");
-		print("current health:")
-		print(package.get_parent().health)
+		#print("current health:")
+		#print(package.get_parent().health)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -56,3 +56,11 @@ func update_c0(a):
 	container[0] = a
 func update_c1_add_one():
 	container[1] += 1 
+
+
+func _on_slot_mouse_entered():
+	get_node("use").visible = true
+
+
+func _on_slot_mouse_exited():
+	get_node("use").visible = false

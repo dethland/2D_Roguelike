@@ -15,26 +15,18 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	if storage.size() != 0 :
-		print(storage.size())
-		var item_sc = storage.pop_front()
-		print(storage.size())
+		var item_sc = storage.pop_front()	
 		var r:String = search_slot(item_sc.instance().item_name)
-		print("1,"+r)
 		if r != "" :
 			var slot = get_node("NinePatchRect" + "/"+r)
-			#slot.add_in()
-			#slot.container[1] +=1
 			slot.update_c1_add_one() 
 		else :
 			r = search_empty_slot()
-			print("2,"+r)
 			var slot = get_node("NinePatchRect" + "/"+r)
-			print_all_slot()
+			#print_all_slot()
 			slot.add_in(item_sc,1) 
-			#= item_sc
-			#slot.container[1] = 1 
-			print_all_slot()
-	pass
+			#print_all_slot()
+	
 
 func search_slot( name)-> String:
 	var x: int = 1
@@ -65,7 +57,6 @@ func print_all_slot():
 	while x <= max_cu:
 		var slot_no :String = "slot"+String(x)
 		var slot = get_node("NinePatchRect" + "/"+slot_no)
-		print(slot.container)
 		x+=1
 	
 func _input(event):
