@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/slot.png-0774d63e45cafc8f676c456a3a59f4ec.stex"
+path="res://.import/resized tilemap.png-839c290fa77aa35adc65523ef1b5cc2f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Image/slot.png"
-dest_files=[ "res://.import/slot.png-0774d63e45cafc8f676c456a3a59f4ec.stex" ]
+source_file="res://Asset/Image/Tiles/resized tilemap.png"
+dest_files=[ "res://.import/resized tilemap.png-839c290fa77aa35adc65523ef1b5cc2f.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

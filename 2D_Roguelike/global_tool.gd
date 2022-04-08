@@ -7,3 +7,8 @@ func get_player():
 		return null
 	
 
+func get_gui():
+	if get_tree().get_nodes_in_group("gui")[0]:
+		return get_tree().get_nodes_in_group("gui")[0]
+	else:
+		return null

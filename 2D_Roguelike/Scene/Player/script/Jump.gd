@@ -36,6 +36,10 @@ func _physics_process(delta):
 
 		# player is in the air
 		elif not player.is_on_floor():
+			
+			if player.is_on_ceiling():
+				velocity.y = 0
+			
 			# go up with jump_gravity
 			if velocity.y < 0:
 				velocity.y -= jump_gravity * delta

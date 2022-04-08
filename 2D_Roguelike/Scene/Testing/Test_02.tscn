@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scene/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scene/Enemy/Enemy.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Asset/Image/protobg.png" type="Texture" id=4]
 [ext_resource path="res://Scene/item/Healing_Potion.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Asset/Image/spikelayers.png" type="Texture" id=6]
+[ext_resource path="res://Asset/Image/bg2.png" type="Texture" id=7]
 [ext_resource path="res://Scene/GUI/Scripts/camera.gd" type="Script" id=8]
 [ext_resource path="res://Scene/GUI/GUI.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scene/GUI/Scripts/HealthBar.gd" type="Script" id=10]
@@ -17,6 +18,9 @@ tile_data = PoolIntArray( 1114132, 0, 1, 1114133, 0, 3, 1114159, 0, 1, 1114160, 
 
 [node name="Enemy" parent="." instance=ExtResource( 2 )]
 position = Vector2( 564, 240 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 469.623, 244.53 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 121, 231 )
@@ -36,6 +40,15 @@ visible = false
 position = Vector2( 388, 274 )
 scale = Vector2( 0.476852, 0.476852 )
 texture = ExtResource( 4 )
+
+[node name="Background" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( 378, 205 )
+scale = Vector2( 1, 1.2 )
+
+[node name="Bg2" type="Sprite" parent="ParallaxBackground/Background"]
+position = Vector2( 12.9999, 139.167 )
+scale = Vector2( 1.35, 1 )
+texture = ExtResource( 7 )
 
 [node name="Back spikes" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.2, 1 )
@@ -78,3 +91,5 @@ margin_top = -172.0
 margin_right = -312.0
 margin_bottom = -172.0
 script = ExtResource( 10 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
