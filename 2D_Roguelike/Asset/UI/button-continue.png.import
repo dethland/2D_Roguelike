@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Character3_pa_attack_axe.png-1c00aa61af904d743d50da1ddbeeedea.stex"
+path="res://.import/button-continue.png-2b8f16348b43da4a86c3379103215d4c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/Player/anim_sheets/attack_axe/Character3_pa_attack_axe.png"
-dest_files=[ "res://.import/Character3_pa_attack_axe.png-1c00aa61af904d743d50da1ddbeeedea.stex" ]
+source_file="res://Asset/UI/button-continue.png"
+dest_files=[ "res://.import/button-continue.png-2b8f16348b43da4a86c3379103215d4c.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0
