@@ -26,7 +26,12 @@ func reset_to_idle():
 
 func success():
 	parry_success = true
+	play_parry_sound()
 	reset_to_idle()
+
+func play_parry_sound():
+	if ($ParrySound.playing): $ParrySound.stop();
+	$ParrySound.play();
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if (anim_name == "parry"):

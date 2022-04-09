@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Scene/Player/script/running.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player/script/Player.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Scene/System/Hitbox.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scene/Shader/SmoothPixel.shader" type="Shader" id=10]
 [ext_resource path="res://Scene/player/script/ChargeSkill.gd" type="Script" id=11]
+[ext_resource path="res://Asset/Sounds/step1.wav" type="AudioStream" id=12]
 [ext_resource path="res://Scene/Player/script/Animator.gd" type="Script" id=13]
 [ext_resource path="res://Asset/Animation/Run/Run_animation.png" type="Texture" id=14]
 [ext_resource path="res://Scene/Player/anim_sheets/attack_melee/Character3_pa_attack_melee.png" type="Texture" id=15]
@@ -23,6 +24,10 @@
 [ext_resource path="res://Scene/Player/anim_sheets/skill_use/Character3_pa_skill_use.png" type="Texture" id=22]
 [ext_resource path="res://Asset/Animation/Attack/Axe_attack_animation.png" type="Texture" id=23]
 [ext_resource path="res://Asset/Animation/Parry/Parry.png" type="Texture" id=24]
+[ext_resource path="res://Asset/Sounds/jump1.wav" type="AudioStream" id=25]
+[ext_resource path="res://Asset/Sounds/hurt1.wav" type="AudioStream" id=26]
+[ext_resource path="res://Asset/Sounds/parry1.wav" type="AudioStream" id=27]
+[ext_resource path="res://Asset/Sounds/hit1.wav" type="AudioStream" id=28]
 
 [sub_resource type="ShaderMaterial" id=14]
 shader = ExtResource( 10 )
@@ -295,6 +300,20 @@ tracks/2/keys = {
 "update": 1,
 "values": [ true ]
 }
+tracks/3/type = "method"
+tracks/3/path = NodePath("Statemachine/Hurt")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.016 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "play_hurt_sound"
+} ]
+}
 
 [sub_resource type="Animation" id=7]
 resource_name = "idle"
@@ -353,6 +372,20 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Statemachine/Jump")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "play_jump_sound"
+} ]
 }
 
 [sub_resource type="Animation" id=22]
@@ -483,6 +516,23 @@ tracks/1/keys = {
 "update": 1,
 "values": [ true ]
 }
+tracks/2/type = "method"
+tracks/2/path = NodePath("Statemachine/Run")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.09, 0.39 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "play_walk_sound"
+}, {
+"args": [  ],
+"method": "play_walk_sound"
+} ]
+}
 
 [sub_resource type="Animation" id=12]
 resource_name = "skill_charge"
@@ -554,11 +604,19 @@ script = ExtResource( 3 )
 script = ExtResource( 1 )
 speed = 300
 
+[node name="WalkSound" type="AudioStreamPlayer2D" parent="Statemachine/Run"]
+stream = ExtResource( 12 )
+volume_db = -25.0
+
 [node name="Attack" type="Node2D" parent="Statemachine"]
 script = ExtResource( 6 )
 
 [node name="Hurt" type="Node2D" parent="Statemachine"]
 script = ExtResource( 4 )
+
+[node name="HurtSound" type="AudioStreamPlayer2D" parent="Statemachine/Hurt"]
+stream = ExtResource( 26 )
+volume_db = -5.0
 
 [node name="Idle" type="Node2D" parent="Statemachine"]
 script = ExtResource( 8 )
@@ -573,11 +631,18 @@ position = Vector2( 0, 29 )
 enabled = true
 cast_to = Vector2( 0, 25 )
 
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="Statemachine/Jump"]
+stream = ExtResource( 25 )
+volume_db = -15.0
+
 [node name="ChargeSkill" type="Node2D" parent="Statemachine"]
 script = ExtResource( 11 )
 
 [node name="Parry" type="Node2D" parent="Statemachine"]
 script = ExtResource( 5 )
+
+[node name="ParrySound" type="AudioStreamPlayer2D" parent="Statemachine/Parry"]
+stream = ExtResource( 27 )
 
 [node name="AnimGroup" type="Node2D" parent="."]
 position = Vector2( -1.375, 2.5 )
@@ -590,18 +655,19 @@ hframes = 5
 vframes = 5
 
 [node name="melee" type="Sprite" parent="AnimGroup"]
-visible = false
 material = SubResource( 15 )
 texture = ExtResource( 15 )
 hframes = 5
 vframes = 4
 
 [node name="attack_axe" type="Sprite" parent="AnimGroup"]
+visible = false
 texture = ExtResource( 23 )
 hframes = 4
 vframes = 3
 
 [node name="hurt" type="Sprite" parent="AnimGroup"]
+visible = false
 texture = ExtResource( 16 )
 hframes = 5
 vframes = 2
@@ -619,6 +685,7 @@ hframes = 5
 vframes = 2
 
 [node name="fall" type="Sprite" parent="AnimGroup"]
+visible = false
 texture = ExtResource( 19 )
 hframes = 5
 vframes = 2
@@ -658,6 +725,9 @@ is_able = false
 position = Vector2( 8.55994, 6 )
 scale = Vector2( 0.700512, 1 )
 polygon = PoolVector2Array( 5, -16, 5.45428, -9, 29.0895, -9, 28.75, -16.023 )
+
+[node name="AttackSound" type="AudioStreamPlayer2D" parent="Hitboxs/Hitbox"]
+stream = ExtResource( 28 )
 
 [node name="Detection" type="Node2D" parent="."]
 
