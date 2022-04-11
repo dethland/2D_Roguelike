@@ -32,3 +32,10 @@ func _physics_process(delta):
 		velocity = player.move_and_slide(velocity, Vector2.UP)
 		velocity.y = 0
 		apply_gravity(fall_gravity, delta)
+
+func play_walk_sound():
+	var rng = RandomNumberGenerator.new();
+	rng.randomize();
+	if ($WalkSound.playing): $WalkSound.stop();
+	$WalkSound.pitch_scale = rng.randf_range(0.5,1.5);
+	$WalkSound.play();
