@@ -26,6 +26,8 @@ __meta__ = {
 [node name="Continue" type="Button" parent="VBoxContainer"]
 margin_right = 111.0
 margin_bottom = 26.0
+focus_mode = 0
+enabled_focus_mode = 0
 icon = ExtResource( 3 )
 flat = true
 script = ExtResource( 6 )
@@ -34,6 +36,8 @@ script = ExtResource( 6 )
 margin_top = 30.0
 margin_right = 111.0
 margin_bottom = 56.0
+focus_mode = 0
+enabled_focus_mode = 0
 icon = ExtResource( 1 )
 flat = true
 script = ExtResource( 5 )
@@ -42,6 +46,12 @@ script = ExtResource( 5 )
 margin_top = 60.0
 margin_right = 111.0
 margin_bottom = 86.0
+focus_mode = 0
+enabled_focus_mode = 0
 icon = ExtResource( 2 )
 flat = true
 script = ExtResource( 4 )
+
+[connection signal="pressed" from="VBoxContainer/Continue" to="VBoxContainer/Continue" method="_on_Continue_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="VBoxContainer/Settings" method="_on_Settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="VBoxContainer/Exit" method="_on_Exit_pressed"]

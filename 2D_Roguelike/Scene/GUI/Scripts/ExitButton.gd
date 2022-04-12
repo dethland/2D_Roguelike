@@ -14,6 +14,5 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-func _button_pressed():
-	print("exit")
+func _on_Exit_pressed():
+	get_tree().quit()

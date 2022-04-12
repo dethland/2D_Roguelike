@@ -15,5 +15,5 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func _button_pressed():
-	print("settings")
+func _on_Settings_pressed():
+	print("settings coming soon")

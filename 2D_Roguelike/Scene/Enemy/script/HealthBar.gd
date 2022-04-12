@@ -12,7 +12,6 @@ func _ready():
 	tb = get_child(0)
 	enemy = get_parent()
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	tb.value = enemy.get("health")

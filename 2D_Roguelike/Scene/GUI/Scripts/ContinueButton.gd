@@ -15,5 +15,9 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func _button_pressed():
-	print("continue")
+
+
+func _on_Continue_pressed():
+	get_parent().get_parent().visible = !get_parent().get_parent().visible
+	get_tree().paused = !get_tree().paused
+	

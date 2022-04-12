@@ -11,7 +11,6 @@ var curr_health : int
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#player = get_parent().get_parent().get_node("Player")
 	player = $"../../Player"
 	bar.value = player.health
 	prev_health = player.health
@@ -21,6 +20,5 @@ func _process(delta):
 	if(curr_health != prev_health):
 		tween.interpolate_property(bar, "value", prev_health, curr_health, .3, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
-	
 	prev_health = curr_health
 	

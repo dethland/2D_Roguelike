@@ -15,14 +15,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Other" type="HBoxContainer" parent="."]
-margin_left = 112.0
-margin_right = 112.0
-margin_bottom = 163.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Container" type="HBoxContainer" parent="."]
 margin_right = 302.0
 margin_bottom = 163.0
