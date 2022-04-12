@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="2D_Roguelike"
-run/main_scene="res://Scene/Testing/Test_02.tscn"
+run/main_scene="res://Scene/GUI/Menu.tscn"
 config/icon="res://Asset/roguelike_logo.png"
 
 [autoload]

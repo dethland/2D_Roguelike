@@ -30,4 +30,5 @@ func get_hit(from_object, damage):
 	
 func die():
 	print("%s died" % self.name)
+	get_tree().change_scene("res://Scene/GUI/GameOver.tscn")
 	
