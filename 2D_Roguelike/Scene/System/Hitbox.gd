@@ -21,6 +21,7 @@ func _on_Hitbox_body_exited(body):
 
 func hurt():
 	for target in in_range_object:
+		try_play_attack_sound()
 		target.get_hit(self, damage)
 
 
@@ -33,6 +34,14 @@ func _process(delta):
 			hurt()
 
 
+var played_attack_sound = false;
+func try_play_attack_sound():
+	if (played_attack_sound): return
+	if ($AttackSound.playing): return
+	$AttackSound.play();
+	played_attack_sound = true
+
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == animation_name:
 		hit_once = true
+		played_attack_sound = false

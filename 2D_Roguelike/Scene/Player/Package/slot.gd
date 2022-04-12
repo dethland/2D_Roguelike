@@ -20,18 +20,11 @@ func _physics_process(delta):
 		
 func _input(event):	
 	if Input.is_key_pressed(KEY_U) and container!=null:
-		print(container.wtd_path)
 		container.get_node(container.wtd_path).what_to_do()
 		container.queue_free()
-		container=null
-		#get_parent().texture=container.get_node("UnknownItem").texture
+		container = null
 		get_parent().texture= load("res://Asset/Image/slot.png");
-		#print("current health:")
-		#print(package.get_parent().health)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 func get_name() ->String:
 	if container[0] !=null:

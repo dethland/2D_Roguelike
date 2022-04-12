@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/button-background.png-ec6d3b76bb236556da980dbcd4e3dae6.stex"
+path="res://.import/button-exit.png-b77207e77142d84edfd1fcf61da154c8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Image/button-background.png"
-dest_files=[ "res://.import/button-background.png-ec6d3b76bb236556da980dbcd4e3dae6.stex" ]
+source_file="res://Asset/UI/button-exit.png"
+dest_files=[ "res://.import/button-exit.png-b77207e77142d84edfd1fcf61da154c8.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

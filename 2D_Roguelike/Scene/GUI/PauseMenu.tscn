@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Asset/UI/button-settings.png" type="Texture" id=1]
+[ext_resource path="res://Asset/UI/button-exit.png" type="Texture" id=2]
+[ext_resource path="res://Asset/UI/button-continue.png" type="Texture" id=3]
+[ext_resource path="res://Scene/GUI/Scripts/ExitButton.gd" type="Script" id=4]
+[ext_resource path="res://Scene/GUI/Scripts/SettingsButton.gd" type="Script" id=5]
+[ext_resource path="res://Scene/GUI/Scripts/ContinueButton.gd" type="Script" id=6]
+[ext_resource path="res://Scene/GUI/Scripts/PauseMenu.gd" type="Script" id=7]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 111.0
+margin_bottom = 86.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Continue" type="Button" parent="VBoxContainer"]
+margin_right = 111.0
+margin_bottom = 26.0
+icon = ExtResource( 3 )
+flat = true
+script = ExtResource( 6 )
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+margin_top = 30.0
+margin_right = 111.0
+margin_bottom = 56.0
+icon = ExtResource( 1 )
+flat = true
+script = ExtResource( 5 )
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+margin_top = 60.0
+margin_right = 111.0
+margin_bottom = 86.0
+icon = ExtResource( 2 )
+flat = true
+script = ExtResource( 4 )

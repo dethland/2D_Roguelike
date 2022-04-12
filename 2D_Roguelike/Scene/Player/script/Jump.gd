@@ -59,6 +59,9 @@ func _physics_process(delta):
 
 		player.move_and_slide(velocity, Vector2.UP)
 
+func play_jump_sound():
+	if ($JumpSound.playing): $JumpSound.stop();
+	$JumpSound.play();
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if (anim_name == "land"):

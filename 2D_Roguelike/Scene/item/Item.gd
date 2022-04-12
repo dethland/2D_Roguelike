@@ -7,13 +7,14 @@ export var wtd_path:   String
 export var img_path:   String
 onready var anim_player:AnimationPlayer = get_node("AnimationPlayer")
 onready var gui = global_tool.get_gui()
+
 func _ready():
 	get_node("UnknownItem").texture = load(img_path)
 	
 var Is_item = true 
 	
 func update_storage():
-	var package =gui.get_node("Package")
+	var package =gui
 	var new_item = load(item_path)
 	var new_in = new_item.instance()
 	#new_in.get_node("CollisionShape2D").disabled=true
@@ -25,8 +26,6 @@ func _on_body_entered(body) -> void:
 		get_node("CollisionShape2D").queue_free()
 		anim_player.play("fade_away")
 	
-		
-		
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):

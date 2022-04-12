@@ -12,7 +12,6 @@ onready var slot = get_parent()
 func _on_Button_pressed():
 	var container =  slot.container
 	if container[0]!=null:
-		print(container[0].instance().wtd_path)
 		container[0].instance().get_node(container[0].instance().wtd_path).what_to_do()
 		slot.container[1]= slot.container[1]-1
 		if slot.container[1] <= 0 :
