@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Character3_pa_skill_use.png-80f16b44a02384871eb6ac7b0d6e08e0.stex"
+path="res://.import/flag3.png-0526d2eb7064daf048dd56520e1d650c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/player/anim_sheets/skill_use/Character3_pa_skill_use.png"
-dest_files=[ "res://.import/Character3_pa_skill_use.png-80f16b44a02384871eb6ac7b0d6e08e0.stex" ]
+source_file="res://Asset/Image/flag3.png"
+dest_files=[ "res://.import/flag3.png-0526d2eb7064daf048dd56520e1d650c.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0
