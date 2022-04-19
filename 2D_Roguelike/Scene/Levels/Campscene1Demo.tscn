@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scene/System/TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Asset/Image/camp_fire.png" type="Texture" id=3]
@@ -8,9 +8,7 @@
 [ext_resource path="res://Asset/Image/pot.png" type="Texture" id=7]
 [ext_resource path="res://Asset/Image/sheep_back.png" type="Texture" id=8]
 [ext_resource path="res://Asset/Image/sheep_front.png" type="Texture" id=9]
-[ext_resource path="res://Scene/GUI/Scripts/PauseMenu.gd" type="Script" id=10]
 [ext_resource path="res://Scene/GUI/Scripts/HealthBar.gd" type="Script" id=11]
-[ext_resource path="res://Scene/Player/script/Package.gd" type="Script" id=12]
 [ext_resource path="res://Scene/GUI/Bars.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scene/Player/Package/Package.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scene/GUI/PauseMenu.tscn" type="PackedScene" id=15]
@@ -78,32 +76,20 @@ position = Vector2( 593, 495 )
 current = true
 script = ExtResource( 16 )
 
-[node name="Healthbar" type="Control" parent="Camera2D" instance=ExtResource( 13 )]
+[node name="Healthbar" parent="Camera2D" instance=ExtResource( 13 )]
 margin_left = -312.0
 margin_top = -172.0
 margin_right = -312.0
 margin_bottom = -172.0
-mouse_filter = 1
 script = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Pause Menu" type="Control" parent="Camera2D" instance=ExtResource( 15 )]
+[node name="Pause Menu" parent="Camera2D" instance=ExtResource( 15 )]
 visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
 margin_left = -56.0
 margin_top = -42.0
 margin_right = -56.0
 margin_bottom = -42.0
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Package" type="Node2D" parent="Camera2D" groups=["gui"] instance=ExtResource( 14 )]
+[node name="Package" parent="Camera2D" groups=["gui"] instance=ExtResource( 14 )]
 visible = false
 position = Vector2( -1, 0 )
-scale = Vector2( 4, 4 )
-script = ExtResource( 12 )

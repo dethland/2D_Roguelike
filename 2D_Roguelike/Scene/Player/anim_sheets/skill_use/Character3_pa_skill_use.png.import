@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Character3_pa_skill_use.png-80f16b44a02384871eb6ac7b0d6e08e0.stex"
+path="res://.import/Character3_pa_skill_use.png-8d775304098e9b5cd1088dc46370512c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/player/anim_sheets/skill_use/Character3_pa_skill_use.png"
-dest_files=[ "res://.import/Character3_pa_skill_use.png-80f16b44a02384871eb6ac7b0d6e08e0.stex" ]
+source_file="res://Scene/Player/anim_sheets/skill_use/Character3_pa_skill_use.png"
+dest_files=[ "res://.import/Character3_pa_skill_use.png-8d775304098e9b5cd1088dc46370512c.stex" ]
 
 [params]
 
