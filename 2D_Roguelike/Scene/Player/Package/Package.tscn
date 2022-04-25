@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scene/Player/script/Package.gd" type="Script" id=1]
 [ext_resource path="res://Scene/Player/Package/slot.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Asset/UI/backpack_ui.png" type="Texture" id=3]
+[ext_resource path="res://Scene/Player/Package/NinePatchRect.gd" type="Script" id=4]
 
 [node name="Package" type="Node2D"]
 position = Vector2( -16, 9 )
@@ -18,13 +19,13 @@ margin_top = -31.75
 margin_right = 22.25
 margin_bottom = 28.25
 columns = 4
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource( 4 )
 
 [node name="slot1" parent="NinePatchRect" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 0.0
 margin_right = 12.0
 margin_bottom = 12.0
 rect_scale = Vector2( 1, 1 )
@@ -34,6 +35,7 @@ no = "slot1"
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 16.0
+margin_top = 0.0
 margin_right = 28.0
 margin_bottom = 12.0
 rect_scale = Vector2( 1, 1 )
@@ -43,6 +45,7 @@ no = "slot2"
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 32.0
+margin_top = 0.0
 margin_right = 44.0
 margin_bottom = 12.0
 rect_scale = Vector2( 1, 1 )
@@ -52,6 +55,7 @@ no = "slot3"
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 48.0
+margin_top = 0.0
 margin_right = 60.0
 margin_bottom = 12.0
 rect_scale = Vector2( 1, 1 )
@@ -60,6 +64,7 @@ no = "slot4"
 [node name="slot5" parent="NinePatchRect" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
+margin_left = 0.0
 margin_top = 16.0
 margin_right = 12.0
 margin_bottom = 28.0
@@ -84,7 +89,7 @@ margin_top = 16.0
 margin_right = 44.0
 margin_bottom = 28.0
 rect_scale = Vector2( 1, 1 )
-no = "slot6"
+no = "slot7"
 
 [node name="slot8" parent="NinePatchRect" instance=ExtResource( 2 )]
 anchor_right = 0.0
@@ -94,16 +99,17 @@ margin_top = 16.0
 margin_right = 60.0
 margin_bottom = 28.0
 rect_scale = Vector2( 1, 1 )
-no = "slot6"
+no = "slot8"
 
 [node name="slot9" parent="NinePatchRect" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
+margin_left = 0.0
 margin_top = 32.0
 margin_right = 12.0
 margin_bottom = 44.0
 rect_scale = Vector2( 1, 1 )
-no = "slot6"
+no = "slot9"
 
 [node name="slot10" parent="NinePatchRect" instance=ExtResource( 2 )]
 anchor_right = 0.0
@@ -113,7 +119,7 @@ margin_top = 32.0
 margin_right = 28.0
 margin_bottom = 44.0
 rect_scale = Vector2( 1, 1 )
-no = "slot6"
+no = "slot10"
 
 [node name="slot11" parent="NinePatchRect" instance=ExtResource( 2 )]
 anchor_right = 0.0
@@ -123,7 +129,7 @@ margin_top = 32.0
 margin_right = 44.0
 margin_bottom = 44.0
 rect_scale = Vector2( 1, 1 )
-no = "slot6"
+no = "slot11"
 
 [node name="slot12" parent="NinePatchRect" instance=ExtResource( 2 )]
 anchor_right = 0.0
@@ -133,16 +139,17 @@ margin_top = 32.0
 margin_right = 60.0
 margin_bottom = 44.0
 rect_scale = Vector2( 1, 1 )
-no = "slot6"
+no = "slot12"
 
 [node name="slot13" parent="NinePatchRect" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
+margin_left = 0.0
 margin_top = 48.0
 margin_right = 12.0
 margin_bottom = 60.0
 rect_scale = Vector2( 1, 1 )
-no = "slot6"
+no = "slot13"
 
 [node name="slot14" parent="NinePatchRect" instance=ExtResource( 2 )]
 anchor_right = 0.0
@@ -152,7 +159,7 @@ margin_top = 48.0
 margin_right = 28.0
 margin_bottom = 60.0
 rect_scale = Vector2( 1, 1 )
-no = "slot6"
+no = "slot14"
 
 [node name="slot15" parent="NinePatchRect" instance=ExtResource( 2 )]
 anchor_right = 0.0
@@ -162,7 +169,7 @@ margin_top = 48.0
 margin_right = 44.0
 margin_bottom = 60.0
 rect_scale = Vector2( 1, 1 )
-no = "slot6"
+no = "slot15"
 
 [node name="slot16" parent="NinePatchRect" instance=ExtResource( 2 )]
 anchor_right = 0.0
@@ -172,4 +179,4 @@ margin_top = 48.0
 margin_right = 60.0
 margin_bottom = 60.0
 rect_scale = Vector2( 1, 1 )
-no = "slot6"
+no = "slot16"

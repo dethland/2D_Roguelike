@@ -57,3 +57,25 @@ func _on_slot_mouse_entered():
 
 func _on_slot_mouse_exited():
 	get_node("use").visible = false
+
+func get_drag_data(position):
+	var data = {}
+	data["original_slot_no"] = no
+	var drag_texture = TextureRect.new()
+	drag_texture.expand = true
+	drag_texture.texture = get_node("TextureRect").texture
+	print(drag_texture.texture)
+	drag_texture.rect_size = Vector2(100,100)
+	set_drag_preview(drag_texture)
+	return data
+	
+func can_drop_data(position, data):
+	return true
+	
+func drop_data(position, data):
+	#texture = data["original_texture"]
+	get_parent().switch_slot(no,data["original_slot_no"] )
+	get_parent().get_parent().print_all_slot()
+
+
+

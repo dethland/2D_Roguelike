@@ -5,18 +5,16 @@
 [ext_resource path="res://Scene/Player/Package/slot.gd" type="Script" id=4]
 [ext_resource path="res://Asset/UI/backpack_under.png" type="Texture" id=5]
 
-
 [node name="slot" type="TextureRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -628.0
-margin_bottom = -346.0
+margin_left = -12.0
+margin_top = -8.0
+margin_right = -640.0
+margin_bottom = -356.0
 rect_scale = Vector2( 3, 3 )
 texture = ExtResource( 5 )
 script = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="use" type="Button" parent="."]
 visible = false
@@ -35,11 +33,10 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = -2.33333
-margin_top = -1.66667
-margin_right = 29.6667
-margin_bottom = 30.3333
-rect_scale = Vector2( 0.5, 0.5 )
+margin_top = -0.333333
+margin_right = 23.0
+margin_bottom = 23.6667
+rect_scale = Vector2( 0.4, 0.4 )
 mouse_filter = 2
 script = ExtResource( 2 )
 

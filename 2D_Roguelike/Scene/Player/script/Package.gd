@@ -1,7 +1,7 @@
 extends Node2D
 
 export (Array) var storage
-onready var max_cu = 6
+onready var max_cu = 16
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -55,6 +55,7 @@ func print_all_slot():
 	while x <= max_cu:
 		var slot_no :String = "slot"+String(x)
 		var slot = get_node("NinePatchRect" + "/"+slot_no)
+		print(slot.container)
 		x+=1
 	
 func _input(event):
