@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Character3_pa_land.png-be6c591756a37711dab262569601c832.stex"
+path="res://.import/Character3_pa_land.png-fe0180fc9950dbc375d771f32aa51baa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/Player/anim_sheets/land/Character3_pa_land.png"
-dest_files=[ "res://.import/Character3_pa_land.png-be6c591756a37711dab262569601c832.stex" ]
+source_file="res://Scene/player/anim_sheets/land/Character3_pa_land.png"
+dest_files=[ "res://.import/Character3_pa_land.png-fe0180fc9950dbc375d771f32aa51baa.stex" ]
 
 [params]
 
